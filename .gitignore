@@ -1,0 +1,10 @@
+node_modules/
+.next/
+__MACOSX/
+.env
+.env.local
+*.zip
+tsconfig.tsbuildinfo
+.claude-flow/
+.swarm/
+messages/
