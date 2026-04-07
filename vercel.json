@@ -1,7 +1,5 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "",
-  "installCommand": "",
-  "framework": null,
+  "buildCommand": "echo done",
+  "installCommand": "echo done",
   "outputDirectory": "aigocy/aigocy"
 }
