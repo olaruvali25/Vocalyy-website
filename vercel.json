@@ -1,5 +1,0 @@
-{
-  "buildCommand": "echo done",
-  "installCommand": "echo done",
-  "outputDirectory": "aigocy/aigocy"
-}

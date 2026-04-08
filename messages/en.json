@@ -1,0 +1,1443 @@
+{
+  "common": {
+    "nav": {
+      "industries": "Industries",
+      "pricing": "Pricing",
+      "howItWorks": "How It Works",
+      "about": "About Us",
+      "contact": "Contact",
+      "requestDemo": "Request a Demo",
+      "blog": "Blog",
+      "faq": "FAQ",
+      "caseStudies": "Case Studies"
+    },
+    "cta": {
+      "getStarted": "Get Started",
+      "bookDemo": "Book a Free Demo",
+      "seeHowItWorks": "See How It Works",
+      "calculateROI": "Calculate Your Savings",
+      "contactUs": "Contact Us",
+      "viewAll": "View All",
+      "requestDemo": "Request a Demo",
+      "seePricing": "See Pricing",
+      "howItWorks": "How It Works"
+    },
+    "footer": {
+      "industries": "Industries",
+      "company": "Company",
+      "resources": "Resources",
+      "contact": "Contact",
+      "rights": "All rights reserved",
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions"
+    },
+    "trust": {
+      "gdpr": "GDPR Compliant",
+      "romanianSupport": "Romanian Language Support",
+      "setup": "Setup in 3-5 Days",
+      "noContracts": "No Long-Term Contracts",
+      "uptime": "99.9% Uptime",
+      "builtInRomania": "Built in Romania",
+      "badge1": "GDPR Compliant",
+      "badge2": "Romanian Support",
+      "badge3": "Setup in 3-5 Days",
+      "gdpr_obj": { "title": "GDPR Compliant", "description": "Your customers' data is protected in accordance with European legislation." },
+      "encryption": { "title": "End-to-End Encryption", "description": "All calls and data are encrypted in transit and at rest." },
+      "humanHandoff": { "title": "Human Handoff", "description": "The agent can transfer the call to you or your team at any time." }
+    }
+  },
+  "homepage": {
+    "hero": {
+      "headline": "Every missed call is a lost client. We answer for you — 24/7.",
+      "subheadline": "Our AI voice agent answers your business calls, has natural conversations with your clients, and books appointments directly in your calendar. No breaks. No holidays. No missed calls.",
+      "ctaPrimary": "Book a Free Demo",
+      "ctaSecondary": "See How It Works"
+    },
+    "problem": {
+      "title": "How much does an unanswered call cost you?",
+      "stat1": {
+        "value": "126,000",
+        "label": "average annual loss from missed calls",
+        "prefix": "€",
+        "suffix": "/year"
+      },
+      "stat2": {
+        "value": "80",
+        "label": "callers don't leave a voicemail and never call back",
+        "suffix": "%"
+      },
+      "stat3": {
+        "value": "42",
+        "label": "never contact the business again after a bad experience",
+        "suffix": "%"
+      },
+      "stat4": {
+        "value": "300–1,200",
+        "label": "the cost of a single missed call",
+        "prefix": "€"
+      },
+      "description": "We don't sell technology. We plug a money leak you already have."
+    },
+    "whatAgentDoes": {
+      "title": "What does your voice agent do?",
+      "subtitle": "Not a robot reading scripts. An agent that knows your business and talks like a person.",
+      "scenario1": {
+        "title": "Call at 10 PM on a Sunday",
+        "description": "The agent answers, talks to the client, confirms the booking, and sends a confirmation SMS. You see everything in the morning."
+      },
+      "scenario2": {
+        "title": "3 simultaneous calls, Tuesday at noon",
+        "description": "All 3 calls are answered. No hold music. No 'Please call back later.' Every client gets attention."
+      },
+      "scenario3": {
+        "title": "Client asks about pricing",
+        "description": "The agent answers common questions, explains your services, and suggests booking an appointment."
+      }
+    },
+    "beforeAfter": {
+      "title": "Before and After",
+      "titleBefore": "Without our agent",
+      "titleAfter": "With our agent",
+      "items": [
+        {
+          "before": "Missed calls evenings and weekends",
+          "after": "Every call answered 24/7/365"
+        },
+        {
+          "before": "Clients calling your competition",
+          "after": "Instant response, client captured"
+        },
+        {
+          "before": "One busy line blocks everyone",
+          "after": "100+ simultaneous calls"
+        },
+        {
+          "before": "Missed appointments = lost revenue",
+          "after": "Automatic calendar bookings"
+        },
+        {
+          "before": "Constant phone stress",
+          "after": "Peace of mind for you"
+        },
+        {
+          "before": "Receptionist: €25,000–€40,000/year",
+          "after": "Starting at €299/month"
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "3 simple steps. No hassle.",
+      "step1": {
+        "title": "Tell us about your business",
+        "description": "Fill out a short form or have a 15-minute conversation with us. Tell us what you do, how you talk to clients, what questions you get."
+      },
+      "step2": {
+        "title": "We set up your agent in 3-5 days",
+        "description": "We customize the voice, dialogue, FAQs, and integrate your calendar. We test everything before launch."
+      },
+      "step3": {
+        "title": "Your agent starts answering",
+        "description": "Every call answered. Appointments booked automatically. You get daily reports. You focus on what matters."
+      }
+    },
+    "industries": {
+      "title": "Solutions built for your industry",
+      "subtitle": "Every industry has unique problems. We have the right solution.",
+      "cta": "Don't see your industry? Contact us.",
+      "items": {
+        "clinici-dentare": "Dental Clinics",
+        "cabinete-medicale": "Medical Offices",
+        "saloane-de-frumusete": "Beauty Salons",
+        "firme-de-avocatura": "Law Firms",
+        "agentii-imobiliare": "Real Estate Agencies",
+        "service-auto": "Auto Service",
+        "frizerii-barbershop": "Barbershops",
+        "hoteluri-hospitality": "Hotels & Hospitality",
+        "consultanti-imigrare": "Immigration Consultants",
+        "notariate": "Notary Offices"
+      }
+    },
+    "costComparison": {
+      "title": "Compare the Costs",
+      "subtitle": "What you're paying now vs. what you'd pay with us",
+      "receptionist": "Full-time receptionist",
+      "answeringService": "Answering service",
+      "ourAgent": "Our AI voice agent",
+      "note": "And it works 24/7 without breaks.",
+      "traditional": {
+        "title": "Traditional Receptionist",
+        "salary": "Net salary",
+        "salaryValue": "€18,000–€25,000/yr",
+        "taxes": "Taxes & contributions",
+        "taxesValue": "€7,000–€15,000/yr",
+        "training": "Training, leave, replacement",
+        "trainingValue": "€3,000–€5,000/yr",
+        "total": "Annual total",
+        "totalValue": "€28,000–€45,000/yr"
+      },
+      "aiAgent": {
+        "title": "Our AI Voice Agent",
+        "subscription": "Monthly subscription",
+        "subscriptionValue": "€299–€699/mo",
+        "setup": "Setup fee (one-time)",
+        "setupValue": "€500–€1,500",
+        "availability": "Availability",
+        "availabilityValue": "24/7/365",
+        "total": "Annual total",
+        "totalValue": "€4,088–€9,888/yr"
+      },
+      "savings": "Save between €18,000 and €35,000 per year."
+    },
+    "demo": {
+      "title": "Hear what your agent sounds like",
+      "subtitle": "Fill out the form and get a personalized demo for your business.",
+      "form": {
+        "name": "Full name",
+        "email": "Email",
+        "phone": "Phone",
+        "businessType": "Business type",
+        "message": "Message (optional)",
+        "submit": "I want a free demo",
+        "success": "Thank you! We'll contact you within 24 hours.",
+        "disclaimer": "No obligations. No spam. We respond within 24 hours."
+      },
+      "ctaPrimary": "I Want a Free Demo",
+      "ctaSecondary": "See How It Works"
+    }
+  },
+  "pricing": {
+    "perMonth": "/month",
+    "setupOnce": "setup (one-time)",
+    "hero": {
+      "title": "Clear pricing. No surprises. No long-term contracts.",
+      "subtitle": "Choose the right plan. Each includes full setup by our team."
+    },
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "price": "299",
+        "setup": "500",
+        "minutes": "1,500",
+        "setupFee": "€500 setup",
+        "cta": "Start with Starter",
+        "features": [
+          "24/7 call answering",
+          "Natural Romanian conversation",
+          "FAQ responses",
+          "WhatsApp/email messages",
+          "Basic booking (existing link)",
+          "Setup in 3-5 days",
+          "Email support",
+          "Monthly call report"
+        ],
+        "idealFor": "Ideal for: salons, barbershops, small auto services"
+      },
+      "professional": {
+        "name": "Professional",
+        "badge": "Recommended",
+        "price": "449",
+        "setup": "800",
+        "minutes": "3,000",
+        "setupFee": "€800 setup",
+        "cta": "Choose Professional",
+        "features": [
+          "Everything in Starter +",
+          "Full conversation (real dialogue)",
+          "Direct calendar booking",
+          "Unlimited simultaneous calls",
+          "Call recording & transcription",
+          "Detailed monthly reports",
+          "CRM integration",
+          "Priority support via email + WhatsApp"
+        ],
+        "idealFor": "Ideal for: clinics, real estate, law firms"
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "699",
+        "setup": "1,500",
+        "minutes": "6,000",
+        "setupFee": "€1,500 setup",
+        "cta": "Choose Premium",
+        "features": [
+          "Everything in Professional +",
+          "Custom voice (your brand's tone)",
+          "Outbound follow-up (confirmation calls)",
+          "Real-time analytics dashboard",
+          "Dedicated account manager",
+          "Weekly check-in",
+          "Emergency support",
+          "Personal onboarding"
+        ],
+        "idealFor": "Ideal for: large clinics, law firms, high volume"
+      }
+    },
+    "comparison": {
+      "title": "Compare plans in detail",
+      "feature": "Feature",
+      "headers": { "starter": "Starter", "professional": "Professional", "premium": "Premium" },
+      "rows": {
+        "voiceAgent": { "label": "AI Voice Agent 24/7", "starter": "true", "professional": "true", "premium": "true" },
+        "languages": { "label": "Languages", "starter": "Romanian", "professional": "RO + EN", "premium": "RO + EN + custom" },
+        "availability": { "label": "Availability", "starter": "24/7/365", "professional": "24/7/365", "premium": "24/7/365" },
+        "integrations": { "label": "Calendar integration", "starter": "Link only", "professional": "true", "premium": "true" },
+        "analytics": { "label": "Reporting", "starter": "Monthly basic", "professional": "Monthly detailed", "premium": "Real-time" },
+        "customVoice": { "label": "Custom voice (brand tone)", "starter": "false", "professional": "false", "premium": "true" },
+        "prioritySupport": { "label": "Priority support", "starter": "false", "professional": "true", "premium": "true" },
+        "dedicatedManager": { "label": "Dedicated account manager", "starter": "false", "professional": "false", "premium": "true" },
+        "sla": { "label": "Guaranteed 99.9% SLA", "starter": "false", "professional": "true", "premium": "true" },
+        "whiteLabel": { "label": "White-label / rebrand", "starter": "false", "professional": "false", "premium": "true" }
+      }
+    },
+    "faq": {
+      "title": "Pricing questions",
+      "items": [
+        {
+          "question": "What happens if I exceed the included minutes?",
+          "answer": "Additional minutes are billed at €0.15/minute. We notify you in advance when you're approaching your limit."
+        },
+        {
+          "question": "Are there long-term contracts?",
+          "answer": "No. You pay monthly and cancel anytime. No penalties, no questions asked."
+        },
+        {
+          "question": "Is there a discount for annual billing?",
+          "answer": "Yes. With annual billing, you get 2 months free — pay for 10, get 12."
+        },
+        {
+          "question": "What does the setup fee include?",
+          "answer": "Complete configuration: voice customization, dialogue setup, calendar integration, testing, and launch."
+        },
+        {
+          "question": "Can I change my plan later?",
+          "answer": "Anytime. Upgrades are instant. Downgrades take effect from the following month."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to stop losing calls?",
+      "subtitle": "Setup in 3-5 days. No long contracts. The first client you win back pays for the first month.",
+      "button": "Book a Free Demo"
+    }
+  },
+  "howItWorks": {
+    "title": "How Our Voice Agent Works",
+    "subtitle": "From first call to first appointment — in 5 simple steps.",
+    "steps": [
+      {
+        "title": "Contact our team",
+        "description": "Fill out the form or give us a call. It takes 2 minutes."
+      },
+      {
+        "title": "We discuss your business",
+        "description": "A 15-minute conversation. We learn what you do, how you talk to clients, and what questions you get most often."
+      },
+      {
+        "title": "We configure your agent",
+        "description": "In 3-5 days. We customize the voice, dialogue, and FAQs. We integrate your calendar."
+      },
+      {
+        "title": "We test together",
+        "description": "You call the agent, check how it responds, we adjust whatever's needed. We don't launch until you're satisfied."
+      },
+      {
+        "title": "Your agent takes over calls",
+        "description": "Every call answered automatically. Appointments booked in your calendar. Daily reports sent to your email."
+      }
+    ],
+    "demo": {
+      "title": "Hear how your agent sounds",
+      "description": "Real audio demo — a simulated call for a dental clinic."
+    },
+    "trust": {
+      "title": "Technology you can trust",
+      "items": [
+        {
+          "title": "GDPR Compliant",
+          "description": "Your customers' data is protected in accordance with European legislation."
+        },
+        {
+          "title": "End-to-end encryption",
+          "description": "All calls and data are encrypted in transit and at rest."
+        },
+        {
+          "title": "Transfer to a human",
+          "description": "The agent can transfer the call to you or your team at any time."
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "We're a team from Romania helping local businesses stop losing clients over the phone.",
+    "whoWeAre": {
+      "title": "Who We Are",
+      "description": "A team of AI and automation specialists based in Romania. We built voice agents because we saw a problem no one was solving: good businesses losing clients simply because they couldn't answer the phone."
+    },
+    "whyWeExist": {
+      "title": "Why We Exist",
+      "description": "78% of small businesses in Romania lose clients due to missed calls. We're not talking about technology for its own sake. We're talking about money slipping through your fingers every single day."
+    },
+    "ourApproach": {
+      "title": "Our Approach",
+      "description": "We don't sell 'innovative solutions.' We measure results. How many calls did the agent handle? How many appointments did it book? How much did you save? If the numbers don't look good, you don't pay."
+    },
+    "values": {
+      "title": "Our Values",
+      "items": [
+        {
+          "title": "Transparency",
+          "description": "Clear pricing, detailed reports, no hidden costs."
+        },
+        {
+          "title": "Accountability",
+          "description": "If the agent doesn't perform, we fix it or you don't pay."
+        },
+        {
+          "title": "Simplicity",
+          "description": "Simple setup, simple interface, clear results."
+        },
+        {
+          "title": "Local Partnership",
+          "description": "We're here, in Romania. We speak your language. We understand your market."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Let's talk about your business. We respond within 24 hours.",
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone number",
+      "businessType": "Business type",
+      "message": "How can we help you?",
+      "submit": "Send message",
+      "success": "Message sent! We'll get back to you soon."
+    },
+    "info": {
+      "email": "contact@yoram.ro",
+      "phone": "+40 7XX XXX XXX",
+      "whatsapp": "WhatsApp: +40 7XX XXX XXX",
+      "schedule": "Hours: Monday–Friday, 9:00 AM–6:00 PM",
+      "address": "Bucharest, Romania",
+      "response": "We respond within 24 hours."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our AI voice agent.",
+    "categories": {
+      "about": {
+        "title": "About the Agent",
+        "items": [
+          {
+            "question": "What is an AI voice agent?",
+            "answer": "It's a system that answers the phone for you. It has natural conversations, answers questions, and books appointments — like a receptionist, but available 24/7 and never in a bad mood."
+          },
+          {
+            "question": "Will clients know they're talking to a robot?",
+            "answer": "The agent's voice is natural and fluent. Most people don't realize it. And honestly — an answer at 10 PM beats a voicemail that nobody checks."
+          },
+          {
+            "question": "What languages does the agent speak?",
+            "answer": "Native Romanian and English. It can switch automatically based on what language the caller uses."
+          },
+          {
+            "question": "Can the agent transfer the call to me?",
+            "answer": "Yes. The agent can transfer the call to you or a team member at any point in the conversation."
+          }
+        ]
+      },
+      "setup": {
+        "title": "Setup",
+        "items": [
+          {
+            "question": "How long does setup take?",
+            "answer": "3–5 business days. This includes voice customization, dialogue setup, calendar integration, and testing."
+          },
+          {
+            "question": "What do I need to do?",
+            "answer": "Very little. Tell us about your business, give us calendar access, and validate the agent before we launch. We handle the rest."
+          },
+          {
+            "question": "What systems does it integrate with?",
+            "answer": "Google Calendar, Outlook, Calendly, and most popular CRMs. Got a specific system? Let's talk."
+          }
+        ]
+      },
+      "costs": {
+        "title": "Costs",
+        "items": [
+          {
+            "question": "Are there hidden costs?",
+            "answer": "No. The price includes everything on the pricing page. The only exception: extra minutes beyond your plan limit, at €0.15/minute."
+          },
+          {
+            "question": "Can I cancel anytime?",
+            "answer": "Yes. No long-term contracts, no cancellation fees. You pay monthly, you leave monthly."
+          },
+          {
+            "question": "Is there a trial period?",
+            "answer": "We offer a free personalized demo. After that, the first month comes with a money-back guarantee — if you're not satisfied, we refund you."
+          }
+        ]
+      },
+      "security": {
+        "title": "Data & Security",
+        "items": [
+          {
+            "question": "Is my clients' data safe?",
+            "answer": "Yes. We are GDPR compliant. All data is encrypted, securely stored, and never shared with third parties."
+          },
+          {
+            "question": "Where is the data stored?",
+            "answer": "On servers in the European Union, fully compliant with GDPR."
+          },
+          {
+            "question": "Are calls recorded?",
+            "answer": "Only on Professional and Premium plans, with your consent. Recordings are encrypted and only you can access them."
+          }
+        ]
+      }
+    }
+  },
+  "industries": {
+    "title": "Industries",
+    "subtitle": "Custom solutions for your industry",
+    "recommendedPlan": "Recommended plan",
+    "roi": {
+      "callsPerDay": "Calls per day",
+      "missedPercent": "% missed",
+      "avgValue": "Average client value"
+    },
+    "items": {
+      "clinici-dentare": {
+        "name": "Dental Clinics",
+        "slug": "clinici-dentare",
+        "shortDesc": "Automatic appointment booking, treatment FAQs, after-hours emergencies.",
+        "hero": "Every missed call is a missed appointment. Your agent answers even when your hands are in a patient's mouth.",
+        "scenarioIntro": "It's Tuesday at 3 PM. You're in the middle of a root canal. The phone rings at reception — but the receptionist is on lunch break.",
+        "description": "Dental clinics lose an average of 35% of incoming calls. Each missed call is a patient who goes to a competitor. Our voice agent answers 24/7, handles bookings, answers questions about procedures, and manages emergencies — so you can focus on actual dentistry.",
+        "scenariosTitle": "Real scenarios your agent handles",
+        "scenarios": [
+          {
+            "title": "Emergency call at 9 PM",
+            "description": "A patient has a broken tooth. The agent collects their details, assesses urgency, and schedules an emergency appointment for the next morning — all without waking you up."
+          },
+          {
+            "title": "New patient asking about pricing",
+            "description": "The agent explains treatment options, gives pricing ranges, answers common questions about procedures, and books a first consultation."
+          },
+          {
+            "title": "Existing patient rescheduling",
+            "description": "Patient needs to move their appointment. The agent checks availability, reschedules directly in your calendar, and sends a confirmation SMS."
+          }
+        ],
+        "beforeTitle": "Without our agent",
+        "afterTitle": "With our agent",
+        "beforeAfter": [
+          {
+            "before": "Calls missed during procedures",
+            "after": "Every call answered, every time"
+          },
+          {
+            "before": "Patients go to the clinic next door",
+            "after": "Patient booked before they even think about calling someone else"
+          },
+          {
+            "before": "Receptionist overwhelmed at peak hours",
+            "after": "Unlimited simultaneous calls, no queues"
+          },
+          {
+            "before": "No one to handle evening emergencies",
+            "after": "24/7 emergency triage and booking"
+          }
+        ],
+        "stats": [
+          { "value": "35", "label": "of calls missed on average", "suffix": "%" },
+          { "value": "380", "label": "average value per patient", "suffix": "€" },
+          { "value": "15", "label": "calls per day on average", "suffix": "" },
+          { "value": "2", "label": "average payback time", "suffix": " months" }
+        ],
+        "featuresTitle": "What your dental agent does",
+        "features": [
+          {
+            "title": "24/7 appointment booking",
+            "description": "Patients can book, reschedule, or cancel at any time — even Sunday night."
+          },
+          {
+            "title": "Treatment FAQ",
+            "description": "Answers questions about implants, braces, whitening, extraction — in plain language."
+          },
+          {
+            "title": "Emergency triage",
+            "description": "Identifies urgent cases and prioritizes them in your schedule."
+          },
+          {
+            "title": "Appointment reminders",
+            "description": "Automatically reminds patients 24 hours before their appointment to reduce no-shows."
+          }
+        ],
+        "objectionsTitle": "Questions from dentists",
+        "objections": [
+          {
+            "question": "What if the agent doesn't know the answer to a medical question?",
+            "answer": "The agent is trained on your specific services and treatments. For anything outside its scope, it collects the caller's details and tells them you'll call back. It never guesses."
+          },
+          {
+            "question": "Can it handle my specific booking system?",
+            "answer": "We integrate with Google Calendar, Outlook, Calendly, and most dental practice management software. If you use something specific, tell us — we'll make it work."
+          },
+          {
+            "question": "What about GDPR for patient data?",
+            "answer": "All data is encrypted, stored on EU servers, and fully GDPR compliant. Patient information is only accessible to you."
+          }
+        ],
+        "roiTitle": "How much do you get back?",
+        "roiDescription": "With 15 calls per day and 35% missed, you're losing roughly 5 potential patients daily. At €380 average value, that's €1,900 per day walking out the door.",
+        "roiDefaults": { "callsPerDay": "15", "missedPercent": "35%", "avgValue": "€380" },
+        "roiResult": "Recovering even 3 of those 5 missed patients per day pays for the agent many times over.",
+        "pricingTitle": "Which plan fits you?",
+        "pricingDescription": "Most dental clinics start on Professional. You get direct calendar integration, call recordings, and detailed monthly reports.",
+        "demoTitle": "Hear what your agent sounds like",
+        "demoDescription": "Listen to a real demo call simulating a new patient booking a consultation at a dental clinic."
+      },
+      "cabinete-medicale": {
+        "name": "Medical Offices",
+        "slug": "cabinete-medicale",
+        "shortDesc": "Patient scheduling, phone triage, test results information.",
+        "hero": "Patients call. You're in consultation. Who answers?",
+        "scenarioIntro": "It's Wednesday at 11 AM. You have 3 back-to-back consultations. The phone rings 5 times.",
+        "description": "Medical offices receive a high volume of calls — appointments, test results, prescription renewals, urgent questions. When you're in consultation, every unanswered call is a patient experience that could have been better. Our agent handles routine calls so your team can focus on care.",
+        "scenariosTitle": "Real scenarios your agent handles",
+        "scenarios": [
+          {
+            "title": "Patient calling about test results",
+            "description": "The agent explains which results are available, confirms the patient's identity, and schedules a follow-up consultation to discuss the findings with the doctor."
+          },
+          {
+            "title": "New patient requesting first appointment",
+            "description": "The agent collects basic information, explains what to bring to the first visit, and books the appointment directly in your calendar."
+          },
+          {
+            "title": "Prescription renewal request",
+            "description": "The agent notes the request, confirms patient details, and schedules a short consultation or flags it for the doctor's review — per your protocol."
+          }
+        ],
+        "beforeTitle": "Without our agent",
+        "afterTitle": "With our agent",
+        "beforeAfter": [
+          {
+            "before": "Phones ringing during consultations",
+            "after": "All calls answered, no interruptions"
+          },
+          {
+            "before": "Patients frustrated by busy signals",
+            "after": "Instant response every time"
+          },
+          {
+            "before": "Staff overwhelmed with repetitive calls",
+            "after": "Routine calls handled automatically"
+          },
+          {
+            "before": "Appointments lost to competitors",
+            "after": "Every new patient captured and booked"
+          }
+        ],
+        "stats": [
+          { "value": "40", "label": "of calls missed on average", "suffix": "%" },
+          { "value": "250", "label": "average consultation value", "suffix": "€" },
+          { "value": "20", "label": "calls per day on average", "suffix": "" },
+          { "value": "1", "label": "average payback time", "suffix": " month" }
+        ],
+        "featuresTitle": "What your medical office agent does",
+        "features": [
+          {
+            "title": "Appointment scheduling",
+            "description": "Books, reschedules, and cancels appointments directly in your calendar."
+          },
+          {
+            "title": "Basic phone triage",
+            "description": "Identifies urgency and routes calls appropriately — urgent cases get flagged immediately."
+          },
+          {
+            "title": "FAQ handling",
+            "description": "Answers questions about opening hours, services, location, what to bring, insurance, and more."
+          },
+          {
+            "title": "Patient callback requests",
+            "description": "When the doctor needs to call back, the agent collects all relevant details and queues the request."
+          }
+        ],
+        "objectionsTitle": "Questions from doctors",
+        "objections": [
+          {
+            "question": "Can it handle medical questions safely?",
+            "answer": "The agent only handles administrative and informational tasks. It never gives medical advice. For medical questions, it tells patients to come in or call emergency services if urgent."
+          },
+          {
+            "question": "What about patient confidentiality?",
+            "answer": "All data is encrypted and GDPR compliant. The agent only collects what's necessary for booking — name, phone, reason for call. Nothing more."
+          },
+          {
+            "question": "We already have a receptionist. Why add this?",
+            "answer": "The agent handles overflow when your receptionist is on another call, on break, or after hours. It's not a replacement — it's backup that never takes a day off."
+          }
+        ],
+        "roiTitle": "How much do you get back?",
+        "roiDescription": "With 20 calls per day and 40% missed, you're missing 8 potential patients daily. At €250 per consultation, that's €2,000 per day in lost revenue.",
+        "roiDefaults": { "callsPerDay": "20", "missedPercent": "40%", "avgValue": "€250" },
+        "roiResult": "Recovering even 4 of those 8 missed patients per day covers the agent cost multiple times over.",
+        "pricingTitle": "Which plan fits you?",
+        "pricingDescription": "Medical offices typically choose Professional for direct calendar integration and detailed call reporting.",
+        "demoTitle": "Hear what your agent sounds like",
+        "demoDescription": "Listen to a demo call simulating a patient booking a consultation at a medical office."
+      },
+      "saloane-de-frumusete": {
+        "name": "Beauty Salons",
+        "slug": "saloane-de-frumusete",
+        "shortDesc": "Non-stop bookings, automatic cancellations and rescheduling.",
+        "hero": "Your clients call when your hands are busy. Our agent books them in your place.",
+        "scenarioIntro": "It's Saturday at 10 AM. You have 3 clients, and the phone keeps ringing.",
+        "description": "Beauty salons lose almost half their incoming calls — hands are always busy, focus is always on the client in the chair. Our agent answers every call, books appointments, handles cancellations, and sends reminders. So you never lose a booking because you were in the middle of a treatment.",
+        "scenariosTitle": "Real scenarios your agent handles",
+        "scenarios": [
+          {
+            "title": "Client calling to book a Saturday appointment",
+            "description": "The agent checks availability, confirms the service and stylist preference, books the slot, and sends a confirmation message."
+          },
+          {
+            "title": "Last-minute cancellation",
+            "description": "Client cancels for tomorrow morning. The agent frees the slot, updates the calendar, and can offer it to clients on a waiting list."
+          },
+          {
+            "title": "New client asking about services and prices",
+            "description": "The agent explains services, gives price ranges, and offers to book a first appointment — turning an inquiry into a booking."
+          }
+        ],
+        "beforeTitle": "Without our agent",
+        "afterTitle": "With our agent",
+        "beforeAfter": [
+          {
+            "before": "Phone rings while you're mid-treatment",
+            "after": "Every call answered without interrupting your work"
+          },
+          {
+            "before": "Clients book at salons that answer faster",
+            "after": "Instant response, booking confirmed"
+          },
+          {
+            "before": "No-shows with no warning",
+            "after": "Automatic reminders reduce no-shows by up to 40%"
+          },
+          {
+            "before": "Evenings and weekends go unmanned",
+            "after": "Bookings coming in around the clock"
+          }
+        ],
+        "stats": [
+          { "value": "45", "label": "of calls missed on average", "suffix": "%" },
+          { "value": "75", "label": "average service value", "suffix": "€" },
+          { "value": "12", "label": "calls per day on average", "suffix": "" },
+          { "value": "1", "label": "average payback time", "suffix": " month" }
+        ],
+        "featuresTitle": "What your beauty salon agent does",
+        "features": [
+          {
+            "title": "24/7 booking",
+            "description": "Clients book any time — even at midnight before a Saturday appointment."
+          },
+          {
+            "title": "Service menu and pricing",
+            "description": "Answers questions about treatments, durations, and prices without you lifting a finger."
+          },
+          {
+            "title": "Cancellation and rescheduling",
+            "description": "Handles changes automatically and keeps your calendar accurate."
+          },
+          {
+            "title": "Appointment reminders",
+            "description": "Sends SMS reminders 24 hours before to cut no-shows."
+          }
+        ],
+        "objectionsTitle": "Questions from salon owners",
+        "objections": [
+          {
+            "question": "Clients want to talk to a real person — will they mind?",
+            "answer": "Most clients care about getting a confirmed booking quickly. The agent does exactly that, naturally and politely. And it's always available."
+          },
+          {
+            "question": "What if a client has a complex request?",
+            "answer": "The agent handles standard bookings and FAQs. For complex cases — special events, group bookings — it notes the details and flags them for you to call back."
+          },
+          {
+            "question": "We're a small salon. Is this worth it?",
+            "answer": "If you're missing 5–6 calls a week, you're losing roughly €400–500 in bookings monthly. The Starter plan is €299/month. The math works."
+          }
+        ],
+        "roiTitle": "How much do you get back?",
+        "roiDescription": "With 12 calls per day and 45% missed, you're losing 5–6 bookings daily. At €75 average, that's €375–450 per day in missed revenue.",
+        "roiDefaults": { "callsPerDay": "12", "missedPercent": "45%", "avgValue": "€75" },
+        "roiResult": "Recovering just 3 bookings a day more than covers the monthly cost.",
+        "pricingTitle": "Which plan fits you?",
+        "pricingDescription": "Most beauty salons start with Starter. It covers all the basics — 24/7 answering, booking, FAQs — at the lowest price.",
+        "demoTitle": "Hear what your agent sounds like",
+        "demoDescription": "Listen to a demo call simulating a client booking a hair appointment at a beauty salon."
+      },
+      "firme-de-avocatura": {
+        "name": "Law Firms",
+        "slug": "firme-de-avocatura",
+        "shortDesc": "New case intake, detail collection, consultation scheduling.",
+        "hero": "When someone calls a lawyer, they're in crisis. If you don't answer, they call the next one.",
+        "scenarioIntro": "It's Thursday at 11 PM. An accident victim calls. You're at home.",
+        "description": "Legal clients call when they're in trouble — after an accident, a business dispute, a family crisis. They need to talk to someone now. If your firm doesn't answer, they don't wait. They call the next lawyer on Google. Our agent captures every lead, collects case details, and books consultations — day or night.",
+        "scenariosTitle": "Real scenarios your agent handles",
+        "scenarios": [
+          {
+            "title": "Urgent call after a road accident",
+            "description": "The agent collects all relevant details — date, location, injuries, parties involved — and schedules an urgent consultation for the next morning."
+          },
+          {
+            "title": "New client asking about legal services",
+            "description": "The agent explains practice areas, gives a general overview of the consultation process, and books an initial meeting."
+          },
+          {
+            "title": "Existing client with a case update question",
+            "description": "The agent notes the inquiry, confirms the client's details, and schedules a callback from the attorney — keeping the client informed and calm."
+          }
+        ],
+        "beforeTitle": "Without our agent",
+        "afterTitle": "With our agent",
+        "beforeAfter": [
+          {
+            "before": "Calls missed evenings and weekends",
+            "after": "Every call answered, every potential client captured"
+          },
+          {
+            "before": "High-value cases going to competing firms",
+            "after": "Lead captured before they hang up"
+          },
+          {
+            "before": "Staff spending time on intake calls",
+            "after": "Intake automated, lawyer time protected"
+          },
+          {
+            "before": "Inconsistent first impression",
+            "after": "Professional, consistent response every time"
+          }
+        ],
+        "stats": [
+          { "value": "30", "label": "of calls missed on average", "suffix": "%" },
+          { "value": "1500", "label": "average case value", "suffix": "€" },
+          { "value": "8", "label": "calls per day on average", "suffix": "" },
+          { "value": "1", "label": "single case pays for months of service", "suffix": "" }
+        ],
+        "featuresTitle": "What your law firm agent does",
+        "features": [
+          {
+            "title": "24/7 lead capture",
+            "description": "Answers after hours and weekends — exactly when clients in crisis call most."
+          },
+          {
+            "title": "Structured intake",
+            "description": "Collects case details systematically so you have everything you need before the consultation."
+          },
+          {
+            "title": "Consultation scheduling",
+            "description": "Books directly in your calendar or collects a preferred time and confirms with you."
+          },
+          {
+            "title": "Practice area information",
+            "description": "Explains your areas of practice, fees, and consultation process clearly and consistently."
+          }
+        ],
+        "objectionsTitle": "Questions from lawyers",
+        "objections": [
+          {
+            "question": "Legal matters are sensitive. Can an AI handle this?",
+            "answer": "The agent handles intake and scheduling, not legal advice. It's disciplined about what it says — it collects facts, books meetings, and never offers opinions on legal matters."
+          },
+          {
+            "question": "What if the client's case is unusual?",
+            "answer": "The agent collects whatever information the caller provides, flags the call as a priority, and ensures you call back. No case slips through."
+          },
+          {
+            "question": "Is a missed call really that costly for a law firm?",
+            "answer": "One missed case at €1,500 average value costs more than 5 months of the Starter plan. Every unanswered call is a real financial decision."
+          }
+        ],
+        "roiTitle": "How much do you get back?",
+        "roiDescription": "With 8 calls per day and 30% missed, that's roughly 2–3 potential clients daily who don't get through. At €1,500 average case value, even one recovered case per week justifies the entire year.",
+        "roiDefaults": { "callsPerDay": "8", "missedPercent": "30%", "avgValue": "€1500" },
+        "roiResult": "One recovered case per week covers the full annual cost of the Professional plan.",
+        "pricingTitle": "Which plan fits you?",
+        "pricingDescription": "Law firms typically choose Professional or Premium for detailed call recordings, CRM integration, and priority support.",
+        "demoTitle": "Hear what your agent sounds like",
+        "demoDescription": "Listen to a demo call simulating a new client contacting a law firm after a road accident."
+      },
+      "agentii-imobiliare": {
+        "name": "Real Estate Agencies",
+        "slug": "agentii-imobiliare",
+        "shortDesc": "24/7 lead capture, viewing scheduling, automatic follow-up.",
+        "hero": "You're at a showing. The phone rings. A seller wants to list. You can't answer. The commission just walked away.",
+        "scenarioIntro": "It's Tuesday at 4 PM. You're at a showing with a buyer. The phone rings — a property owner wants to sell.",
+        "description": "Real estate agents are always on the move — showings, negotiations, site visits. Leads call when they're ready to act, and they don't wait. Our agent captures every seller inquiry, schedules viewings, and follows up automatically. So you never lose a commission because you were busy closing another deal.",
+        "scenariosTitle": "Real scenarios your agent handles",
+        "scenarios": [
+          {
+            "title": "Seller calling to list their property",
+            "description": "The agent collects property details, location, asking price, and availability for a valuation visit — and books you in."
+          },
+          {
+            "title": "Buyer calling about a listed property",
+            "description": "The agent provides property details, answers common questions, and schedules a viewing directly in your calendar."
+          },
+          {
+            "title": "Lead calling after seeing a portal listing",
+            "description": "The agent qualifies the lead, captures contact information, and books a call-back or viewing before they move on to another listing."
+          }
+        ],
+        "beforeTitle": "Without our agent",
+        "afterTitle": "With our agent",
+        "beforeAfter": [
+          {
+            "before": "Leads calling while you're at a showing",
+            "after": "Every lead captured, every time"
+          },
+          {
+            "before": "Hot sellers going to the agency that answers",
+            "after": "Seller booked before they call your competitor"
+          },
+          {
+            "before": "No follow-up on missed calls",
+            "after": "Automatic callback scheduling"
+          },
+          {
+            "before": "Evenings and weekends missed",
+            "after": "24/7 availability — when buyers and sellers are actually browsing"
+          }
+        ],
+        "stats": [
+          { "value": "35", "label": "of calls missed on average", "suffix": "%" },
+          { "value": "3500", "label": "average commission value", "suffix": "€" },
+          { "value": "18", "label": "calls per day on average", "suffix": "" },
+          { "value": "1", "label": "recovered deal pays for a full year", "suffix": "" }
+        ],
+        "featuresTitle": "What your real estate agent does",
+        "features": [
+          {
+            "title": "Lead capture 24/7",
+            "description": "Captures seller and buyer inquiries at any hour — portal listings generate calls at all times."
+          },
+          {
+            "title": "Viewing scheduling",
+            "description": "Books viewings directly in your calendar with all relevant property and client details."
+          },
+          {
+            "title": "Property information",
+            "description": "Answers questions about listed properties — price, location, size, availability."
+          },
+          {
+            "title": "Automatic follow-up",
+            "description": "Schedules callbacks and follow-up calls so no lead goes cold."
+          }
+        ],
+        "objectionsTitle": "Questions from real estate agents",
+        "objections": [
+          {
+            "question": "Real estate is personal — clients want a real agent.",
+            "answer": "The agent's job is to capture the lead and book the meeting. The relationship starts with you. The agent just makes sure the lead doesn't go to someone else while you're unavailable."
+          },
+          {
+            "question": "What if the caller has complex questions about a property?",
+            "answer": "For standard questions it answers directly. For specifics it doesn't have, it collects the caller's details and schedules a callback from you."
+          },
+          {
+            "question": "I already use a CRM. Will this work with it?",
+            "answer": "We integrate with most real estate CRMs. Every call is logged with caller details and notes — ready in your system when you check."
+          }
+        ],
+        "roiTitle": "How much do you get back?",
+        "roiDescription": "With 18 calls per day and 35% missed, you're missing 6–7 potential leads daily. At €3,500 average commission, even one recovered deal per month more than pays for the entire year.",
+        "roiDefaults": { "callsPerDay": "18", "missedPercent": "35%", "avgValue": "€3500" },
+        "roiResult": "One recovered deal per month covers 12 months of Premium service.",
+        "pricingTitle": "Which plan fits you?",
+        "pricingDescription": "Real estate agencies typically choose Professional for CRM integration and detailed lead tracking.",
+        "demoTitle": "Hear what your agent sounds like",
+        "demoDescription": "Listen to a demo call simulating a property seller calling a real estate agency."
+      },
+      "service-auto": {
+        "name": "Auto Service",
+        "slug": "service-auto",
+        "shortDesc": "Repair bookings, breakdown emergencies, pricing information.",
+        "hero": "You're under a car, hands covered in oil. The phone rings. Whoever answers first wins.",
+        "scenarioIntro": "It's Monday morning. You have 3 cars on the lift. The phone rings 8 times.",
+        "description": "Auto service shops are loud, hands-on environments. You can't answer the phone from under a car. But clients who call about a breakdown or service need an answer now — or they call the next shop. Our agent captures every inquiry, books service appointments, and handles pricing questions while you focus on the work.",
+        "scenariosTitle": "Real scenarios your agent handles",
+        "scenarios": [
+          {
+            "title": "Client with a breakdown on the roadside",
+            "description": "The agent collects the location, vehicle details, and nature of the problem — books an emergency slot or arranges a tow, based on your service protocols."
+          },
+          {
+            "title": "Client calling for a service booking",
+            "description": "The agent checks availability, confirms the service type and vehicle, and books the appointment directly in your schedule."
+          },
+          {
+            "title": "Client asking for repair estimate",
+            "description": "The agent provides price ranges for common services, explains what's included, and suggests booking an inspection for a precise quote."
+          }
+        ],
+        "beforeTitle": "Without our agent",
+        "afterTitle": "With our agent",
+        "beforeAfter": [
+          {
+            "before": "Phone ignored while working on cars",
+            "after": "Every call answered, no job interrupted"
+          },
+          {
+            "before": "Breakdown clients calling the next shop",
+            "after": "Emergency captured and booked immediately"
+          },
+          {
+            "before": "Uneven schedule with empty slots",
+            "after": "Calendar filled automatically"
+          },
+          {
+            "before": "No one to answer pricing questions",
+            "after": "Instant pricing information, booking offer"
+          }
+        ],
+        "stats": [
+          { "value": "40", "label": "of calls missed on average", "suffix": "%" },
+          { "value": "320", "label": "average repair value", "suffix": "€" },
+          { "value": "10", "label": "calls per day on average", "suffix": "" },
+          { "value": "2", "label": "average payback time", "suffix": " months" }
+        ],
+        "featuresTitle": "What your auto service agent does",
+        "features": [
+          {
+            "title": "Service booking",
+            "description": "Books maintenance and repair appointments directly in your schedule."
+          },
+          {
+            "title": "Emergency handling",
+            "description": "Captures breakdown details and coordinates urgent responses per your protocols."
+          },
+          {
+            "title": "Pricing information",
+            "description": "Provides price ranges for common services — oil changes, tires, brakes, inspections."
+          },
+          {
+            "title": "Vehicle and service FAQs",
+            "description": "Answers common questions about your shop, services offered, and turnaround times."
+          }
+        ],
+        "objectionsTitle": "Questions from auto service owners",
+        "objections": [
+          {
+            "question": "Technical questions about cars are complex — can the agent handle them?",
+            "answer": "The agent handles booking and standard FAQs. For diagnostic questions, it collects the details and flags the call for a technician callback. It doesn't pretend to diagnose."
+          },
+          {
+            "question": "We have irregular hours and seasonal peaks. Can it adjust?",
+            "answer": "Yes. Your agent reflects your actual schedule and can be updated anytime. During peak season, it handles higher call volumes without any change in cost."
+          },
+          {
+            "question": "Is it worth it for a smaller shop?",
+            "answer": "If you're missing 4 calls a day at €320 average, that's over €1,200 in daily potential revenue walking out. The Starter plan costs €299/month."
+          }
+        ],
+        "roiTitle": "How much do you get back?",
+        "roiDescription": "With 10 calls per day and 40% missed, you're losing 4 potential bookings daily. At €320 average repair value, that's €1,280 per day in unrealized revenue.",
+        "roiDefaults": { "callsPerDay": "10", "missedPercent": "40%", "avgValue": "€320" },
+        "roiResult": "Recovering just 1 repair booking per day covers the monthly plan cost many times over.",
+        "pricingTitle": "Which plan fits you?",
+        "pricingDescription": "Most auto service shops start with Starter or Professional depending on call volume.",
+        "demoTitle": "Hear what your agent sounds like",
+        "demoDescription": "Listen to a demo call simulating a client booking a car service appointment."
+      },
+      "frizerii-barbershop": {
+        "name": "Barbershops",
+        "slug": "frizerii-barbershop",
+        "shortDesc": "Quick bookings, automatic rebooking, reminders.",
+        "hero": "A client calls to book. You're cutting someone's hair. The phone rings out.",
+        "scenarioIntro": "It's Friday at 5 PM. Everyone wants a weekend appointment. You've got scissors in hand.",
+        "description": "Barbershops run on bookings. Miss a call and that client books somewhere else — or just walks in somewhere else. Our agent handles all booking calls while you focus on the cut. It books, reschedules, and reminds clients so your calendar stays full and your chair stays busy.",
+        "scenariosTitle": "Real scenarios your agent handles",
+        "scenarios": [
+          {
+            "title": "Client calling to book for the weekend",
+            "description": "The agent checks availability, confirms the barber preference, books the slot, and sends a confirmation."
+          },
+          {
+            "title": "Regular client wants the same time next week",
+            "description": "The agent books the recurring slot, confirms it, and sets up an automatic reminder for the day before."
+          },
+          {
+            "title": "New client asking about services and prices",
+            "description": "The agent explains services — cuts, beard, color — gives pricing, and offers to book a first appointment."
+          }
+        ],
+        "beforeTitle": "Without our agent",
+        "afterTitle": "With our agent",
+        "beforeAfter": [
+          {
+            "before": "Calls missed mid-cut",
+            "after": "Every call answered without stopping"
+          },
+          {
+            "before": "Friday and Saturday slots unfilled",
+            "after": "Peak slots booked in advance"
+          },
+          {
+            "before": "No-shows with no notice",
+            "after": "Automatic reminders reduce no-shows"
+          },
+          {
+            "before": "Regular clients going elsewhere when you don't answer",
+            "after": "Regulars automatically rebooked"
+          }
+        ],
+        "stats": [
+          { "value": "50", "label": "of calls missed on average", "suffix": "%" },
+          { "value": "45", "label": "average service value", "suffix": "€" },
+          { "value": "8", "label": "calls per day on average", "suffix": "" },
+          { "value": "1", "label": "average payback time", "suffix": " month" }
+        ],
+        "featuresTitle": "What your barbershop agent does",
+        "features": [
+          {
+            "title": "Instant booking",
+            "description": "Clients book in under a minute — while you're still cutting."
+          },
+          {
+            "title": "Barber preference",
+            "description": "Asks which barber they prefer and books with the right person."
+          },
+          {
+            "title": "Rebooking regulars",
+            "description": "Automatically suggests the next appointment when a booking is confirmed."
+          },
+          {
+            "title": "Reminders",
+            "description": "SMS the day before to cut no-shows and last-minute cancellations."
+          }
+        ],
+        "objectionsTitle": "Questions from barbershop owners",
+        "objections": [
+          {
+            "question": "My clients are used to calling me directly. Will they accept this?",
+            "answer": "The agent sounds natural and gets the job done fast. Most clients just want to confirm a slot. Once they book easily the first time, they stop caring who answered."
+          },
+          {
+            "question": "I only have one barber. Is this overkill?",
+            "answer": "Single-chair shops actually benefit most — you're always cutting and never free to answer. The agent pays for itself with just 7–8 extra bookings per month."
+          },
+          {
+            "question": "What if I'm fully booked?",
+            "answer": "The agent tells callers you're fully booked, offers the next available slot, and asks if they want to be added to a waiting list."
+          }
+        ],
+        "roiTitle": "How much do you get back?",
+        "roiDescription": "With 8 calls per day and 50% missed, you're losing 4 bookings daily. At €45 average, that's €180 per day — or roughly €3,600 per month in unrealized revenue.",
+        "roiDefaults": { "callsPerDay": "8", "missedPercent": "50%", "avgValue": "€45" },
+        "roiResult": "Recovering just 7 bookings per month covers the entire Starter plan cost.",
+        "pricingTitle": "Which plan fits you?",
+        "pricingDescription": "Barbershops almost always start with Starter — it covers all you need at the lowest price.",
+        "demoTitle": "Hear what your agent sounds like",
+        "demoDescription": "Listen to a demo call simulating a client booking a haircut at a barbershop."
+      },
+      "hoteluri-hospitality": {
+        "name": "Hotels & Hospitality",
+        "slug": "hoteluri-hospitality",
+        "shortDesc": "Reservations, confirmations, FAQs, night calls.",
+        "hero": "A guest calls at 2 AM asking about check-in. The front desk is busy.",
+        "scenarioIntro": "It's 2 AM. A foreign tourist calls to confirm their reservation. The front desk is with another guest.",
+        "description": "Hospitality runs on first impressions. A guest who can't reach you at 2 AM starts their stay frustrated. Our agent handles reservations, check-in questions, FAQ, and after-hours calls — in Romanian and English — so every guest interaction starts on the right foot.",
+        "scenariosTitle": "Real scenarios your agent handles",
+        "scenarios": [
+          {
+            "title": "Late-night reservation inquiry",
+            "description": "The agent provides room availability, prices, and amenities, and offers to complete the booking or transfer to an online form."
+          },
+          {
+            "title": "Check-in question from a guest arriving late",
+            "description": "The agent confirms the reservation, explains late check-in procedures, and provides access instructions — all without waking the night manager."
+          },
+          {
+            "title": "Guest calling about hotel facilities",
+            "description": "The agent answers questions about breakfast hours, parking, pool, Wi-Fi, and nearby attractions — the questions every front desk answers 20 times a day."
+          }
+        ],
+        "beforeTitle": "Without our agent",
+        "afterTitle": "With our agent",
+        "beforeAfter": [
+          {
+            "before": "Calls missed when front desk is occupied",
+            "after": "Every call answered, even at peak times"
+          },
+          {
+            "before": "International guests unable to reach the hotel",
+            "after": "English and Romanian support 24/7"
+          },
+          {
+            "before": "Booking inquiries lost after hours",
+            "after": "Reservations captured around the clock"
+          },
+          {
+            "before": "Staff interrupted by repetitive FAQ calls",
+            "after": "Routine questions handled automatically"
+          }
+        ],
+        "stats": [
+          { "value": "30", "label": "of calls missed on average", "suffix": "%" },
+          { "value": "180", "label": "average nightly room value", "suffix": "€" },
+          { "value": "25", "label": "calls per day on average", "suffix": "" },
+          { "value": "1", "label": "average payback time", "suffix": " month" }
+        ],
+        "featuresTitle": "What your hotel agent does",
+        "features": [
+          {
+            "title": "Reservation handling",
+            "description": "Takes reservation inquiries, provides availability and pricing, and directs to booking completion."
+          },
+          {
+            "title": "Multilingual support",
+            "description": "Handles calls in Romanian and English — switches automatically based on the caller."
+          },
+          {
+            "title": "Guest FAQ",
+            "description": "Answers the 20 most common guest questions — check-in time, parking, breakfast, facilities."
+          },
+          {
+            "title": "After-hours support",
+            "description": "Covers the desk overnight and during peak periods so guests always reach someone."
+          }
+        ],
+        "objectionsTitle": "Questions from hotel managers",
+        "objections": [
+          {
+            "question": "We already have a booking system online. Why do we need this?",
+            "answer": "Many guests prefer calling, especially international visitors or older guests. The agent captures those calls and directs them to complete the booking — rather than just losing them."
+          },
+          {
+            "question": "What about complex reservation requests?",
+            "answer": "Standard reservations are handled directly. Special requests — group bookings, events, dietary needs — are noted and flagged for your team to follow up."
+          },
+          {
+            "question": "Can it handle both Romanian and English guests?",
+            "answer": "Yes. The agent detects the caller's language and responds accordingly. Romanian first, English if needed."
+          }
+        ],
+        "roiTitle": "How much do you get back?",
+        "roiDescription": "With 25 calls per day and 30% missed, you're losing 7–8 potential booking inquiries daily. At €180 average nightly rate, even recovering 1–2 bookings per day pays for the agent many times over.",
+        "roiDefaults": { "callsPerDay": "25", "missedPercent": "30%", "avgValue": "€180" },
+        "roiResult": "Two recovered bookings per day covers the entire monthly plan cost.",
+        "pricingTitle": "Which plan fits you?",
+        "pricingDescription": "Hotels typically choose Professional or Premium for multilingual support, CRM integration, and detailed reporting.",
+        "demoTitle": "Hear what your agent sounds like",
+        "demoDescription": "Listen to a demo call simulating a hotel guest calling to confirm a reservation late at night."
+      },
+      "consultanti-imigrare": {
+        "name": "Immigration Consultants",
+        "slug": "consultanti-imigrare",
+        "shortDesc": "Visa information, consultation booking, document triage.",
+        "hero": "A client calls asking about visas. You're in a consultation. Lost.",
+        "scenarioIntro": "It's Wednesday at 2 PM. You're in a consultation with a client. The phone rings 6 times with visa questions.",
+        "description": "Immigration clients are often stressed, confused, and on tight deadlines. When they call you and get no answer, they don't wait — they call the next consultant. Our agent handles visa inquiries, collects case details, and books consultations so you capture every lead while you're working with other clients.",
+        "scenariosTitle": "Real scenarios your agent handles",
+        "scenarios": [
+          {
+            "title": "Client asking about visa requirements",
+            "description": "The agent explains general visa types and requirements for common destinations, provides an overview of your services, and books a consultation for specific advice."
+          },
+          {
+            "title": "Urgent call about a visa deadline",
+            "description": "The agent captures the urgency, collects key details, and books the earliest available consultation — flagging it as priority."
+          },
+          {
+            "title": "Client asking about required documents",
+            "description": "The agent explains the standard document checklist for common case types and schedules a consultation for a complete document review."
+          }
+        ],
+        "beforeTitle": "Without our agent",
+        "afterTitle": "With our agent",
+        "beforeAfter": [
+          {
+            "before": "Calls missed during client consultations",
+            "after": "Every inquiry captured, every time"
+          },
+          {
+            "before": "Stressed clients going to other consultants",
+            "after": "Client reassured and booked before hanging up"
+          },
+          {
+            "before": "Repetitive visa FAQ calls taking your time",
+            "after": "FAQ handled automatically"
+          },
+          {
+            "before": "No after-hours coverage for urgent cases",
+            "after": "24/7 availability for urgent visa deadlines"
+          }
+        ],
+        "stats": [
+          { "value": "35", "label": "of calls missed on average", "suffix": "%" },
+          { "value": "800", "label": "average case value", "suffix": "€" },
+          { "value": "10", "label": "calls per day on average", "suffix": "" },
+          { "value": "1", "label": "recovered case pays for months of service", "suffix": "" }
+        ],
+        "featuresTitle": "What your immigration consultant agent does",
+        "features": [
+          {
+            "title": "Visa information FAQ",
+            "description": "Answers general questions about visa types, requirements, and timelines for common destinations."
+          },
+          {
+            "title": "Consultation booking",
+            "description": "Books initial and follow-up consultations directly in your calendar."
+          },
+          {
+            "title": "Document checklist info",
+            "description": "Explains standard document requirements for common case types."
+          },
+          {
+            "title": "Urgency triage",
+            "description": "Identifies deadline-sensitive cases and prioritizes them in your schedule."
+          }
+        ],
+        "objectionsTitle": "Questions from immigration consultants",
+        "objections": [
+          {
+            "question": "Immigration law changes frequently. How does the agent stay current?",
+            "answer": "The agent is trained on the information you provide and updated whenever you need. It stays within scope — general guidance and booking. It never gives legal opinions."
+          },
+          {
+            "question": "Clients need reassurance. Can an AI provide that?",
+            "answer": "The agent is warm, calm, and professional. It acknowledges concerns, provides clear information, and books a real consultation with you. That combination is reassuring."
+          },
+          {
+            "question": "What if the caller speaks a language I don't support?",
+            "answer": "The agent handles Romanian and English natively. For other languages, it politely explains the languages available and offers to book a consultation with a translator."
+          }
+        ],
+        "roiTitle": "How much do you get back?",
+        "roiDescription": "With 10 calls per day and 35% missed, you're losing 3–4 potential clients daily. At €800 average case value, one recovered case per week pays for the agent for months.",
+        "roiDefaults": { "callsPerDay": "10", "missedPercent": "35%", "avgValue": "€800" },
+        "roiResult": "One recovered case per week covers the full annual Professional plan cost.",
+        "pricingTitle": "Which plan fits you?",
+        "pricingDescription": "Immigration consultants typically start with Professional for calendar integration and call recordings.",
+        "demoTitle": "Hear what your agent sounds like",
+        "demoDescription": "Listen to a demo call simulating a client calling an immigration consultant with urgent visa questions."
+      },
+      "notariate": {
+        "name": "Notary Offices",
+        "slug": "notariate",
+        "shortDesc": "Document appointments, document reminders, procedure information.",
+        "hero": "A client calls for a notarial deed. You're busy. The phone rings 4 times. No one answers.",
+        "scenarioIntro": "It's Thursday at 11 AM. You have 3 consecutive authentications. The phone rings between them.",
+        "description": "Notary offices handle time-sensitive documents where clients have strict deadlines — property transactions, inheritance, contracts. When they can't reach you, they go to another notary. Our agent books appointments, explains document requirements, and handles procedure questions — so clients choose you and stay organized.",
+        "scenariosTitle": "Real scenarios your agent handles",
+        "scenarios": [
+          {
+            "title": "Client calling to book a property deed",
+            "description": "The agent explains what documents are required, checks your availability, and books the appointment — sending a confirmation with the document checklist."
+          },
+          {
+            "title": "Client asking about inheritance procedure",
+            "description": "The agent explains the general process and required documents for an inheritance case, and books an initial consultation."
+          },
+          {
+            "title": "Client confirming their appointment details",
+            "description": "The agent confirms the date, time, and document requirements — reducing the chance of clients arriving unprepared."
+          }
+        ],
+        "beforeTitle": "Without our agent",
+        "afterTitle": "With our agent",
+        "beforeAfter": [
+          {
+            "before": "Calls missed between authentications",
+            "after": "Every call answered between sessions"
+          },
+          {
+            "before": "Clients with deadlines going to another notary",
+            "after": "Deadline captured, appointment booked immediately"
+          },
+          {
+            "before": "Clients arriving without required documents",
+            "after": "Automatic document checklist sent at booking"
+          },
+          {
+            "before": "Repetitive procedure questions taking staff time",
+            "after": "Standard FAQs handled automatically"
+          }
+        ],
+        "stats": [
+          { "value": "35", "label": "of calls missed on average", "suffix": "%" },
+          { "value": "280", "label": "average deed value", "suffix": "€" },
+          { "value": "12", "label": "calls per day on average", "suffix": "" },
+          { "value": "2", "label": "average payback time", "suffix": " months" }
+        ],
+        "featuresTitle": "What your notary agent does",
+        "features": [
+          {
+            "title": "Appointment booking",
+            "description": "Books all notarial services directly in your schedule — deeds, authentications, inheritance, contracts."
+          },
+          {
+            "title": "Document requirements",
+            "description": "Explains what documents clients need to bring for each type of notarial act."
+          },
+          {
+            "title": "Procedure information",
+            "description": "Answers common questions about notarial procedures, timelines, and fees."
+          },
+          {
+            "title": "Appointment confirmations",
+            "description": "Sends clients confirmation with document checklist to ensure they arrive prepared."
+          }
+        ],
+        "objectionsTitle": "Questions from notaries",
+        "objections": [
+          {
+            "question": "Notarial matters require precision. Can an AI be trusted?",
+            "answer": "The agent handles scheduling and information, not legal acts. It's precise about what it says and what it doesn't. For anything requiring notarial judgment, it books a consultation with you."
+          },
+          {
+            "question": "What if a client has a complex case with many documents?",
+            "answer": "The agent collects the case type and details, provides the standard checklist, and flags complex cases for you to follow up with specific requirements."
+          },
+          {
+            "question": "We have strict hours. Can the agent work within them?",
+            "answer": "The agent books within your defined working hours. For after-hours calls, it explains your hours, takes a message, and ensures you follow up the next morning."
+          }
+        ],
+        "roiTitle": "How much do you get back?",
+        "roiDescription": "With 12 calls per day and 35% missed, you're losing 4 potential clients daily. At €280 average deed value, that's over €1,000 per day in missed revenue.",
+        "roiDefaults": { "callsPerDay": "12", "missedPercent": "35%", "avgValue": "€280" },
+        "roiResult": "Recovering 3 extra bookings per day covers the monthly plan cost many times over.",
+        "pricingTitle": "Which plan fits you?",
+        "pricingDescription": "Notary offices typically start with Starter or Professional depending on volume and integration needs.",
+        "demoTitle": "Hear what your agent sounds like",
+        "demoDescription": "Listen to a demo call simulating a client booking a property deed appointment at a notary office."
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles on how to stop losing clients over the phone."
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "subtitle": "Real results from businesses like yours.",
+    "comingSoon": "Case studies are being prepared. Check back soon."
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you're looking for doesn't exist.",
+    "backHome": "Back to Home"
+  }
+}
