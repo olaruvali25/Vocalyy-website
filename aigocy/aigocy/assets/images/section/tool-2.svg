@@ -1,0 +1,17 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="80" height="80" rx="8" fill="#F5F5F5"/>
+  <rect width="80" height="80" rx="8" fill="url(#paint0_radial_2399_1064)" fill-opacity="0.2"/>
+
+  <!-- Centered icon -->
+  <g transform="translate(12 12) scale(0.2916667)">
+    <path d="M30 54C30 40.7452 40.7452 30 54 30H138C151.255 30 162 40.7452 162 54V138C162 151.255 151.255 162 138 162H30V54Z" stroke="#000000" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M54 96H138M54 120H114M54 72H90" stroke="#000000" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <defs>
+    <radialGradient id="paint0_radial_2399_1064" cx="0" cy="0" r="1" gradientTransform="matrix(50.0503 43.3333 -2.52115 50.0503 22.5126 -8.33333)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

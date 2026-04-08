@@ -1,0 +1,19 @@
+<svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="104" height="104" rx="8" fill="#F5F5F5"/>
+  <rect width="104" height="104" rx="8" fill="url(#paint0_radial_2399_1061)" fill-opacity="0.2"/>
+
+  <!-- Centered chart icon -->
+  <g transform="translate(26 26) scale(2.2)">
+    <line x1="2" y1="20" x2="22" y2="20" stroke="#d00b0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5 20V8.2C5 8.08954 5.08954 8 5.2 8H7.8C7.91046 8 8 8.08954 8 8.2V20" stroke="#d00b0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M11 20V4.26667C11 4.11939 11.08954 4 11.2 4H13.8C13.91046 4 14 4.11939 14 4.26667V20" stroke="#d00b0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M17 20V11.15C17 11.06716 17.08954 11 17.2 11H19.8C19.91046 11 20 11.06716 20 11.15V20" stroke="#d00b0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <defs>
+    <radialGradient id="paint0_radial_2399_1061" cx="0" cy="0" r="1" gradientTransform="matrix(65.0653 56.3333 -3.27749 65.0653 29.2663 -10.8333)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

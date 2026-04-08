@@ -1,3 +1,6 @@
 {
-  "framework": "nextjs"
+  "buildCommand": "echo done",
+  "installCommand": "echo done",
+  "framework": null,
+  "outputDirectory": "aigocy/aigocy"
 }

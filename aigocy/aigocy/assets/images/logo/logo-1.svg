@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="208" height="160" viewBox="0 0 208 160" fill="none">
+  <rect width="208" height="160" rx="32" fill="url(#bgLinear)" />
+  <rect width="208" height="160" rx="32" fill="url(#bgRadial)" fill-opacity="0.2" />
+
+  <g transform="translate(104 80) scale(1.6) translate(-30 -32)" stroke="black" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="30" cy="6" r="3" fill="white" />
+    <rect x="29" y="8" width="2" height="8" rx="1" fill="white" />
+
+    <rect x="4" y="28" width="6" height="20" rx="3" fill="white" />
+    <rect x="50" y="28" width="6" height="20" rx="3" fill="white" />
+
+    <rect x="10" y="18" width="40" height="34" rx="10" fill="white" />
+
+    <path d="M22 34 Q25 32 28 34" fill="none" />
+    <path d="M32 34 Q35 32 38 34" fill="none" />
+    <path d="M26 41 Q30 44 34 41" fill="none" />
+
+    <path d="M50 46 Q56 46 56 52" fill="none" />
+    <circle cx="56" cy="54" r="2.5" fill="white" />
+  </g>
+
+  <defs>
+    <linearGradient id="bgLinear" x1="0" y1="0" x2="0" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EA2B16" />
+      <stop offset="1" stop-color="#FF3B26" />
+    </linearGradient>
+
+    <radialGradient id="bgRadial" cx="0" cy="0" r="1" gradientTransform="translate(60 -10) rotate(35) scale(140 110)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" />
+      <stop offset="1" stop-color="white" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+</svg>

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Activare și Plată | Vocalyy</title>
+    <meta name="author" content="Vocalyy">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="noindex">
+
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/icon/icomoon/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick.theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg">
+    <link rel="apple-touch-icon-precomposed" href="assets/images/logo/favicon.svg">
+
+    <style>
+        /* === Payment Page === */
+        .payment-page { padding: 60px 0 100px; }
+
+        /* Card shared styles */
+        .pay-card {
+            background: var(--neutral-100);
+            border-radius: 28px;
+            padding: 40px 36px;
+            box-shadow: 0px 7.77px 16px 0px rgba(0,0,0,0.06),
+                        0px 3px 3px 0px rgba(0,0,0,0.10),
+                        0px -8px 0px 0px rgba(0,0,0,0.05) inset,
+                        0px 4px 0px 0px rgba(255,255,255,0.6) inset;
+        }
+
+        /* Order Summary */
+        .order-card-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        .order-package-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 14px;
+            padding: 8px 18px;
+            border-radius: 99px;
+            margin-bottom: 24px;
+        }
+        .order-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--neutral-200);
+            font-size: 15px;
+        }
+        .order-row:last-child { border-bottom: none; }
+        .order-row .label { color: var(--secondary); font-weight: 500; }
+        .order-row .value { color: var(--primary); font-weight: 700; }
+        .order-row .value.price {
+            font-size: 22px;
+            letter-spacing: -0.02em;
+        }
+        .order-divider {
+            height: 1px;
+            background: var(--neutral-200);
+            margin: 8px 0;
+        }
+        .order-total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0 0;
+        }
+        .order-total-row .label { font-size: 14px; font-weight: 700; color: var(--primary); }
+        .order-total-row .total-price {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.03em;
+        }
+
+        /* Includes list */
+        .order-includes {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--neutral-200);
+        }
+        .order-includes-title {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+        .order-includes ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .order-includes li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        .order-includes li i { color: #22c55e; font-size: 14px; }
+
+        /* Payment Form */
+        .pay-form-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .pay-form-desc {
+            color: var(--secondary);
+            font-size: 14px;
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .pay-card input[type="text"],
+        .pay-card input[type="email"] {
+            width: 100%;
+            padding: 13px 18px;
+            border-radius: 12px;
+            border: 1.5px solid var(--neutral-200);
+            background: #fff;
+            font-size: 15px;
+            color: var(--primary);
+            outline: none;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        .pay-card input::placeholder { color: var(--neutral-400); }
+        .pay-card input:focus { border-color: var(--primary); }
+
+        /* Stripe placeholder */
+        .stripe-placeholder {
+            border: 1.5px dashed var(--neutral-300);
+            border-radius: 12px;
+            padding: 24px 18px;
+            background: #fafafa;
+            text-align: center;
+        }
+        .stripe-placeholder .stripe-icon {
+            font-size: 28px;
+            color: var(--neutral-400);
+            margin-bottom: 10px;
+        }
+        .stripe-placeholder p {
+            font-size: 14px;
+            color: var(--secondary);
+            margin: 0;
+            font-weight: 500;
+        }
+        .stripe-placeholder .stripe-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #635BFF;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 99px;
+            margin-top: 10px;
+            letter-spacing: 0.04em;
+        }
+
+        /* Submit button */
+        .pay-submit-btn {
+            width: 100%;
+            justify-content: center;
+            font-size: 17px;
+            padding: 17px 24px;
+            margin-top: 8px;
+        }
+
+        /* Security badges */
+        .security-badges {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .security-badge {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        .security-badge i {
+            font-size: 16px;
+            color: #22c55e;
+        }
+
+        /* Success message */
+        .success-msg {
+            display: none;
+            text-align: center;
+            padding: 48px 24px;
+        }
+        .success-msg .success-icon-big {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: #dcfce7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        }
+        .success-msg .success-icon-big i { font-size: 44px; color: #16a34a; }
+        .success-msg h3 {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+        .success-msg p {
+            color: var(--secondary);
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 420px;
+            margin: 0 auto 28px;
+        }
+        @keyframes popIn {
+            0%   { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1);   opacity: 1; }
+        }
+
+        @media (max-width: 991px) {
+            .order-col { margin-bottom: 28px; }
+        }
+        @media (max-width: 767px) {
+            .pay-card { padding: 28px 20px; border-radius: 20px; }
+            .security-badges { gap: 14px; }
+        }
+    </style>
+</head>
+
+<body class="">
+    <canvas class="cursor-trail" id="trail" style="display: none;"></canvas>
+    <button id="goTop">
+        <span class="border-progress"></span>
+        <span class="ic-wrap"><span class="icon icon-long-arrow-alt-up-solid"></span></span>
+    </button>
+
+    <main id="wrapper">
+
+        <!-- Header -->
+        <header class="tf-header header2">
+            <div class="header-inner">
+                <a href="index.html" class="logo-site">
+                    <img src="assets/images/logo/logo.svg" alt="Vocalyy">
+                </a>
+                <div class="box-navigation">
+                    <ul class="nav-menu-main">
+                        <li class="menu-item"><a href="about.html" class="item-link link1">Despre Noi</a></li>
+                        <li class="menu-item"><a href="service-single.html" class="item-link link1">Servicii</a></li>
+                        <li class="menu-item"><a href="work.html" class="item-link link1">Industrii</a></li>
+                        <li class="menu-item"><a href="pricing.html" class="item-link link1">Prețuri</a></li>
+                        <li class="menu-item"><a href="blog-three-columns.html" class="item-link link1">Blog</a></li>
+                        <li class="menu-item"><a href="contact.html" class="item-link link1">Contact</a></li>
+                    </ul>
+                </div>
+                <a href="try-agent.html" class="tf-btn d-lg-flex d-none">Solicită Demo</a>
+                <a href="#" class="tf-btn open-mb-menu mobile-menu d-lg-none d-flex">
+                    <i class="icon icon-grip-lines-solid"></i>
+                </a>
+            </div>
+        </header>
+        <!-- /Header -->
+
+        <!-- page-title -->
+        <div class="section-page-title">
+            <div class="container text-center">
+                <h1 class="page-title fw-semibold effectFade fadeZoom">Activare și Plată</h1>
+                <div class="breadcrumbs effectFade fadeUp">
+                    <a href="index.html" class="link1">Acasă</a>
+                    <div>/</div>
+                    <a href="pricing.html" class="link1">Prețuri</a>
+                    <div>/</div>
+                    <span>Plată</span>
+                </div>
+            </div>
+        </div>
+        <!-- /page-title -->
+
+        <!-- Main Content -->
+        <div class="payment-page">
+            <div class="container">
+                <div class="row">
+
+                    <!-- LEFT: Order Summary -->
+                    <div class="col-lg-4 order-col">
+                        <div class="pay-card effectFade fadeUp" style="position: sticky; top: 100px;">
+                            <div class="order-card-title">Rezumat comandă</div>
+
+                            <div class="order-package-badge" id="order-package-badge">
+                                <i class="icon icon-bolt-solid fs-14"></i>
+                                <span id="order-package">Professional</span>
+                            </div>
+
+                            <div class="order-row">
+                                <span class="label">Afacere</span>
+                                <span class="value" id="order-business">—</span>
+                            </div>
+                            <div class="order-row">
+                                <span class="label">Plan</span>
+                                <span class="value" id="order-plan">Professional</span>
+                            </div>
+                            <div class="order-row">
+                                <span class="label">Facturare</span>
+                                <span class="value">Lunar</span>
+                            </div>
+                            <div class="order-divider"></div>
+                            <div class="order-total-row">
+                                <span class="label">Total / lună</span>
+                                <span class="total-price" id="order-price">€449</span>
+                            </div>
+
+                            <div class="order-includes">
+                                <div class="order-includes-title">Inclus în pachet</div>
+                                <ul id="order-includes-list">
+                                    <!-- populated by JS -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: Payment Form -->
+                    <div class="col-lg-8">
+                        <div class="pay-card effectFade fadeUp" data-delay="0.1">
+
+                            <!-- Form view -->
+                            <div id="payment-form-wrap">
+                                <div class="pay-form-title">Finalizează activarea</div>
+                                <div class="pay-form-desc">
+                                    Completează datele de mai jos. Echipa noastră te va contacta în maxim 24 de ore pentru activarea agentului.
+                                </div>
+
+                                <form id="payment-form" novalidate>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label" for="full-name">Nume complet *</label>
+                                                <input type="text" id="full-name" placeholder="ex. Ion Popescu" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label" for="email">Adresă de email *</label>
+                                                <input type="email" id="email" placeholder="ex. ion@afacere.ro" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Stripe placeholder -->
+                                    <div class="form-group">
+                                        <label class="form-label">Date card de plată</label>
+                                        <div class="stripe-placeholder">
+                                            <div class="stripe-icon">🔒</div>
+                                            <p>Plată securizată prin Stripe — disponibil în curând</p>
+                                            <span class="stripe-badge">STRIPE</span>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="tf-btn pay-submit-btn animate-btn">
+                                        Finalizează Comanda
+                                        <i class="icon icon-long-arrow-alt-right-solid"></i>
+                                    </button>
+
+                                </form>
+
+                                <!-- Security badges -->
+                                <div class="security-badges">
+                                    <div class="security-badge">
+                                        <i class="icon icon-lock-solid"></i>
+                                        Plată securizată SSL
+                                    </div>
+                                    <div class="security-badge">
+                                        <i class="icon icon-shield-alt-solid"></i>
+                                        GDPR Compliant
+                                    </div>
+                                    <div class="security-badge">
+                                        <i class="icon icon-times-circle-solid"></i>
+                                        Anulează oricând
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Success message (shown after submit) -->
+                            <div class="success-msg" id="payment-success">
+                                <div class="success-icon-big">
+                                    <i class="icon icon-check-solid"></i>
+                                </div>
+                                <h3>Cerere înregistrată!</h3>
+                                <p>
+                                    Cererea ta a fost înregistrată cu succes.<br>
+                                    Te vom contacta în maxim 24 de ore pentru activarea agentului tău.
+                                </p>
+                                <a href="index.html" class="tf-btn animate-btn">
+                                    Înapoi la pagina principală
+                                    <i class="icon icon-long-arrow-alt-right-solid"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /Main Content -->
+
+        <!-- footer -->
+        <footer>
+            <div class="footer-image">
+                <img class="effectFade fadeUp" src="assets/images/logo/logo-footer.png" alt="">
+            </div>
+            <div class="container">
+                <div class="footer-content">
+                    <a href="index.html" class="footer-logo"><img src="assets/images/logo/logo-2.svg" alt=""></a>
+                </div>
+                <div class="footer-bottom">
+                    <ul class="footer-links d-flex gap-24 align-items-center">
+                        <li><a href="about.html" class="fw-semibold link-underline link1">Despre Noi</a></li>
+                        <li><a href="service-single.html" class="fw-semibold link-underline link1">Servicii</a></li>
+                        <li><a href="work.html" class="fw-semibold link-underline link1">Industrii</a></li>
+                        <li><a href="pricing.html" class="fw-semibold link-underline link1">Prețuri</a></li>
+                        <li><a href="contact.html" class="fw-semibold link-underline link1">Contact</a></li>
+                    </ul>
+                    <p class="text-secondary coppy-rights text-center">© 2026 Vocalyy. Toate drepturile rezervate.</p>
+                    <a href="#" class="action-go-top d-flex gap-8 align-items-center justify-content-end link1">
+                        <span class="fw-semibold">Înapoi sus</span>
+                        <i class="icon icon-long-arrow-alt-up-solid fs-20"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- /footer -->
+
+    </main>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas-menu">
+        <div class="offcanvas-content">
+            <div class="container h-100">
+                <div class="offcanvas-content_wrapin">
+                    <div class="canvas_head">
+                        <a href="index.html" class="logo-site"><i class="icon icon-davies-logo"></i></a>
+                        <div class="btn-mobile-menu close-mb-menu text-caption link"><i class="icon icon-close"></i> CLOSE</div>
+                    </div>
+                    <div class="canvas_center">
+                        <ul class="nav-ul-mb" id="mobile-menu">
+                            <li><div class="item"><a href="about.html" class="mb-menu-link text-display-1"><span class="text">Despre Noi</span></a></div></li>
+                            <li><div class="item"><a href="service-single.html" class="mb-menu-link text-display-1"><span class="text">Servicii</span></a></div></li>
+                            <li><div class="item"><a href="work.html" class="mb-menu-link text-display-1"><span class="text">Industrii</span></a></div></li>
+                            <li><div class="item"><a href="pricing.html" class="mb-menu-link text-display-1"><span class="text">Prețuri</span></a></div></li>
+                            <li><div class="item"><a href="blog-three-columns.html" class="mb-menu-link text-display-1"><span class="text">Blog</span></a></div></li>
+                            <li><div class="item"><a href="contact.html" class="mb-menu-link text-display-1"><span class="text">Contact</span></a></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/countto.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/infinityslide.js"></script>
+    <script src="assets/js/ScrollSmooth.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/gsapAnimation.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+    (function () {
+        var params       = new URLSearchParams(window.location.search);
+        var business     = params.get('business') || '—';
+        var packageParam = (params.get('package') || 'professional').toLowerCase();
+
+        var packageData = {
+            starter: {
+                name: 'Starter',
+                price: '€299',
+                includes: [
+                    '1.000 minute inbound / lună',
+                    '3 apeluri simultane',
+                    'Agent vocal 24/7 în română',
+                    'Notificări WhatsApp după apel',
+                    'Raport lunar de activitate',
+                    'Support email'
+                ]
+            },
+            professional: {
+                name: 'Professional',
+                price: '€449',
+                includes: [
+                    '2.500 minute inbound / lună',
+                    '7 apeluri simultane',
+                    'Google Calendar / Calendly',
+                    '50 apeluri outbound / lună',
+                    'Integrare CRM de bază',
+                    'Support prioritar 4h'
+                ]
+            },
+            premium: {
+                name: 'Premium',
+                price: '€749',
+                includes: [
+                    'Minute inbound nelimitate',
+                    '12 apeluri simultane',
+                    '500 apeluri outbound / lună',
+                    'Integrare CRM avansat + API',
+                    'Dashboard live statistici',
+                    'Manager de cont dedicat'
+                ]
+            }
+        };
+
+        var pkg = packageData[packageParam] || packageData.professional;
+
+        document.getElementById('order-business').textContent = business;
+        document.getElementById('order-package').textContent  = pkg.name;
+        document.getElementById('order-plan').textContent     = pkg.name;
+        document.getElementById('order-price').textContent    = pkg.price;
+
+        var listEl = document.getElementById('order-includes-list');
+        pkg.includes.forEach(function (item) {
+            var li = document.createElement('li');
+            li.innerHTML = '<i class="icon icon-check-solid"></i>' + item;
+            listEl.appendChild(li);
+        });
+
+        /* Form submit */
+        document.getElementById('payment-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var name  = document.getElementById('full-name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            if (!name || !email) { return; }
+            document.getElementById('payment-form-wrap').style.display = 'none';
+            document.getElementById('payment-success').style.display   = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Încearcă Agentul | Vocalyy – Demo Gratuit Agent Vocal AI</title>
+    <meta name="author" content="Vocalyy">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Ascultă cum sună agentul tău vocal AI — completează câteva detalii și primești un demo gratuit, fără card de credit.">
+    <link rel="canonical" href="try-agent.html">
+
+    <!-- font -->
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/icon/icomoon/style.css">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick.theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg">
+    <link rel="apple-touch-icon-precomposed" href="assets/images/logo/favicon.svg">
+
+    <style>
+        /* === Try Agent Page === */
+        .try-agent-page {
+            min-height: 70vh;
+            padding: 80px 0 100px;
+        }
+
+        /* --- Step containers --- */
+        #step-form,
+        #step-loading,
+        #step-result {
+            display: none;
+        }
+        #step-form { display: block; }
+
+        /* --- Form card --- */
+        .demo-form-card {
+            background: var(--neutral-100);
+            border-radius: 32px;
+            padding: 56px 48px;
+            box-shadow: 0px 7.77px 16px 0px rgba(0,0,0,0.06),
+                        0px 3px 3px 0px rgba(0,0,0,0.10),
+                        0px -8px 0px 0px rgba(0,0,0,0.05) inset,
+                        0px 4px 0px 0px rgba(255,255,255,0.6) inset;
+        }
+        .demo-form-card .form-label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .demo-form-card .form-label span {
+            color: #ef4444;
+        }
+        .demo-form-card input,
+        .demo-form-card select {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 12px;
+            border: 1.5px solid var(--neutral-200);
+            background: #fff;
+            font-size: 15px;
+            color: var(--primary);
+            outline: none;
+            transition: border-color 0.2s;
+            appearance: none;
+            -webkit-appearance: none;
+            box-sizing: border-box;
+        }
+        .demo-form-card select {
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6' stroke='%2371717A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-color: #fff;
+            padding-right: 44px;
+            cursor: pointer;
+            font-family: inherit;
+            color: var(--primary);
+        }
+        .demo-form-card select option {
+            background: #fff;
+            color: var(--primary);
+            padding: 10px;
+        }
+        /* Nice-select overrides — keep dropdown inside form card */
+        .demo-form-card .nice-select {
+            float: none;
+            display: block;
+            width: 100% !important;
+            box-sizing: border-box;
+            padding: 14px 44px 14px 20px;
+            border-radius: 12px;
+            border: 1.5px solid var(--neutral-200);
+            background: #fff;
+            font-size: 15px;
+            color: var(--primary);
+            height: auto;
+            line-height: 1.5;
+            font-family: inherit;
+            font-weight: 400;
+            white-space: normal;
+        }
+        .demo-form-card .nice-select:focus,
+        .demo-form-card .nice-select.open {
+            border-color: var(--primary);
+        }
+        .demo-form-card .nice-select:after {
+            right: 16px;
+            margin-top: -4px;
+            border-bottom: 2px solid #71717A;
+            border-right: 2px solid #71717A;
+            width: 8px;
+            height: 8px;
+        }
+        .demo-form-card .nice-select .list {
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 12px;
+            margin-top: 4px;
+            max-height: 260px;
+            overflow-y: auto;
+            background: #fff;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            border: 1.5px solid var(--neutral-200);
+        }
+        .demo-form-card .nice-select .option {
+            color: var(--primary);
+            font-size: 15px;
+            padding: 10px 20px;
+            line-height: 1.5;
+            min-height: auto;
+            font-weight: 500;
+        }
+        .demo-form-card .nice-select .option:hover,
+        .demo-form-card .nice-select .option.focus,
+        .demo-form-card .nice-select .option.selected.focus {
+            background: var(--neutral-100);
+        }
+        .demo-form-card .nice-select .current {
+            color: var(--primary);
+        }
+        .demo-form-card input:focus,
+        .demo-form-card select:focus {
+            border-color: var(--primary);
+        }
+        .demo-form-card input::placeholder {
+            color: var(--neutral-400);
+        }
+        .demo-form-card .form-group {
+            margin-bottom: 24px;
+        }
+        .demo-form-card .form-group:last-of-type {
+            margin-bottom: 32px;
+        }
+        .demo-submit-btn {
+            width: 100%;
+            font-size: 17px;
+            padding: 17px 24px;
+            justify-content: center;
+        }
+        .form-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .form-intro .heading-sub {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .form-intro .heading-title {
+            font-size: 48px;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        .form-intro-desc {
+            color: var(--secondary);
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 16px 0 0;
+        }
+
+        /* --- Loading step --- */
+        #step-loading {
+            min-height: 50vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 32px;
+        }
+        .loading-text {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .loading-text span {
+            opacity: 0.6;
+        }
+        /* Waveform animation */
+        .wave-bars {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            height: 56px;
+        }
+        .wave-bars .bar {
+            width: 5px;
+            border-radius: 99px;
+            background: var(--primary);
+            animation: waveBar 1.2s ease-in-out infinite;
+        }
+        .wave-bars .bar:nth-child(1)  { height: 16px; animation-delay: 0s;    }
+        .wave-bars .bar:nth-child(2)  { height: 32px; animation-delay: 0.1s;  }
+        .wave-bars .bar:nth-child(3)  { height: 48px; animation-delay: 0.2s;  }
+        .wave-bars .bar:nth-child(4)  { height: 56px; animation-delay: 0.3s;  }
+        .wave-bars .bar:nth-child(5)  { height: 40px; animation-delay: 0.4s;  }
+        .wave-bars .bar:nth-child(6)  { height: 56px; animation-delay: 0.5s;  }
+        .wave-bars .bar:nth-child(7)  { height: 48px; animation-delay: 0.4s;  }
+        .wave-bars .bar:nth-child(8)  { height: 32px; animation-delay: 0.3s;  }
+        .wave-bars .bar:nth-child(9)  { height: 16px; animation-delay: 0.2s;  }
+        @keyframes waveBar {
+            0%, 100% { transform: scaleY(0.4); opacity: 0.5; }
+            50%       { transform: scaleY(1);   opacity: 1;   }
+        }
+
+        /* --- Result step --- */
+        .demo-result-card {
+            background: var(--neutral-100);
+            border-radius: 32px;
+            padding: 56px 48px;
+            box-shadow: 0px 7.77px 16px 0px rgba(0,0,0,0.06),
+                        0px 3px 3px 0px rgba(0,0,0,0.10),
+                        0px -8px 0px 0px rgba(0,0,0,0.05) inset,
+                        0px 4px 0px 0px rgba(255,255,255,0.6) inset;
+            text-align: center;
+        }
+        .result-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #dcfce7;
+            color: #166534;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 6px 16px;
+            border-radius: 99px;
+            margin-bottom: 24px;
+        }
+        .result-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+        }
+        .result-title {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--primary);
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+
+        /* Audio player */
+        .audio-player-wrap {
+            background: var(--primary);
+            border-radius: 24px;
+            padding: 36px;
+            margin-bottom: 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+        .audio-waveform-static {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            height: 48px;
+        }
+        .audio-waveform-static .wbar {
+            width: 4px;
+            border-radius: 99px;
+            background: rgba(255,255,255,0.25);
+            transition: background 0.3s;
+        }
+        .audio-player-wrap.is-playing .audio-waveform-static .wbar {
+            animation: waveBar 1s ease-in-out infinite;
+            background: rgba(255,255,255,0.6);
+        }
+        .play-btn-large {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #fff;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+            flex-shrink: 0;
+        }
+        .play-btn-large:hover {
+            transform: scale(1.06);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+        .play-btn-large .icon-play,
+        .play-btn-large .icon-pause {
+            font-size: 28px;
+            color: var(--primary);
+            line-height: 1;
+        }
+        .play-btn-large .icon-pause { display: none; }
+        .play-btn-large.playing .icon-play { display: none; }
+        .play-btn-large.playing .icon-pause { display: block; }
+
+        .player-row {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            width: 100%;
+        }
+        .audio-track-label {
+            color: rgba(255,255,255,0.6);
+            font-size: 13px;
+            font-weight: 500;
+            text-align: left;
+        }
+        .audio-track-title {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .audio-progress {
+            flex: 1;
+            height: 4px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+        .audio-progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #fff;
+            border-radius: 99px;
+            transition: width 0.1s linear;
+        }
+
+        .result-desc {
+            color: var(--secondary);
+            font-size: 15px;
+            line-height: 1.7;
+            max-width: 480px;
+            margin: 0 auto 36px;
+        }
+        .result-cta-btn {
+            font-size: 17px;
+            padding: 17px 40px;
+        }
+        .result-restart {
+            margin-top: 16px;
+            color: var(--secondary);
+            font-size: 14px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .result-restart:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 767px) {
+            .demo-form-card,
+            .demo-result-card {
+                padding: 36px 24px;
+                border-radius: 24px;
+            }
+            .form-intro .heading-title {
+                font-size: 36px;
+            }
+            .result-title { font-size: 28px; }
+            .audio-player-wrap { padding: 24px; }
+            .play-btn-large { width: 68px; height: 68px; }
+            .play-btn-large .icon-play,
+            .play-btn-large .icon-pause { font-size: 24px; }
+        }
+    </style>
+</head>
+
+<body class="">
+    <canvas class="cursor-trail" id="trail" style="display: none;"></canvas>
+
+    <!-- Scroll Top -->
+    <button id="goTop">
+        <span class="border-progress"></span>
+        <span class="ic-wrap">
+            <span class="icon icon-long-arrow-alt-up-solid"></span>
+        </span>
+    </button>
+    <!-- /Scroll Top -->
+
+    <!-- #wrapper -->
+    <main id="wrapper">
+
+        <!-- Header -->
+        <header class="tf-header header2">
+            <div class="header-inner">
+                <a href="index.html" class="logo-site">
+                    <img src="assets/images/logo/logo.svg" alt="Vocalyy">
+                </a>
+                <div class="box-navigation">
+                    <ul class="nav-menu-main">
+                        <li class="menu-item">
+                            <a href="about.html" class="item-link link1">Despre Noi</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="service-single.html" class="item-link link1">Servicii</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="work.html" class="item-link link1">Industrii</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="pricing.html" class="item-link link1">Prețuri</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="blog-three-columns.html" class="item-link link1">Blog</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="contact.html" class="item-link link1">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="try-agent.html" class="tf-btn d-lg-flex d-none">
+                    Solicită Demo
+                </a>
+                <a href="#" class="tf-btn open-mb-menu mobile-menu d-lg-none d-flex">
+                    <i class="icon icon-grip-lines-solid"></i>
+                </a>
+            </div>
+        </header>
+        <!-- /Header -->
+
+        <!-- page-title -->
+        <div class="section-page-title">
+            <div class="container text-center">
+                <h1 class="page-title fw-semibold effectFade fadeZoom">Demo Gratuit</h1>
+                <div class="breadcrumbs effectFade fadeUp">
+                    <a href="index.html" class="link1">Acasă</a>
+                    <div>/</div>
+                    <span>Încearcă Agentul</span>
+                </div>
+            </div>
+        </div>
+        <!-- /page-title -->
+
+        <!-- Try Agent Main -->
+        <div class="try-agent-page">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-8">
+
+                        <!-- STEP 1: Form -->
+                        <div id="step-form">
+                            <div class="form-intro mb-40">
+                                <div class="heading-section center mb-0">
+                                    <div class="heading-sub fw-semibold effectFade fadeUp">Gratuit</div>
+                                    <div class="heading-title text-gradient-3 effectFade fadeRotateX">Aude cum sună<br>agentul tău</div>
+                                </div>
+                                <p class="form-intro-desc effectFade fadeUp">Completează câteva detalii și primești demo-ul în câteva secunde.</p>
+                            </div>
+
+                            <div class="demo-form-card effectFade fadeUp">
+                                <form id="demo-form" novalidate>
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="business-name">
+                                            Numele afacerii tale <span>*</span>
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="business-name"
+                                            name="business_name"
+                                            placeholder="ex. Clinica Dent Smile"
+                                            required
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="business-type">
+                                            Tipul afacerii <span>*</span>
+                                        </label>
+                                        <select id="business-type" name="business_type" required>
+                                            <option value="" disabled selected>Alege tipul afacerii</option>
+                                            <option value="clinica-dentara">Clinică Dentară</option>
+                                            <option value="salon-frumusete">Salon de Înfrumusețare</option>
+                                            <option value="agentie-imobiliara">Agenție Imobiliară</option>
+                                            <option value="service-auto">Service Auto</option>
+                                            <option value="altele">Altele</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="phone">
+                                            Numărul tău de telefon <span>*</span>
+                                        </label>
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            name="phone"
+                                            placeholder="ex. 0740 000 000"
+                                            required
+                                        >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="city">
+                                            Orașul <span>*</span>
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="city"
+                                            name="city"
+                                            placeholder="ex. Cluj-Napoca"
+                                            required
+                                        >
+                                    </div>
+
+                                    <button type="submit" class="tf-btn demo-submit-btn animate-btn">
+                                        Generează Demo
+                                        <i class="icon icon-long-arrow-alt-right-solid"></i>
+                                    </button>
+
+                                </form>
+                            </div>
+                            <p style="text-align:center;color:var(--secondary);font-size:13px;margin-top:16px;">
+                                Fără card de credit. Fără abonament.
+                            </p>
+                        </div>
+                        <!-- /STEP 1 -->
+
+                        <!-- STEP 2: Loading -->
+                        <div id="step-loading">
+                            <div class="wave-bars">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="loading-text">
+                                Pregătim demo-ul pentru<br>
+                                <span id="loading-business-name"></span>
+                            </p>
+                        </div>
+                        <!-- /STEP 2 -->
+
+                        <!-- STEP 3: Result -->
+                        <div id="step-result">
+                            <div class="demo-result-card effectFade fadeUp">
+
+                                <div class="result-badge">Demo gata</div>
+
+                                <h2 class="result-title">
+                                    Demo-ul tău este gata,<br>
+                                    <span id="result-business-name"></span>!
+                                </h2>
+
+                                <!-- Audio Player -->
+                                <div class="audio-player-wrap" id="audio-player-wrap">
+                                    <div class="player-row">
+                                        <button class="play-btn-large" id="play-btn" type="button" aria-label="Play / Pause">
+                                            <i class="icon icon-play-solid icon-play"></i>
+                                            <i class="icon icon-pause-solid icon-pause"></i>
+                                        </button>
+                                        <div style="flex:1;text-align:left;">
+                                            <div class="audio-track-label">Linie de deschidere — Agent Vocal AI</div>
+                                            <div class="audio-track-title" id="player-business-name"></div>
+                                        </div>
+                                    </div>
+                                    <div class="audio-waveform-static" id="audio-waveform">
+                                        <div class="wbar" style="height:12px;"></div>
+                                        <div class="wbar" style="height:24px;"></div>
+                                        <div class="wbar" style="height:36px;"></div>
+                                        <div class="wbar" style="height:44px;"></div>
+                                        <div class="wbar" style="height:48px;"></div>
+                                        <div class="wbar" style="height:40px;"></div>
+                                        <div class="wbar" style="height:48px;"></div>
+                                        <div class="wbar" style="height:44px;"></div>
+                                        <div class="wbar" style="height:36px;"></div>
+                                        <div class="wbar" style="height:28px;"></div>
+                                        <div class="wbar" style="height:40px;"></div>
+                                        <div class="wbar" style="height:48px;"></div>
+                                        <div class="wbar" style="height:44px;"></div>
+                                        <div class="wbar" style="height:32px;"></div>
+                                        <div class="wbar" style="height:20px;"></div>
+                                        <div class="wbar" style="height:36px;"></div>
+                                        <div class="wbar" style="height:44px;"></div>
+                                        <div class="wbar" style="height:48px;"></div>
+                                        <div class="wbar" style="height:36px;"></div>
+                                        <div class="wbar" style="height:24px;"></div>
+                                        <div class="wbar" style="height:16px;"></div>
+                                    </div>
+                                    <div class="audio-progress" style="width:100%;">
+                                        <div class="audio-progress-bar" id="audio-progress-bar"></div>
+                                    </div>
+                                    <audio id="demo-audio" src="demo-agent.mp3" preload="none"></audio>
+                                </div>
+                                <!-- /Audio Player -->
+
+                                <p class="result-desc">
+                                    Aceasta este linia de deschidere a agentului tău. Într-o implementare reală, agentul răspunde exact așa la fiecare apel.
+                                </p>
+
+                                <a href="pricing.html" class="tf-btn result-cta-btn animate-btn">
+                                    Vreau acest agent pentru afacerea mea
+                                    <i class="icon icon-long-arrow-alt-right-solid"></i>
+                                </a>
+
+                                <br>
+                                <button class="result-restart" id="restart-btn" type="button">
+                                    ← Încearcă cu altă afacere
+                                </button>
+
+                            </div>
+                        </div>
+                        <!-- /STEP 3 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Try Agent Main -->
+
+        <!-- footer -->
+        <footer>
+            <div class="footer-image">
+                <img class="effectFade fadeUp" src="assets/images/logo/logo-footer.png" alt="">
+            </div>
+            <div class="container">
+                <div class="footer-content">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/images/logo/logo-2.svg" alt="">
+                    </a>
+                </div>
+                <div class="footer-bottom">
+                    <ul class="footer-links d-flex gap-24 align-items-center">
+                        <li><a href="about.html" class="fw-semibold link-underline link1">Despre Noi</a></li>
+                        <li><a href="service-single.html" class="fw-semibold link-underline link1">Servicii</a></li>
+                        <li><a href="work.html" class="fw-semibold link-underline link1">Industrii</a></li>
+                        <li><a href="pricing.html" class="fw-semibold link-underline link1">Prețuri</a></li>
+                        <li><a href="contact.html" class="fw-semibold link-underline link1">Contact</a></li>
+                    </ul>
+                    <p class="text-secondary coppy-rights text-center">© 2026 Vocalyy. Toate drepturile rezervate.</p>
+                    <a href="#" class="action-go-top d-flex gap-8 align-items-center justify-content-end link1">
+                        <span class="fw-semibold">Înapoi sus</span>
+                        <i class="icon icon-long-arrow-alt-up-solid fs-20"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- /footer -->
+
+    </main>
+    <!-- /wrapper -->
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas-menu">
+        <div class="offcanvas-content">
+            <div class="container h-100">
+                <div class="offcanvas-content_wrapin">
+                    <div class="canvas_head">
+                        <a href="index.html" class="logo-site">
+                            <i class="icon icon-davies-logo"></i>
+                        </a>
+                        <div class="btn-mobile-menu close-mb-menu text-caption link">
+                            <i class="icon icon-close"></i>
+                            CLOSE
+                        </div>
+                    </div>
+                    <div class="canvas_center">
+                        <ul class="nav-ul-mb" id="mobile-menu">
+                            <li>
+                                <div class="item">
+                                    <a href="about.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Despre Noi</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="service-single.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Servicii</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="work.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Industrii</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="pricing.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Prețuri</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="blog-three-columns.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Blog</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="contact.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Contact</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="canvas_foot">
+                        <div class="left">
+                            <a href="mailto:contact@vocalyy.ro" class="text-caption text-neutral-200">contact@vocalyy.ro</a>
+                            <p class="text-caption text-neutral-200">
+                                CUP <span class="clock"></span>
+                            </p>
+                        </div>
+                        <div class="right">
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200">
+                                <i class="icon icon-arrow-top-right"></i>
+                                LINKEDIN
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+
+    <!-- JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/countto.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/infinityslide.js"></script>
+    <script src="assets/js/ScrollSmooth.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/gsapAnimation.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        (function () {
+            var form       = document.getElementById('demo-form');
+            var step1      = document.getElementById('step-form');
+            var stepLoad   = document.getElementById('step-loading');
+            var stepResult = document.getElementById('step-result');
+            var loadName   = document.getElementById('loading-business-name');
+            var resultName = document.getElementById('result-business-name');
+            var playerName = document.getElementById('player-business-name');
+
+            // --- Form submit ---
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var businessName = document.getElementById('business-name').value.trim();
+                if (!businessName) return;
+
+                // Inject names
+                loadName.textContent   = '"' + businessName + '"';
+                resultName.textContent = businessName;
+                playerName.textContent = businessName;
+
+                // Transition to loading
+                step1.style.display    = 'none';
+                stepLoad.style.display = 'flex';
+
+                // After 3s → show result
+                setTimeout(function () {
+                    stepLoad.style.display   = 'none';
+                    stepResult.style.display = 'block';
+                    // Scroll to result card smoothly
+                    stepResult.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 3000);
+            });
+
+            // --- Audio player ---
+            var playBtn     = document.getElementById('play-btn');
+            var audio       = document.getElementById('demo-audio');
+            var progressBar = document.getElementById('audio-progress-bar');
+            var playerWrap  = document.getElementById('audio-player-wrap');
+
+            playBtn.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play().catch(function () {
+                        // demo-agent.mp3 not yet present — show a visual pulse anyway
+                    });
+                    playBtn.classList.add('playing');
+                    playerWrap.classList.add('is-playing');
+                } else {
+                    audio.pause();
+                    playBtn.classList.remove('playing');
+                    playerWrap.classList.remove('is-playing');
+                }
+            });
+
+            audio.addEventListener('timeupdate', function () {
+                if (audio.duration) {
+                    var pct = (audio.currentTime / audio.duration) * 100;
+                    progressBar.style.width = pct + '%';
+                }
+            });
+
+            audio.addEventListener('ended', function () {
+                playBtn.classList.remove('playing');
+                playerWrap.classList.remove('is-playing');
+                progressBar.style.width = '0%';
+            });
+
+            // --- Restart ---
+            document.getElementById('restart-btn').addEventListener('click', function () {
+                audio.pause();
+                audio.currentTime = 0;
+                playBtn.classList.remove('playing');
+                playerWrap.classList.remove('is-playing');
+                progressBar.style.width = '0%';
+
+                stepResult.style.display = 'none';
+                step1.style.display      = 'block';
+                form.reset();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

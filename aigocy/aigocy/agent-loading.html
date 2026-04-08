@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Pregătim Agentul Tău | Vocalyy</title>
+    <meta name="author" content="Vocalyy">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="noindex">
+
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/icon/icomoon/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg">
+    <link rel="apple-touch-icon-precomposed" href="assets/images/logo/favicon.svg">
+
+    <style>
+        /* === Loading Screen === */
+        .loading-screen {
+            background: var(--neutral-900);
+            min-height: calc(100vh - 72px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 24px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background glow */
+        .loading-screen::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .loading-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+            max-width: 560px;
+            width: 100%;
+        }
+
+        /* Waveform */
+        .loading-wave {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            height: 80px;
+        }
+        .lbar {
+            width: 6px;
+            border-radius: 99px;
+            background: rgba(255, 255, 255, 0.7);
+            animation: loadWave 1.4s ease-in-out infinite;
+            transform-origin: center;
+        }
+        .lbar:nth-child(1)  { height: 18px; animation-delay: 0s;    }
+        .lbar:nth-child(2)  { height: 30px; animation-delay: 0.1s;  }
+        .lbar:nth-child(3)  { height: 44px; animation-delay: 0.2s;  }
+        .lbar:nth-child(4)  { height: 60px; animation-delay: 0.3s;  }
+        .lbar:nth-child(5)  { height: 74px; animation-delay: 0.4s;  }
+        .lbar:nth-child(6)  { height: 80px; animation-delay: 0.5s;  background: rgba(255,255,255,0.9); }
+        .lbar:nth-child(7)  { height: 74px; animation-delay: 0.4s;  }
+        .lbar:nth-child(8)  { height: 60px; animation-delay: 0.3s;  }
+        .lbar:nth-child(9)  { height: 44px; animation-delay: 0.2s;  }
+        .lbar:nth-child(10) { height: 30px; animation-delay: 0.1s;  }
+        .lbar:nth-child(11) { height: 18px; animation-delay: 0s;    }
+        @keyframes loadWave {
+            0%, 100% { transform: scaleY(0.3); opacity: 0.35; }
+            50%       { transform: scaleY(1);   opacity: 1;    }
+        }
+
+        /* Pulsing ring behind waveform */
+        .pulse-ring {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.08);
+            animation: pulseRing 3s ease-out infinite;
+        }
+        .pulse-ring:nth-child(2) { animation-delay: 1s; }
+        .pulse-ring:nth-child(3) { animation-delay: 2s; }
+        @keyframes pulseRing {
+            0%   { transform: scale(0.8); opacity: 0.6; }
+            100% { transform: scale(2.2); opacity: 0;   }
+        }
+
+        .wave-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 240px;
+            height: 120px;
+        }
+
+        /* Text */
+        .loading-msg {
+            color: var(--white);
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.5;
+            opacity: 1;
+            transition: opacity 0.4s ease;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading-label {
+            color: var(--neutral-500);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Progress bar */
+        .loading-progress-wrap {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 99px;
+            height: 4px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        .loading-progress-fill {
+            height: 100%;
+            width: 0%;
+            background: var(--white);
+            border-radius: 99px;
+            animation: loadFill 12s linear forwards;
+        }
+        @keyframes loadFill {
+            from { width: 0%; }
+            to   { width: 100%; }
+        }
+
+        @media (max-width: 767px) {
+            .loading-msg { font-size: 17px; }
+            .lbar:nth-child(6) { height: 64px; }
+            .loading-wave { height: 64px; gap: 5px; }
+        }
+    </style>
+</head>
+
+<body class="">
+    <canvas class="cursor-trail" id="trail" style="display: none;"></canvas>
+
+    <main id="wrapper">
+
+        <!-- Header -->
+        <header class="tf-header header2">
+            <div class="header-inner">
+                <a href="index.html" class="logo-site">
+                    <img src="assets/images/logo/logo.svg" alt="Vocalyy">
+                </a>
+                <div class="box-navigation">
+                    <ul class="nav-menu-main">
+                        <li class="menu-item"><a href="about.html" class="item-link link1">Despre Noi</a></li>
+                        <li class="menu-item"><a href="service-single.html" class="item-link link1">Servicii</a></li>
+                        <li class="menu-item"><a href="work.html" class="item-link link1">Industrii</a></li>
+                        <li class="menu-item"><a href="pricing.html" class="item-link link1">Prețuri</a></li>
+                        <li class="menu-item"><a href="blog-three-columns.html" class="item-link link1">Blog</a></li>
+                        <li class="menu-item"><a href="contact.html" class="item-link link1">Contact</a></li>
+                    </ul>
+                </div>
+                <a href="try-agent.html" class="tf-btn d-lg-flex d-none">Solicită Demo</a>
+                <a href="#" class="tf-btn open-mb-menu mobile-menu d-lg-none d-flex">
+                    <i class="icon icon-grip-lines-solid"></i>
+                </a>
+            </div>
+        </header>
+        <!-- /Header -->
+
+        <!-- Loading Screen -->
+        <div class="loading-screen">
+            <div class="loading-inner">
+
+                <div class="loading-label">Se procesează</div>
+
+                <div class="wave-wrap">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="loading-wave">
+                        <div class="lbar"></div>
+                        <div class="lbar"></div>
+                        <div class="lbar"></div>
+                        <div class="lbar"></div>
+                        <div class="lbar"></div>
+                        <div class="lbar"></div>
+                        <div class="lbar"></div>
+                        <div class="lbar"></div>
+                        <div class="lbar"></div>
+                        <div class="lbar"></div>
+                        <div class="lbar"></div>
+                    </div>
+                </div>
+
+                <p class="loading-msg" id="loading-msg">Se inițializează...</p>
+
+                <div style="width:100%;max-width:400px;">
+                    <div class="loading-progress-wrap">
+                        <div class="loading-progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /Loading Screen -->
+
+        <!-- footer (hidden during loading, appears after scroll if ever needed) -->
+        <footer style="display:none;">
+            <div class="container">
+                <div class="footer-bottom">
+                    <p class="text-secondary coppy-rights text-center">© 2026 Vocalyy. Toate drepturile rezervate.</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas-menu">
+        <div class="offcanvas-content">
+            <div class="container h-100">
+                <div class="offcanvas-content_wrapin">
+                    <div class="canvas_head">
+                        <a href="index.html" class="logo-site"><i class="icon icon-davies-logo"></i></a>
+                        <div class="btn-mobile-menu close-mb-menu text-caption link"><i class="icon icon-close"></i> CLOSE</div>
+                    </div>
+                    <div class="canvas_center">
+                        <ul class="nav-ul-mb" id="mobile-menu">
+                            <li><div class="item"><a href="about.html" class="mb-menu-link text-display-1"><span class="text">Despre Noi</span></a></div></li>
+                            <li><div class="item"><a href="service-single.html" class="mb-menu-link text-display-1"><span class="text">Servicii</span></a></div></li>
+                            <li><div class="item"><a href="work.html" class="mb-menu-link text-display-1"><span class="text">Industrii</span></a></div></li>
+                            <li><div class="item"><a href="pricing.html" class="mb-menu-link text-display-1"><span class="text">Prețuri</span></a></div></li>
+                            <li><div class="item"><a href="blog-three-columns.html" class="mb-menu-link text-display-1"><span class="text">Blog</span></a></div></li>
+                            <li><div class="item"><a href="contact.html" class="mb-menu-link text-display-1"><span class="text">Contact</span></a></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+    (function () {
+        var params   = new URLSearchParams(window.location.search);
+        var business = params.get('business') || 'afacerea ta';
+        var pkg      = params.get('package') || '';
+
+        var messages = [
+            'Analizăm profilul afacerii "' + business + '"...',
+            'Configurăm vocea și personalitatea agentului...',
+            'Integrăm programul și serviciile tale...',
+            'Ultimele ajustări...'
+        ];
+
+        var msgEl = document.getElementById('loading-msg');
+        msgEl.textContent = messages[0];
+
+        var idx = 0;
+        var cycleInterval = setInterval(function () {
+            idx++;
+            if (idx >= messages.length) { clearInterval(cycleInterval); return; }
+            msgEl.style.opacity = '0';
+            setTimeout(function () {
+                msgEl.textContent = messages[idx];
+                msgEl.style.opacity = '1';
+            }, 400);
+        }, 3000);
+
+        // Redirect after 12 seconds
+        setTimeout(function () {
+            window.location.href = 'agent-ready.html?business=' + encodeURIComponent(business) + '&package=' + encodeURIComponent(pkg);
+        }, 12000);
+    })();
+    </script>
+
+</body>
+</html>

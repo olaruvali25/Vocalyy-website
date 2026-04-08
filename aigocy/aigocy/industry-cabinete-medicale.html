@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Cabinete Medicale | Vocalyy</title>
+    <meta name="author" content="Vocalyy">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Vocalyy ajuta cabinetele medicale sa gestioneze apelurile eficient. Agentul AI filtreaza urgentele, programeaza consultatii si raspunde la intrebari frecvente.">
+
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/icon/icomoon/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick.theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg">
+    <link rel="apple-touch-icon-precomposed" href="assets/images/logo/favicon.svg">
+</head>
+
+<body class="">
+    <canvas class="cursor-trail" id="trail" style="display: none;"></canvas>
+
+    <button id="goTop">
+        <span class="border-progress"></span>
+        <span class="ic-wrap">
+            <span class="icon icon-long-arrow-alt-up-solid"></span>
+        </span>
+    </button>
+
+    <main id="wrapper">
+
+        <header class="tf-header header2">
+            <div class="header-inner">
+                <a href="index.html" class="logo-site">
+                    <img src="assets/images/logo/logo.svg" alt="">
+                </a>
+                <div class="box-navigation">
+                    <ul class="nav-menu-main">
+                        <li class="menu-item"><a href="about.html" class="item-link link1">Despre Noi</a></li>
+                        <li class="menu-item"><a href="service-single.html" class="item-link link1">Servicii</a></li>
+                        <li class="menu-item"><a href="work.html" class="item-link link1 active">Industrii</a></li>
+                        <li class="menu-item"><a href="pricing.html" class="item-link link1">Prețuri</a></li>
+                        <li class="menu-item"><a href="blog-three-columns.html" class="item-link link1">Blog</a></li>
+                        <li class="menu-item"><a href="contact.html" class="item-link link1">Contact</a></li>
+                    </ul>
+                </div>
+                <a href="try-agent.html" class="tf-btn d-lg-flex d-none">Solicita Demo</a>
+                <a href="#" class="tf-btn open-mb-menu mobile-menu d-lg-none d-flex">
+                    <i class="icon icon-grip-lines-solid"></i>
+                </a>
+            </div>
+        </header>
+
+        <div class="section-hero v2">
+            <div class="hero-image"></div>
+            <div class="container">
+                <div class="content-wrap text-center">
+                    <div class="title text-display-2 effectFade fadeRotateX">
+                        <span class="title1 fw-semibold text-gradient-1">Cabinete Medicale</span>
+                        <br>
+                        <div class="title2 d-flex gap-20 justify-content-center flex-wrap">
+                            <span class="fw-semibold text-gradient-1">cu Vocalyy</span>
+                        </div>
+                    </div>
+                    <p class="text effectFade fadeUp">
+                        Medici mai relaxati. Pacienti serviti rapid. Consultatii nelimitate. <br> Telefoanele preluate automat, 24/7.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="works" class="section-work-single flat-spacing pt-0">
+            <div class="container">
+                <div class="row mb-32">
+                    <div class="col-12">
+                        <div class="wrap-image mb-60 effectFade fadeZoom">
+                            <img src="assets/images/industries/cabinete-medicale/banner.jpg" alt="Cabinete Medicale - Vocalyy">
+                        </div>
+                        <h2 class="heading fw-semibold mb-32 effectFade fadeUp">Problema Principala</h2>
+                        <p class="text-secondary effectFade fadeUp">
+                            Cabinetele medicale se confrunta zilnic cu o paradox greu de rezolvat: medicul este ocupat cu pacientul din cabinet, iar telefonul suna neincetat. Fiecare apel nereceptionat inseamna un pacient frustrat care poate decide sa caute alt medic. Secretara, chiar si cea mai eficienta, nu poate gestiona simultan primirea pacientilor, programarile, intrebarile telefonice si documentatia medicala.
+                            <br><br>
+                            Volumul de apeluri intr-un cabinet medical obisnuit este impresionant: reprogramari, anulari, intrebari despre rezultate, solicitari de retete, urgente medicale — toate concureaza pentru acelasi fir de telefon. In plus, pacientii suna si in afara programului, sambata dimineata sau duminica seara, cand niciun angajat nu este disponibil. Consecinta directa este pierderea de pacienti, venituri ratate si o echipa medicala permanent stresata din cauza volumului de comunicatii.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row mb-60">
+                    <div class="col-md-8 md-mb-24">
+                        <div class="text-body-1 fw-semibold text-secondary mb-15 effectFade fadeUp">PROBLEME FRECVENTE</div>
+                        <div class="list-tags effectFade fadeUp">
+                            <span class="tags-item fw-semibold">Telefon neanswered</span>
+                            <span class="tags-item fw-semibold">Consultatii ratate</span>
+                            <span class="tags-item fw-semibold">Urgente nefiltrate</span>
+                            <span class="tags-item fw-semibold">Pacienti frustrati</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-body-1 fw-semibold text-secondary mb-15 effectFade fadeUp" data-delay="0.1">INDUSTRIE</div>
+                        <div class="list-tags effectFade fadeUp" data-delay="0.1">
+                            <span class="tags-item fw-semibold">Medicina Generala</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- section-flow-demo -->
+        <div class="section-flow-demo">
+            <div class="flow-scroll-container">
+                <div class="flow-sticky-wrapper">
+                    <div class="flow-label-top">Vocalyy in actiune</div>
+                    <div class="flow-inner">
+                        <div class="flow-patient-card" id="fcd-card">
+                            <div class="fcd-card-header">
+                                <div class="fcd-avatar">ID</div>
+                                <div class="fcd-info">
+                                    <div class="fcd-name">Ion Dumitrescu</div>
+                                    <span class="fcd-badge">Pacient nou</span>
+                                </div>
+                                <div class="fcd-expires">&#9201; Consultatie azi</div>
+                            </div>
+                            <div class="fcd-card-body">
+                                <div class="fcd-meta"><span>&#128197;</span> Prima programare la cabinet</div>
+                                <div class="fcd-meta"><span>&#128222;</span> Trimis de medicul de familie</div>
+                                <div class="fcd-meta"><span>&#128138;</span> Consultatie generala</div>
+                            </div>
+                        </div>
+                        <div class="fcd-line-wrap">
+                            <div class="fcd-line-track">
+                                <div class="fcd-line-fill" id="fcd-line1"></div>
+                            </div>
+                        </div>
+                        <div class="fcd-node" id="fcd-node">
+                            <span class="fcd-node-spinner" id="fcd-spinner">&#9696;</span>
+                            <span class="fcd-node-text" id="fcd-node-text" data-success="Consultatie confirmata!">Confirmare consultatie trimisa...</span>
+                        </div>
+                        <div class="fcd-branches" id="fcd-branches">
+                            <svg class="fcd-branch-svg" viewBox="0 0 420 80" preserveAspectRatio="none">
+                                <path class="fcd-branch-path" id="fcd-branch-left"  d="M210 0 H90  Q78 0 78 12  V80" stroke="#FD3A25" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                <path class="fcd-branch-path" id="fcd-branch-mid"   d="M210 0 L210 80"               stroke="#FD3A25" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                <path class="fcd-branch-path" id="fcd-branch-right" d="M210 0 H330 Q342 0 342 12 V80" stroke="#FD3A25" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                <path class="fcd-branch-success" id="fcd-success-left"  d="M210 0 H90  Q78 0 78 12  V80" stroke="#6bc799" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="200" stroke-dashoffset="200"/>
+                                <path class="fcd-branch-success" id="fcd-success-mid"   d="M210 0 L210 80"               stroke="#6bc799" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="200" stroke-dashoffset="200"/>
+                                <path class="fcd-branch-success" id="fcd-success-right" d="M210 0 H330 Q342 0 342 12 V80" stroke="#6bc799" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="200" stroke-dashoffset="200"/>
+                            </svg>
+                            <div class="fcd-channels">
+                                <div class="fcd-channel" id="fcd-ch-sms"><span class="fcd-ch-icon">&#128172;</span><span class="fcd-ch-label">SMS</span><span class="fcd-ch-status" id="fcd-st-sms">&#8987;</span></div>
+                                <div class="fcd-channel" id="fcd-ch-email"><span class="fcd-ch-icon">&#9993;</span><span class="fcd-ch-label">Email</span><span class="fcd-ch-status" id="fcd-st-email">&#8987;</span></div>
+                                <div class="fcd-channel" id="fcd-ch-cal"><span class="fcd-ch-icon">&#128197;</span><span class="fcd-ch-label">Calendar</span><span class="fcd-ch-status" id="fcd-st-cal">&#8987;</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-flow-demo -->
+
+        <style>
+        .section-flow-demo { background: #f7f7f8; }
+        .flow-scroll-container { height: 280vh; position: relative; padding-bottom: 20vh; }
+        .flow-sticky-wrapper { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; overflow: hidden; }
+        .flow-label-top { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #FD3A25; margin-bottom: 28px; }
+        .flow-inner { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 600px; }
+        .flow-patient-card { background: #fff; border-radius: 20px; box-shadow: 0 8px 48px rgba(0,0,0,0.12); width: 100%; padding: 28px 32px 22px; opacity: 0; transform: translateY(30px); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .flow-patient-card.visible { opacity: 1; transform: translateY(0); }
+        .fcd-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+        .fcd-avatar { width: 52px; height: 52px; border-radius: 50%; background: #272727; color: #fff; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .fcd-info { flex: 1; }
+        .fcd-name { font-weight: 700; font-size: 18px; color: #111; }
+        .fcd-badge { display: inline-block; background: #e8f5e9; color: #2e7d32; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-top: 4px; }
+        .fcd-expires { font-size: 13px; font-weight: 600; color: #fff; background: #FD3A25; border: 1px solid #FD3A25; border-radius: 20px; padding: 6px 14px; white-space: nowrap; }
+        .fcd-card-body { border-top: 1px solid #f0f0f0; padding-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+        .fcd-meta { font-size: 15px; color: #555; display: flex; gap: 10px; }
+        .fcd-line-wrap { width: 4px; height: 64px; background: #e8e8e8; border-radius: 3px; overflow: hidden; opacity: 0; transition: opacity 0.3s ease; }
+        .fcd-line-wrap.visible { opacity: 1; }
+        .fcd-line-track { width: 100%; height: 100%; position: relative; }
+        .fcd-line-fill { position: absolute; top: 0; left: 0; right: 0; height: 0%; background: #FD3A25; transition: height 0.6s ease; }
+        .fcd-line-fill.success { background: #6bc799; }
+        .fcd-node { display: flex; align-items: center; gap: 12px; background: #fff; border: 2px solid #FD3A25; border-radius: 30px; padding: 14px 28px; font-size: 16px; font-weight: 600; color: #333; white-space: nowrap; opacity: 0; transform: translateY(-16px); transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.4s ease; min-width: 340px; justify-content: center; }
+        .fcd-node.visible { opacity: 1; transform: translateY(0); }
+        .fcd-node.success { border-color: #6bc799; }
+        .fcd-node-spinner { font-size: 16px; animation: fcd-spin 1.2s linear infinite; display: inline-block; }
+        .fcd-node.success .fcd-node-spinner { animation: none; }
+        @keyframes fcd-spin { to { transform: rotate(360deg); } }
+        .fcd-branches { width: 100%; opacity: 0; transform: translateY(-10px); transition: opacity 0.4s ease, transform 0.4s ease; }
+        .fcd-branches.visible { opacity: 1; transform: translateY(0); }
+        .fcd-branch-svg { width: 100%; height: 110px; display: block; }
+        .fcd-branch-path { stroke-dasharray: 300; stroke-dashoffset: 300; transition: stroke-dashoffset 0.6s ease; }
+        .fcd-branch-path.drawn { stroke-dashoffset: 0; }
+        .fcd-branch-success { transition: stroke-dashoffset 0.6s ease 0.3s; }
+        .fcd-branch-success.drawn { stroke-dashoffset: 0; }
+        .fcd-channels { display: flex; justify-content: space-around; width: 100%; padding: 0 10px; }
+        .fcd-channel { display: flex; align-items: center; gap: 8px; background: #fff; border: 2px solid #FD3A25; border-radius: 14px; padding: 12px 20px; font-size: 15px; font-weight: 600; color: #333; opacity: 0; transform: translateY(-12px); transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.4s ease; }
+        .fcd-channel.visible { opacity: 1; transform: translateY(0); }
+        .fcd-channel.success { border-color: #6bc799; background: #f0faf4; }
+        .fcd-ch-icon { font-size: 18px; }
+        .fcd-ch-label { font-size: 15px; }
+        .fcd-ch-status { font-size: 15px; color: #aaa; margin-left: 2px; }
+        .fcd-channel.success .fcd-ch-status { color: #6bc799; }
+        </style>
+
+        <script>
+        (function() {
+            function initFlowDemo() {
+                var card     = document.querySelector('.flow-patient-card');
+                var lineWrap = document.querySelector('.fcd-line-wrap');
+                var lineFill = document.getElementById('fcd-line1');
+                var node     = document.getElementById('fcd-node');
+                var nodeText = document.getElementById('fcd-node-text');
+                var spinner  = document.getElementById('fcd-spinner');
+                var branches = document.getElementById('fcd-branches');
+                var bLeft    = document.getElementById('fcd-branch-left');
+                var bMid     = document.getElementById('fcd-branch-mid');
+                var bRight   = document.getElementById('fcd-branch-right');
+                var sLeft    = document.getElementById('fcd-success-left');
+                var sMid     = document.getElementById('fcd-success-mid');
+                var sRight   = document.getElementById('fcd-success-right');
+                var chSms    = document.getElementById('fcd-ch-sms');
+                var chEmail  = document.getElementById('fcd-ch-email');
+                var chCal    = document.getElementById('fcd-ch-cal');
+                var stSms    = document.getElementById('fcd-st-sms');
+                var stEmail  = document.getElementById('fcd-st-email');
+                var stCal    = document.getElementById('fcd-st-cal');
+                var container = document.querySelector('.flow-scroll-container');
+                if (!card || !container) return;
+                var stage = -1;
+                var successText = nodeText ? nodeText.getAttribute('data-success') || 'Trimis cu succes!' : 'Trimis cu succes!';
+                var loadingText = nodeText ? nodeText.textContent : '';
+                function setStage(s) {
+                    if (s === stage) return;
+                    stage = s;
+                    if (s >= 0) card.classList.add('visible');
+                    if (s >= 1) { lineWrap.classList.add('visible'); lineFill.style.height = '100%'; }
+                    else { lineFill.style.height = '0%'; lineWrap.classList.remove('visible'); }
+                    if (s >= 2) { node.classList.add('visible'); }
+                    else { node.classList.remove('visible'); }
+                    if (s >= 3) { branches.classList.add('visible'); bLeft.classList.add('drawn'); bMid.classList.add('drawn'); bRight.classList.add('drawn'); chSms.classList.add('visible'); chEmail.classList.add('visible'); chCal.classList.add('visible'); }
+                    else { branches.classList.remove('visible'); bLeft.classList.remove('drawn'); bMid.classList.remove('drawn'); bRight.classList.remove('drawn'); chSms.classList.remove('visible'); chEmail.classList.remove('visible'); chCal.classList.remove('visible'); }
+                    if (s >= 4) { node.classList.add('success'); nodeText.textContent = successText; spinner.textContent = '\u2713'; sLeft.classList.add('drawn'); sMid.classList.add('drawn'); sRight.classList.add('drawn'); chSms.classList.add('success'); chEmail.classList.add('success'); chCal.classList.add('success'); stSms.textContent = '\u2713'; stEmail.textContent = '\u2713'; stCal.textContent = '\u2713'; lineFill.classList.add('success'); }
+                    else { node.classList.remove('success'); nodeText.textContent = loadingText; spinner.textContent = '\u9696'; sLeft.classList.remove('drawn'); sMid.classList.remove('drawn'); sRight.classList.remove('drawn'); chSms.classList.remove('success'); chEmail.classList.remove('success'); chCal.classList.remove('success'); stSms.textContent = '\u231b'; stEmail.textContent = '\u231b'; stCal.textContent = '\u231b'; lineFill.classList.remove('success'); }
+                }
+                function onScroll() {
+                    var rect = container.getBoundingClientRect();
+                    var total = container.offsetHeight - window.innerHeight;
+                    var scrolled = -rect.top;
+                    var progress = Math.min(Math.max(scrolled / total, 0), 1);
+                    if      (progress < 0.15) setStage(0);
+                    else if (progress < 0.35) setStage(1);
+                    else if (progress < 0.55) setStage(2);
+                    else if (progress < 0.75) setStage(3);
+                    else                      setStage(4);
+                }
+                window.addEventListener('scroll', onScroll, { passive: true });
+                onScroll();
+            }
+            if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initFlowDemo); }
+            else { initFlowDemo(); }
+        })();
+        </script>
+
+        <div class="section-work-single flat-spacing pt-0"><div class="container">
+                <div class="row mb-60">
+                    <div class="col-12">
+                        <h2 class="heading fw-semibold mb-20 effectFade fadeUp">Rezultate Tipice</h2>
+                        <p class="text-secondary effectFade fadeUp">
+                            Cabinetele medicale care utilizeaza Vocalyy raporteaza o transformare imediata a modului de lucru. Medicii nu mai sunt intrerupti inutil de telefoane in timpul consultatiilor, putandu-se concentra 100% pe pacientul din fata lor — ceea ce se traduce direct intr-o calitate mai buna a actului medical si intr-o satisfactie crescuta a pacientilor.
+                            <br><br>
+                            Volumul de apeluri pierdute scade la zero, iar numarul de programari noi creste cu 20-35% datorita disponibilitatii 24/7. Personalul administrativ este eliberat de pana la 65% din volumul apelurilor repetitive, putand gestiona sarcinile cu adevarat importante. Pacientii apreciaza raspunsul rapid si profesional, iar recenziile pozitive pe platformele medicale cresc vizibil. Implementarea Vocalyy intr-un cabinet medical costa o fractiune din salariul unui operator telefonic suplimentar, cu un ROI masurabil inca din prima luna.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row mb-60">
+                    <div class="col-12 text-center">
+                        <a href="try-agent.html" class="tf-btn">Solicita o demonstratie gratuita</a>
+                        &nbsp;&nbsp;
+                        <a href="work.html" class="tf-btn style-outline">Inapoi la industrii</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 md-mb-24">
+                        <div class="image effectFade fadeUp">
+                            <img src="assets/images/industries/cabinete-medicale/rezultate-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="image effectFade fadeUp" data-delay="0.1">
+                            <img src="assets/images/industries/cabinete-medicale/rezultate-2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-black">
+            <div class="light-box"></div>
+            <img class="light-top" src="assets/images/item/light-top.png" alt="">
+            <img class="light-bot" src="assets/images/item/light-bot.png" alt="">
+            <div class="section-testimonials flat-spacing">
+                <div class="container">
+                    <div class="heading-section center mb-64">
+                        <div class="heading-sub fw-semibold style-1 effectFade fadeUp">Testimoniale</div>
+                        <div class="heading-title text-white effectFade fadeRotateX">Ce Spun Clientii Nostri</div>
+                    </div>
+                    <div class="testimonials-v2-wrap">
+                        <div class="col-left">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M44.375 70.4063V41.0938C44.375 33.0729 47.0729 26.3646 52.4687 20.9688C58.0104 15.4271 65.5208 11.6354 75 9.59375V29.0625C71.3542 30.2292 68.9479 31.6875 67.7812 33.4375C66.6146 35.0417 65.9583 37.0833 65.8125 39.5625H75V70.4063H44.375ZM5 70.4063V41.0938C5 33.0729 7.69792 26.3646 13.0938 20.9688C18.6354 15.4271 26.1458 11.6354 35.625 9.59375V29.0625C32.125 30.2292 29.7187 31.6875 28.4062 33.4375C27.2396 35.0417 26.5833 37.0833 26.4375 39.5625H35.625V70.4063H5Z" fill="#27272A"/>
+                            </svg>
+                            <div class="swiper-testimonial_wrap">
+                                <div dir="ltr" class="swiper tf-swiper swiper-testimonial">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div>
+                                                <div class="top-icon d-flex gap-4">
+                                                    <i class="icon icon-star-solid"></i>
+                                                    <i class="icon icon-star-solid"></i>
+                                                    <i class="icon icon-star-solid"></i>
+                                                    <i class="icon icon-star-solid"></i>
+                                                    <i class="icon icon-star-solid"></i>
+                                                </div>
+                                                <div class="text-body-1 text-white desc">
+                                                    Vocalyy mi-a schimbat complet ziua de lucru. Nu mai sunt intrerupt in timpul consultatiilor si toti pacientii primesc raspuns imediat. E ca si cum as avea o a doua receptie.
+                                                </div>
+                                                <div class="cite mb-0">
+                                                    <img class="line-left" src="assets/images/item/line-1.png" alt="">
+                                                    <div class="name text-body-3 text-neutral-400 fw-semibold">Dr. Catalin Gheorghe</div>
+                                                    <div class="line"></div>
+                                                    <div class="sub text-body-3 text-neutral-400">Medic de Familie, Timisoara</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div>
+                                                <div class="top-icon d-flex gap-4">
+                                                    <i class="icon icon-star-solid"></i>
+                                                    <i class="icon icon-star-solid"></i>
+                                                    <i class="icon icon-star-solid"></i>
+                                                    <i class="icon icon-star-solid"></i>
+                                                    <i class="icon icon-star-solid"></i>
+                                                </div>
+                                                <div class="text-body-1 text-white desc">
+                                                    Numarul de programari a crescut cu 28% in prima luna. Pacientii suna si primesc raspuns chiar si duminica. Rezultat exceptional.
+                                                </div>
+                                                <div class="cite mb-0">
+                                                    <img class="line-left" src="assets/images/item/line-1.png" alt="">
+                                                    <div class="name text-body-3 text-neutral-400 fw-semibold">Dr. Raluca Stanciu</div>
+                                                    <div class="line"></div>
+                                                    <div class="sub text-body-3 text-neutral-400">Medic Specialist, Iasi</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div dir="ltr" class="swiper sw-main-image">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-image-v2"><img src="assets/images/industries/cabinete-medicale/testimonial-1.jpg" alt=""></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-image-v2"><img src="assets/images/industries/cabinete-medicale/testimonial-2.jpg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- section-recommended-package -->
+        <div class="section-pricing flat-spacing">
+            <div class="container">
+                <div class="heading-section center mb-64">
+                    <div class="heading-sub fw-semibold effectFade fadeUp">Recomandat</div>
+                    <div class="heading-title text-gradient-3 effectFade fadeRotateX">Pachetul potrivit<br>pentru afacerea ta</div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="pricing-item h-100 style-black effectFade fadeRotateX">
+                            <div class="top d-flex gap-12 align-items-center">
+                                <div class="d-flex gap-8 align-items-center">
+                                    <i class="icon icon-bolt-solid fs-24"></i>
+                                    <div class="fw-semibold text">Professional</div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="fw-semibold text-neutral-400">Cel mai ales</div>
+                            </div>
+                            <div class="heading">
+                                <div class="d-flex gap-14 align-items-end">
+                                    <div class="price-number fw-bold" data-month="449" data-year="4490">€449</div>
+                                    <h6 class="price-per">/ lună</h6>
+                                </div>
+                                <a href="try-agent.html" class="tf-btn">
+                                    Solicita Demo Gratuit
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <div>
+                                    <div class="title fw-semibold mb-4">Ce include</div>
+                                    <div class="text fw-semibold">
+                                        Programari automate, calendar sincronizat, zero efort.
+                                    </div>
+                                </div>
+                                <ul class="list-text type-check">
+                                    <li><i class="icon icon-check-solid"></i>Tot din Starter, plus:</li>
+                                    <li><i class="icon icon-check-solid"></i>2.500 minute inbound / 7 apeluri simultane</li>
+                                    <li><i class="icon icon-check-solid"></i>Google Calendar / Calendly integrat</li>
+                                    <li><i class="icon icon-check-solid"></i>50 apeluri outbound/luna</li>
+                                    <li><i class="icon icon-check-solid"></i>Scripturi dinamice per apelant</li>
+                                    <li><i class="icon icon-check-solid"></i>Raport detaliat + support prioritar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-recommended-package -->
+
+        <footer>
+            <div class="footer-image">
+                <img class="effectFade fadeUp" src="assets/images/logo/logo-footer.png" alt="">
+            </div>
+            <div class="container">
+                <div class="footer-content">
+                    <a href="index.html" class="footer-logo"><img src="assets/images/logo/logo-2.svg" alt=""></a>
+                </div>
+                <div class="footer-bottom">
+                    <ul class="footer-links d-flex gap-24 align-items-center">
+                        <li><a href="about.html" class="fw-semibold link-underline link1">Despre Noi</a></li>
+                        <li><a href="service-single.html" class="fw-semibold link-underline link1">Servicii</a></li>
+                        <li><a href="work.html" class="fw-semibold link-underline link1">Industrii</a></li>
+                        <li><a href="contact.html" class="fw-semibold link-underline link1">Contact</a></li>
+                    </ul>
+                    <p class="text-secondary coppy-rights text-center">© 2026 Vocalyy. Toate drepturile rezervate.</p>
+                    <a href="#" class="action-go-top d-flex gap-8 align-items-center justify-content-end link1">
+                        <span class="fw-semibold">Inapoi sus</span>
+                        <i class="icon icon-long-arrow-alt-up-solid fs-20"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <div class="offcanvas-menu">
+        <div class="offcanvas-content">
+            <div class="container h-100">
+                <div class="offcanvas-content_wrapin">
+                    <div class="canvas_head">
+                        <a href="index.html" class="logo-site"><i class="icon icon-davies-logo"></i></a>
+                        <div class="btn-mobile-menu close-mb-menu text-caption link"><i class="icon icon-close"></i> CLOSE</div>
+                    </div>
+                    <div class="canvas_center">
+                        <ul class="nav-ul-mb" id="mobile-menu">
+                            <li><div class="item"><a href="about.html" class="mb-menu-link text-display-1"><span class="text">Despre Noi</span></a></div></li>
+                            <li><div class="item"><a href="service-single.html" class="mb-menu-link text-display-1"><span class="text">Servicii</span></a></div></li>
+                            <li><div class="item"><a href="work.html" class="mb-menu-link text-display-1"><span class="text">Industrii</span></a></div></li>
+                            <li><div class="item"><a href="pricing.html" class="mb-menu-link text-display-1"><span class="text">Prețuri</span></a></div></li>
+                            <li><div class="item"><a href="blog-three-columns.html" class="mb-menu-link text-display-1"><span class="text">Blog</span></a></div></li>
+                            <li><div class="item"><a href="contact.html" class="mb-menu-link text-display-1"><span class="text">Contact</span></a></div></li>
+                        </ul>
+                    </div>
+                    <div class="canvas_foot">
+                        <div class="left">
+                            <a href="mailto:contact@vocalyy.ro" class="text-caption text-neutral-200">contact@vocalyy.ro</a>
+                            <p class="text-caption text-neutral-200">CUP <span class="clock"></span></p>
+                        </div>
+                        <div class="right">
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200"><i class="icon icon-arrow-top-right"></i> TWITTER (X)</a>
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200"><i class="icon icon-arrow-top-right"></i> FACEBOOK</a>
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200"><i class="icon icon-arrow-top-right"></i> LINKEDIN</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tf-left-bar">
+        <a class="btn-setting-color" data-bs-toggle="offcanvas" href="#settingColorMenu">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0015 7.50004C11.1115 7.50004 10.2415 7.76396 9.50144 8.25843C8.76142 8.7529 8.18464 9.4557 7.84405 10.278C7.50346 11.1002 7.41434 12.005 7.58797 12.8779C7.76161 13.7509 8.19019 14.5527 8.81953 15.182C9.44886 15.8114 10.2507 16.2399 11.1236 16.4136C11.9965 16.5872 12.9013 16.4981 13.7236 16.1575C14.5458 15.8169 15.2487 15.2401 15.7431 14.5001C16.2376 13.7601 16.5015 12.8901 16.5015 12C16.5003 10.8069 16.0258 9.66308 15.1821 8.81943C14.3385 7.97579 13.1946 7.50128 12.0015 7.50004Z" fill="#fff"/></svg>
+        </a>
+    </div>
+
+    <div class="offcanvas offcanvas-end offcanvas-color" id="settingColorMenu">
+        <div class="offcanvas-content">
+            <span class="icon-close-popup" data-bs-dismiss="offcanvas"><i class="icon-close"></i></span>
+            <div class="canvas-header"><h3 class="fw-semibold text-white">Configuration</h3></div>
+            <div class="canvas-body">
+                <h6 class="title fw-semibold text-white">COLORS</h6>
+                <div class="settings-color list-choose mb-24">
+                    <button type="button" class="choose-item link-no-action active"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                </div>
+                <h6 class="title fw-semibold text-white">CUSTOM CURSOR</h6>
+                <div><input type="checkbox" id="cursor" class="tf-switch-check style-small"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/infinityslide.js"></script>
+    <script src="assets/js/ScrollSmooth.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/gsapAnimation.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Vocalyy – Agent Vocal AI pentru Afaceri din România</title>
+    <meta name="author" content="wpriverthemes.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description"
+        content="Vocalyy preia apelurile tale 24/7, programează clienți automat și nu lasă niciun apel fără răspuns. Configurare simpla. Agentul tau raspunde la toate apelurile.">
+
+    <!-- font -->
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/icon/icomoon/style.css">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick.theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg">
+    <link rel="apple-touch-icon-precomposed" href="assets/images/logo/favicon.svg">
+
+    <style>
+        /* === Încearcă Agentul Section === */
+        .section-try-agent {
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0;
+            text-align: center;
+        }
+        .try-agent-parallax-bg {
+            position: absolute;
+            inset: -80px 0;
+            z-index: 0;
+            background-image: url('assets/images/section/hero-1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .try-agent-parallax-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                rgba(9,9,11,0.88) 0%,
+                rgba(9,9,11,0.80) 50%,
+                rgba(9,9,11,0.92) 100%);
+        }
+        .section-try-agent .container {
+            position: relative;
+            z-index: 2;
+        }
+        .section-try-agent .heading-title {
+            color: var(--white);
+            margin-top: 24px;
+            margin-bottom: 0;
+        }
+        .try-agent-sub {
+            color: var(--neutral-400);
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 32px auto 48px;
+        }
+        .try-agent-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+        .try-agent-cta .tf-btn {
+            font-size: 18px;
+            padding: 18px 48px;
+        }
+        .try-agent-note {
+            color: var(--neutral-500);
+            font-size: 14px;
+            margin: 0;
+            letter-spacing: 0.02em;
+        }
+        @media (max-width: 767px) {
+            .section-try-agent { padding: 80px 0; }
+            .try-agent-sub { font-size: 16px; }
+            .try-agent-cta .tf-btn { font-size: 16px; padding: 16px 32px; }
+        }
+    </style>
+</head>
+
+<body class="counter-scroll">
+    <canvas class="cursor-trail" id="trail" style="display: none;"></canvas>
+
+    <!-- Scroll Top -->
+    <button id="goTop">
+        <span class="border-progress"></span>
+        <span class="ic-wrap">
+            <span class="icon icon-long-arrow-alt-up-solid"></span>
+        </span>
+    </button>
+    <!-- /Scroll Top -->
+
+    <!-- #wrapper -->
+    <main id="wrapper">
+
+        <!-- Header -->
+        <header class="tf-header header2">
+            <div class="header-inner">
+                <a href="index.html" class="logo-site">
+                    <img src="assets/images/logo/logo.svg" alt="Vocalyy">
+                </a>
+                <div class="box-navigation">
+                    <ul class="nav-menu-main">
+                        <li class="menu-item">
+                            <a href="about.html" class="item-link link1">Despre Noi</a>
+                        </li>
+                        <li class="menu-item"><a href="service-single.html" class="item-link link1">Servicii</a></li>
+                        <li class="menu-item"><a href="work.html" class="item-link link1">Industrii</a></li>
+                        <li class="menu-item"><a href="pricing.html" class="item-link link1">Prețuri</a></li>
+                        <li class="menu-item"><a href="blog-three-columns.html" class="item-link link1">Blog</a></li>
+                        <li class="menu-item">
+                            <a href="contact.html" class="item-link link1">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="try-agent.html" class="tf-btn d-lg-flex d-none">
+                    Solicită Demo
+                </a>
+                <a href="#" class="tf-btn open-mb-menu mobile-menu d-lg-none d-flex">
+                    <i class="icon icon-grip-lines-solid"></i>
+                </a>
+            </div>
+        </header>
+        <!-- /Header -->
+        <!-- Hero Banner -->
+        <div class="section-hero">
+            <div class="hero-image"></div>
+            <div class="container">
+                <div class="content-wrap text-center">
+                    <div class="sub fw-semibold effectFade fadeUp">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.53252 12.0966C3.75106 11.5025 4.59108 11.5025 4.81645 12.0966L5.54037 14.0567C5.60866 14.2411 5.75891 14.3913 5.9433 14.4596L7.90335 15.1835C8.49751 15.4021 8.49751 16.2421 7.90335 16.4674L5.9433 17.1914C5.75891 17.2597 5.60866 17.4099 5.54037 17.5943L4.81645 19.5543C4.59791 20.1485 3.75789 20.1485 3.53252 19.5543L2.8086 17.5943C2.74031 17.4099 2.59006 17.2597 2.40566 17.1914L0.44562 16.4674C-0.14854 16.2489 -0.14854 15.4089 0.44562 15.1835L2.40566 14.4596C2.59006 14.3913 2.74031 14.2411 2.8086 14.0567L3.53252 12.0966Z" fill="url(#paint0_linear_580_105)"/>
+                            <path d="M3.53252 12.0966C3.75106 11.5025 4.59108 11.5025 4.81645 12.0966L5.54037 14.0567C5.60866 14.2411 5.75891 14.3913 5.9433 14.4596L7.90335 15.1835C8.49751 15.4021 8.49751 16.2421 7.90335 16.4674L5.9433 17.1914C5.75891 17.2597 5.60866 17.4099 5.54037 17.5943L4.81645 19.5543C4.59791 20.1485 3.75789 20.1485 3.53252 19.5543L2.8086 17.5943C2.74031 17.4099 2.59006 17.2597 2.40566 17.1914L0.44562 16.4674C-0.14854 16.2489 -0.14854 15.4089 0.44562 15.1835L2.40566 14.4596C2.59006 14.3913 2.74031 14.2411 2.8086 14.0567L3.53252 12.0966Z" fill="url(#paint1_linear_580_105)"/>
+                            <path d="M11.4068 0.670991C11.7346 -0.223664 12.9981 -0.223664 13.3259 0.670991L14.7874 4.61157C14.8898 4.89157 15.1152 5.11011 15.3952 5.21938L19.3358 6.68088C20.2304 7.00869 20.2304 8.27214 19.3358 8.59995L15.3952 10.0614C15.1152 10.1639 14.8967 10.3893 14.7874 10.6693L13.3259 14.6098C12.9981 15.5045 11.7346 15.5045 11.4068 14.6098L9.94534 10.6693C9.8429 10.3893 9.61753 10.1707 9.33752 10.0614L5.39694 8.59995C4.50229 8.27214 4.50229 7.00869 5.39694 6.68088L9.33752 5.21938C9.61753 5.11694 9.83607 4.89157 9.94534 4.61157L11.4068 0.670991Z" fill="url(#paint2_linear_580_105)"/>
+                            <path d="M11.4068 0.670991C11.7346 -0.223664 12.9981 -0.223664 13.3259 0.670991L14.7874 4.61157C14.8898 4.89157 15.1152 5.11011 15.3952 5.21938L19.3358 6.68088C20.2304 7.00869 20.2304 8.27214 19.3358 8.59995L15.3952 10.0614C15.1152 10.1639 14.8967 10.3893 14.7874 10.6693L13.3259 14.6098C12.9981 15.5045 11.7346 15.5045 11.4068 14.6098L9.94534 10.6693C9.8429 10.3893 9.61753 10.1707 9.33752 10.0614L5.39694 8.59995C4.50229 8.27214 4.50229 7.00869 5.39694 6.68088L9.33752 5.21938C9.61753 5.11694 9.83607 4.89157 9.94534 4.61157L11.4068 0.670991Z" fill="url(#paint3_linear_580_105)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_580_105" x1="10.2993" y1="-1.30435" x2="21.6031" y2="11.1057" gradientUnits="userSpaceOnUse">
+                            <stop offset="1" stop-color="#555D64"/>
+                            <stop offset="1" stop-color="#292C2E"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_580_105" x1="10.0034" y1="0" x2="10.0034" y2="20" gradientUnits="userSpaceOnUse">
+                            <stop offset="1" stop-color="#EA2B16"/>
+                            <stop offset="1" stop-color="#FF3B26"/>
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_580_105" x1="10.2993" y1="-1.30435" x2="21.6031" y2="11.1057" gradientUnits="userSpaceOnUse">
+                            <stop offset="1" stop-color="#555D64"/>
+                            <stop offset="1" stop-color="#292C2E"/>
+                            </linearGradient>
+                            <linearGradient id="paint3_linear_580_105" x1="10.0034" y1="0" x2="10.0034" y2="20" gradientUnits="userSpaceOnUse">
+                            <stop offset="1" stop-color="#EA2B16"/>
+                            <stop offset="1" stop-color="#FF3B26"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                        Agent Vocal AI • România
+                    </div>
+                    <div class="title text-display-2 effectFade fadeRotateX">
+                        <span class="title1 fw-semibold text-gradient-1">Telefonul tău</span>
+                        <br>
+                        <div class="title2 d-flex gap-20 justify-content-center flex-wrap">
+                            <span class="fw-semibold text-gradient-1">răspunde singur.</span>
+                        </div>
+                    </div>
+                    <p class="text effectFade fadeUp">
+                        Vocalyy preia fiecare apel, vorbește natural în română și adaugă programările direct în calendarul tău. Configurare simpla. Pachete lunare flexibile.
+                    </p>
+                    <div class="bot-btns effectFade fadeRotateX">
+                        <a href="service-single.html" class="tf-btn">
+                            Vezi Serviciile
+                        </a>
+                        <a href="#pricing" class="tf-btn-2">
+                            Pachete și Prețuri
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-more">
+                <span class="fw-semibold link1">Derulează în jos</span>
+                <i class="icon icon-long-arrow-alt-down-solid"></i>
+            </a>
+        </div>
+        <!-- /Hero Banner -->
+        <!-- section-about-us -->
+        <div class="section-about-us flat-spacing" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="heading-section">
+                            <div class="heading-sub fw-semibold effectFade fadeUp">Despre Vocalyy</div>
+                            <div class="heading-title text-gradient-2 effectFade fadeRotateX">Agentul vocal care<br>nu doarme niciodată</div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-7 col-lg-6 lg-mb-24">
+                        <div class="col-left">
+                            <div class="position-relative z-5">
+                                <div class="sub text-white">
+                                    <span class="dot"></span>
+                                    Disponibil pentru afaceri din România
+                                </div>
+                                <h5 class="title fw-semibold text-white">Configurare <span class="text-brand">simpla</span></h5>
+                                <a href="try-agent.html" class="tf-btn">
+                                    Solicită Demo
+                                </a>
+                            </div>
+                            <img class="effectFade fadeRotateX" src="assets/images/item/earth.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xxl-5 col-lg-6">
+                        <div class="review-box mb-24">
+                            <div class="desc fw-semibold text-body-1">Peste 500 de afaceri din România folosesc Vocalyy - <br> configurare rapid si simplu, pachete lunare flexibile</div>
+                            <div class="d-flex justify-content-between flex-wrap align-items-end gap-12">
+                                <div class="">
+                                    <div class="d-flex gap-4 text mb-10">
+                                        <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.6792 18.3019L18.1887 16.9057L20.4906 24L12.6792 18.3019ZM25.3585 9.13208H15.6604L12.6792 0L9.69811 9.13208H0L7.84906 14.7925L4.86792 23.9245L12.717 18.2641L17.5472 14.7925L25.3585 9.13208Z" fill="#219653"/>
+                                        </svg>
+                                        Trustpilot
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="24" height="24" fill="#3F3F46"/>
+                                            <path d="M11.9996 16.4114L15.6496 15.4341L17.1746 20.4001L11.9996 16.4114ZM20.3996 9.99255H13.9746L11.9996 3.6001L10.0246 9.99255H3.59961L8.79961 13.9548L6.82461 20.3473L12.0246 16.385L15.2246 13.9548L20.3996 9.99255Z" fill="white"/>
+                                        </svg>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="24" height="24" fill="#3F3F46"/>
+                                            <path d="M11.9996 16.4114L15.6496 15.4341L17.1746 20.4001L11.9996 16.4114ZM20.3996 9.99255H13.9746L11.9996 3.6001L10.0246 9.99255H3.59961L8.79961 13.9548L6.82461 20.3473L12.0246 16.385L15.2246 13.9548L20.3996 9.99255Z" fill="white"/>
+                                        </svg>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="24" height="24" fill="#3F3F46"/>
+                                            <path d="M11.9996 16.4114L15.6496 15.4341L17.1746 20.4001L11.9996 16.4114ZM20.3996 9.99255H13.9746L11.9996 3.6001L10.0246 9.99255H3.59961L8.79961 13.9548L6.82461 20.3473L12.0246 16.385L15.2246 13.9548L20.3996 9.99255Z" fill="white"/>
+                                        </svg>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="24" height="24" fill="#3F3F46"/>
+                                            <path d="M11.9996 16.4114L15.6496 15.4341L17.1746 20.4001L11.9996 16.4114ZM20.3996 9.99255H13.9746L11.9996 3.6001L10.0246 9.99255H3.59961L8.79961 13.9548L6.82461 20.3473L12.0246 16.385L15.2246 13.9548L20.3996 9.99255Z" fill="white"/>
+                                        </svg>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="24" height="24" fill="#3F3F46"/>
+                                            <path d="M11.9996 16.4114L15.6496 15.4341L17.1746 20.4001L11.9996 16.4114ZM20.3996 9.99255H13.9746L11.9996 3.6001L10.0246 9.99255H3.59961L8.79961 13.9548L6.82461 20.3473L12.0246 16.385L15.2246 13.9548L20.3996 9.99255Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="counter text-neutral-200">
+                                    <span class="number" data-speed="1500" data-to="120" data-inviewport="yes">10</span><span>+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-quotes effectFade fadeRotateX">
+                            <div class="image ">
+                                <img src="assets/images/section/quotes-1.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="icon mb-8">
+                                    <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#E4E4E7"/>
+                                    </svg>
+                                </div>
+                                <div class="text-body-1 fw-semibold desc">Niciun client nu mai pleacă pentru că telefonul nu a răspuns.</div>
+                                <div class="cite">
+                                    <div class="name text-body-3 fw-semibold">Echipa Vocalyy</div>
+                                    <div class="line"></div>
+                                    <div class="sub text-body-3">Agent Vocal AI pentru România</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-about-us -->
+
+        <!-- section-features -->
+        <div class="section-features flat-spacing pt-0">
+            <div class="container">
+                <div class="heading-section center mb-64">
+                    <div class="heading-sub fw-semibold effectFade fadeUp">Functionalitati</div>
+                    <div class="heading-title text-gradient-3 effectFade fadeRotateX">Tot ce ai nevoie<br>intr-un singur agent</div>
+                </div>
+            </div>
+            <div class="position-relative">
+                <div class="container z-5">
+                    <div class="features-wrap justify-content-between">
+                        <div class="features-col col-left lg-mb-24">
+                            <div class="features-item effectFade fadeUp">
+                                <i class="icon icon-robot-solid"></i>
+                                <h6 class="title fw-semibold">Disponibil 24/7</h6>
+                                <p class="text-secondary">
+                                    Agentul răspunde la orice oră, inclusiv weekend și sărbători. Niciun apel nu rămâne fără răspuns.
+                                </p>
+                            </div>
+                            <div class="features-item effectFade fadeUp">
+                                <i class="icon icon-clipboard-check-solid"></i>
+                                <h6 class="title fw-semibold">Integrare Google Calendar</h6>
+                                <p class="text-secondary">
+                                    Programările se adaugă automat în calendarul tău. Fără intermediar, fără erori de notare.
+                                </p>
+                            </div>
+                            <div class="features-item effectFade fadeUp">
+                                <i class="icon icon-book-solid"></i>
+                                <h6 class="title fw-semibold">Voce naturală în română</h6>
+                                <p class="text-secondary">
+                                    Agentul vorbește clar și natural în română. Clienții tăi nu își dau seama că vorbesc cu un AI.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="features-center flex-shrink">
+                            <img src="assets/images/logo/logo-1.svg" alt="">
+                        </div>
+                        <div class="features-col col-right">
+                            <div class="features-item effectFade fadeUp" data-delay="0.1">
+                                <i class="icon icon-user-check-solid"></i>
+                                <h6 class="title fw-semibold">Înregistrarea convorbirilor</h6>
+                                <p class="text-secondary">
+                                    Fiecare apel este înregistrat și stocat. Poți asculta oricând dacă vrei să verifici ce a spus agentul sau ce a cerut clientul.
+                                </p>
+                            </div>
+                            <div class="features-item effectFade fadeUp" data-delay="0.1">
+                                <i class="icon icon-shield-alt-solid"></i>
+                                <h6 class="title fw-semibold">Apeluri simultane</h6>
+                                <p class="text-secondary">
+                                    Agentul poate prelua mai multe apeluri în același timp. Nu există coadă de așteptare și niciun client nu primește ton ocupat.
+                                </p>
+                            </div>
+                            <div class="features-item effectFade fadeUp" data-delay="0.1">
+                                <i class="icon icon-plug-solid"></i>
+                                <h6 class="title fw-semibold">Rapoarte lunare</h6>
+                                <p class="text-secondary">
+                                    La final de lună primești un raport complet cu apeluri, programări, subiecte frecvente și feedback, totul organizat clar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-line-main d-none d-lg-block wow fadeIn">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 mx-auto">
+                                <div class="side-line-wrap">
+                                    <div class="link-break-line left">
+                                        <div class="link-break-line">
+                                            <span class="item top"></span>
+                                            <span class="item bottom"></span>
+                                        </div>
+                                    </div>
+                                    <div class="link-break-center">
+                                        <span class="simu-electric left"></span>
+                                        <span class="simu-electric right"></span>
+                                    </div>
+                                    <div class="link-break-line right">
+                                        <span class="item top"></span>
+                                        <span class="item bottom"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-features -->
+
+        <!-- section-partner -->
+        <div class="section-partner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="partner-wrap">
+                            <p class="text-secondary text fw-semibold">Beneficii clare din prima zi</p>
+                            <div class="infiniteSlide_tech_main d-grid">
+                                <div class="infiniteSlide infiniteSlide_partner" data-clone="5">
+                                    <img src="assets/images/partner/partner-1.svg" alt="">
+                                    <img src="assets/images/partner/partner-2.svg" alt="">
+                                    <img src="assets/images/partner/partner-3.svg" alt="">
+                                    <img src="assets/images/partner/partner-4.svg" alt="">
+                                    <img src="assets/images/partner/partner-5.svg" alt="">
+                                    <img src="assets/images/partner/partner-6.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-partner -->
+
+        <div class="box-white">
+            <!-- section-services -->
+            <div id="services" class="section-services flat-spacing">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-xxl-4 col-lg-6">
+                            <div class="d-flex flex-column justify-content-between h-100">
+                                <div class="col-left">
+                                    <div class="heading-section mb-48">
+                                        <div class="heading-sub fw-semibold effectFade fadeUp">Servicii</div>
+                                        <div class="heading-title text-gradient-3 effectFade fadeRotateX">Ce face agentul<br>tău în fiecare zi</div>
+                                    </div>
+                                    <p class="effectFade fadeUp">Vocalyy preia apelurile, programează clienții și trimite rapoarte lunare. Tu te ocupi de afacere, agentul se ocupă de telefon.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-lg-6">
+                            <div class="accordion-faq_list" id="accordion-services">
+                                <div class="accordion-faq_item effectFade fadeUp" role="presentation">
+                                    <div class="accordion-action services-image-btn active-img" data-img="assets/images/section/service-1.jpg" data-bs-target="#faq-1" role="button"
+                                        data-bs-toggle="collapse" aria-controls="faq-1" aria-expanded="true">
+                                        <div class="accordion-title">
+                                            Răspuns la Apeluri <br> 24/7
+                                            <div class="text-body-1 num">(01)</div>
+                                        </div>
+                                    </div>
+                                    <div id="faq-1" class="collapse show" data-bs-parent="#accordion-services">
+                                        <div class="accordion-content">
+                                            <div class="text-body-3 text-neutral-300 text">Agentul preia orice apel instant, indiferent de oră. Sambata, duminica, noaptea — nu contează. Niciun client nu rămâne fără răspuns.</div>
+                                            <div class="list-tags">
+                                                <span class="tags-item fw-semibold">Disponibil 24/7/365</span>
+                                                <span class="tags-item fw-semibold">Voce naturală în română</span>
+                                                <span class="tags-item fw-semibold">Zero apeluri pierdute</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-faq_item effectFade fadeUp" role="presentation">
+                                    <div class="accordion-action services-image-btn collapsed" data-img="assets/images/section/service-2.jpg" data-bs-target="#faq-2" role="button"
+                                        data-bs-toggle="collapse" aria-controls="faq-2" aria-expanded="false">
+                                        <div class="accordion-title">
+                                            Programare <br> Automată
+                                            <div class="text-body-1 num">(02)</div>
+                                        </div>
+                                    </div>
+                                    <div id="faq-2" class="collapse" data-bs-parent="#accordion-services">
+                                        <div class="accordion-content">
+                                            <div class="text-body-3 text-neutral-300 text">Agentul identifică scopul apelului și adaugă programarea direct în Google Calendar sau Calendly, fără intervenție din partea ta.</div>
+                                            <div class="list-tags">
+                                                <span class="tags-item fw-semibold">Google Calendar</span>
+                                                <span class="tags-item fw-semibold">Calendly</span>
+                                                <span class="tags-item fw-semibold">Confirmare automată</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-faq_item effectFade fadeUp" role="presentation">
+                                    <div class="accordion-action services-image-btn collapsed" data-img="assets/images/section/service-3.jpg" data-bs-target="#faq-3" role="button"
+                                        data-bs-toggle="collapse" aria-controls="faq-3" aria-expanded="false">
+                                        <div class="accordion-title">
+                                            Răspunsuri la <br> Întrebări Frecvente
+                                            <div class="text-body-1 num">(03)</div>
+                                        </div>
+                                    </div>
+                                    <div id="faq-3" class="collapse" data-bs-parent="#accordion-services">
+                                        <div class="accordion-content">
+                                            <div class="text-body-3 text-neutral-300 text">Prețuri, orar, locație, disponibilitate — agentul știe tot ce trebuie să știe un client și răspunde instant, clar.</div>
+                                            <div class="list-tags">
+                                                <span class="tags-item fw-semibold">Orar și locație</span>
+                                                <span class="tags-item fw-semibold">Prețuri și oferte</span>
+                                                <span class="tags-item fw-semibold">Disponibilitate</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-faq_item effectFade fadeUp" role="presentation">
+                                    <div class="accordion-action services-image-btn collapsed" data-img="assets/images/section/service-4.jpg" data-bs-target="#faq-4" role="button"
+                                        data-bs-toggle="collapse" aria-controls="faq-4" aria-expanded="false">
+                                        <div class="accordion-title">
+                                            Rapoarte <br> Lunare
+                                            <div class="text-body-1 num">(04)</div>
+                                        </div>
+                                    </div>
+                                    <div id="faq-4" class="collapse" data-bs-parent="#accordion-services">
+                                        <div class="accordion-content">
+                                            <div class="text-body-3 text-neutral-300 text">La sfârșitul fiecărei luni primești un raport cu toate apelurile, programările și feedback-ul clienților, totul într-un singur document.</div>
+                                            <div class="list-tags">
+                                                <span class="tags-item fw-semibold">Total apeluri</span>
+                                                <span class="tags-item fw-semibold">Programări realizate</span>
+                                                <span class="tags-item fw-semibold">Feedback clienți</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-image">
+                            <img src="assets/images/section/service-1.jpg" alt="" class="svc-img svc-img-active">
+                            <img src="assets/images/section/service-2.jpg" alt="" class="svc-img">
+                            <img src="assets/images/section/service-3.jpg" alt="" class="svc-img">
+                            <img src="assets/images/section/service-4.jpg" alt="" class="svc-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-services -->
+            <!-- Încearcă Agentul -->
+            <div class="section-try-agent" id="incearca-agentul">
+                <div class="try-agent-parallax-bg" id="try-agent-bg"></div>
+                <div class="container">
+                    <div class="heading-section center mb-0">
+                        <div class="heading-sub fw-semibold style-1 effectFade fadeUp">Încearcă Gratuit</div>
+                        <div class="heading-title text-white effectFade fadeRotateX" style="margin-top:24px;margin-bottom:0;">
+                            Aude cum sună<br>agentul tău
+                        </div>
+                    </div>
+                    <p class="try-agent-sub effectFade fadeUp" data-delay="0.1">
+                        Completează câteva detalii despre afacerea ta și ascultă cum agentul tău<br class="d-none d-md-block">
+                        ar răspunde la telefon — gratuit, fără obligații.
+                    </p>
+                    <div class="try-agent-cta effectFade fadeUp" data-delay="0.2">
+                        <a href="try-agent.html" class="tf-btn animate-btn">
+                            Încearcă Gratuit
+                            <i class="icon icon-long-arrow-alt-right-solid"></i>
+                        </a>
+                        <p class="try-agent-note">Fără card de credit. Fără abonament.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /Încearcă Agentul -->
+
+            <!-- section-featured-works -->
+            <div id="works" class="section-featured-works flat-spacing pt-0">
+                <div class="container">
+                    <div class="heading-section mb-0">
+                        <div class="heading-sub fw-semibold mx-auto effectFade fadeUp">Industrii</div>
+                        <h3 class="heading-title text-gradient-3 effectFade fadeRotateX" style="font-size:28px;line-height:1.2;">Vezi cum Vocalyy se potriveste strict pentru industria ta</h3>
+                    </div>
+                    <div class="featured-works-list position-relative">
+                        <div class="">
+                            <div class="featured-works-item  effectFade fadeUp no-div">
+                                <div class="image main-mouse-hover">
+                                    <img src="assets/images/section/featured-works-1.jpg" alt="">
+                                    <a href="industry-clinici-dentare.html" class="tf-mouse view-project h6">
+                                        Citeste mai mult
+                                        <i class="icon icon-arrow-top-right"></i>
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="pagi-dot">
+                                        <span class="active"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="bot">
+                                        <h4 class="heading fw-semibold">Clinici Dentare</h4>
+                                        <div class="grid-text">
+                                            <div class="item">
+                                                <div class="title text-secondary">DESCRIERE</div>
+                                                <div class="text-body-3 fw-semibold">Secretara lipsea de câteva ori pe săptămână. Acum agentul preia 100% din apeluri și adaugă programările direct în calendar.</div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="title text-secondary">BENEFICII</div>
+                                                <div class="fw-semibold text-body-3">Zero apeluri pierdute, programări automate, pacienți multumiți</div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="title text-secondary">INDUSTRIE</div>
+                                                <div class="fw-semibold text-body-3">Medical</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="featured-works-item ">
+                                <div class="image main-mouse-hover">
+                                    <img src="assets/images/section/featured-works-2.jpg" alt="">
+                                    <a href="industry-saloane-frumusete.html" class="tf-mouse view-project h6">
+                                        Citeste mai mult
+                                        <i class="icon icon-arrow-top-right"></i>
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="pagi-dot">
+                                        <span></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="bot">
+                                        <h4 class="heading fw-semibold">Saloane de <br> Frumusete</h4>
+                                        <div class="grid-text">
+                                            <div class="item">
+                                                <div class="title text-secondary">DESCRIERE</div>
+                                                <div class="text-body-3 fw-semibold">15 apeluri pierdute pe zi înseamnă venituri pierdute în fiecare lună. Vocalyy le preia pe toate, automat.</div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="title text-secondary">BENEFICII</div>
+                                                <div class="fw-semibold">Program complet ocupat, fără secretară extra</div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="title text-secondary">INDUSTRIE</div>
+                                                <div class="fw-semibold">Beauty</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="featured-works-item ">
+                                <div class="image main-mouse-hover">
+                                    <img src="assets/images/section/featured-works-3.jpg" alt="">
+                                    <a href="industry-service-auto.html" class="tf-mouse view-project h6">
+                                        Citeste mai mult
+                                        <i class="icon icon-arrow-top-right"></i>
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="pagi-dot">
+                                        <span></span>
+                                        <span></span>
+                                        <span class="active"></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="bot">
+                                        <h4 class="heading fw-semibold">Service <br> Auto</h4>
+                                        <div class="grid-text">
+                                            <div class="item">
+                                                <div class="title text-secondary">DESCRIERE</div>
+                                                <div class="text-body-3 fw-semibold">40-60 apeluri pe zi, jumătate fără răspuns. Vocalyy filtrează urgentele și programează restul.</div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="title text-secondary">BENEFICII</div>
+                                                <div class="fw-semibold">Mai putine apeluri ratate, angajati mai relaxati</div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="title text-secondary">INDUSTRIE</div>
+                                                <div class="fw-semibold">Auto</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="featured-works-item ">
+                                <div class="image main-mouse-hover">
+                                    <img src="assets/images/section/featured-works-4.jpg" alt="">
+                                    <a href="industry-firme-avocatura.html" class="tf-mouse view-project h6">
+                                        Citeste mai mult
+                                        <i class="icon icon-arrow-top-right"></i>
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="pagi-dot">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span class="active"></span>
+                                    </div>
+                                    <div class="bot">
+                                        <h4 class="heading fw-semibold">Firme de <br> Avocatura</h4>
+                                        <div class="grid-text">
+                                            <div class="item">
+                                                <div class="title text-secondary">DESCRIERE</div>
+                                                <div class="text-body-3 fw-semibold">Clientii suna la orice ora. Agentul preia apelul, colecteaza informatii si programeaza consultanta.</div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="title text-secondary">BENEFICII</div>
+                                                <div class="fw-semibold">Clienti captati 24/7, cabinet mai organizat</div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="title text-secondary">INDUSTRIE</div>
+                                                <div class="fw-semibold">Juridic</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-48 effectFade fadeUp">
+                        <a href="work.html" class="tf-btn style-border">
+                            Vezi toate industriile
+                            <i class="icon icon-arrow-right-solid"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-featured-works -->
+            <!-- section-process -->
+            <div class="section-process flat-spacing pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="process-heading h-100">
+                                <div class="heading-section mb-80">
+                                    <div class="heading-sub fw-semibold effectFade fadeUp">Cum functioneaza</div>
+                                    <div class="heading-title text-gradient-3 effectFade fadeRotateX">Simplu de<br>implementat</div>
+                                </div>
+                                <div class="group-btn-slider">
+                                    <div class="nav-prev-swiper">
+                                        <i class="icon icon-angle-left-solid"></i>
+                                    </div>
+                                    <div class="nav-next-swiper">
+                                        <i class="icon icon-angle-right-solid"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="process-slide">
+                                <div dir="ltr" class="swiper tf-swiper swiper-box-shadow" data-preview="1.78" data-tablet="2" data-mobile-sm="1" data-mobile="1"
+                                    data-loop="false" data-center="false" data-space-lg="24" data-space-md="24" data-space="30" >
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="process-card">
+                                                <i class="icon icon-search-solid"></i>
+                                                <div class="content">
+                                                    <h4 class="title fw-semibold">Ne spui cum functioneaza afacerea ta</h4>
+                                                    <p class="text text-secondary">Facem un apel scurt în care înțelegem cum lucrezi, ce tip de apeluri primești și ce vrei să facă agentul în locul tău.</p>
+                                                </div>
+                                                <div class="bot">
+                                                    <div class="time fw-semibold">Pasul 1</div>
+                                                    <div class="number">
+                                                        <span class="text-neutral-400">01</span>
+                                                        <span class="text-neutral-200">/03</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="process-card">
+                                                <i class="icon icon-bolt-solid"></i>
+                                                <div class="content">
+                                                    <h4 class="title fw-semibold">Configuram agentul special pentru tine</h4>
+                                                    <p class="text text-secondary">Echipa noastră configurează agentul cu vocea, informațiile și regulile potrivite afacerii tale. Testăm împreună înainte de lansare.</p>
+                                                </div>
+                                                <div class="bot">
+                                                    <div class="time fw-semibold">Pasul 2</div>
+                                                    <div class="number">
+                                                        <span class="text-neutral-400">02</span>
+                                                        <span class="text-neutral-200">/03</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="process-card">
+                                                <i class="icon icon-user-check-solid-1"></i>
+                                                <div class="content">
+                                                    <h4 class="title fw-semibold">Agentul preia apelurile, tu te ocupi de clienti</h4>
+                                                    <p class="text text-secondary">Agentul e activ pe numărul tău imediat după lansare. Primești un raport lunar și poți ajusta oricând ce spune agentul.</p>
+                                                </div>
+                                                <div class="bot">
+                                                    <div class="time fw-semibold">Pasul 3</div>
+                                                    <div class="number">
+                                                        <span class="text-neutral-400">03</span>
+                                                        <span class="text-neutral-200">/03</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-process -->
+            <!-- section-benefits -->
+            <div class="section-benefits flat-spacing pt-0">
+                <div class="container">
+                    <div class="heading-section center mb-70">
+                        <div class="heading-sub fw-semibold effectFade fadeUp">De ce Vocalyy</div>
+                        <div class="heading-title text-gradient-3 effectFade fadeRotateX">De ce aleg afacerile<br>din Romania Vocalyy</div>
+                    </div>
+                    <div class="row mb-24">
+                        <div class="col-lg-7">
+                            <div class="benefits-box benefits-progress">
+                                <div class="benefits-progress-inner">
+                                    <div class="benefits-progress-item">
+                                        <div class="progress-line" data-progress="60"></div>
+                                        <div class="progress-text fw-semibold">
+                                            <i class="icon icon-bullseye-solid"></i>
+                                            Accuracy
+                                        </div>
+                                    </div>
+                                    <div class="benefits-progress-item">
+                                        <div class="progress-line" data-progress="100"></div>
+                                        <div class="progress-text fw-semibold">
+                                            <i class="icon icon-tachometer-alt-solid"></i>
+                                            Latency
+                                        </div>
+                                    </div>
+                                    <div class="benefits-progress-item">
+                                        <div class="progress-line" data-progress="40"></div>
+                                        <div class="progress-text fw-semibold">
+                                            <i class="icon icon-shield-alt-solid"></i>
+                                            Safety
+                                        </div>
+                                    </div>
+                                    <div class="benefits-progress-item">
+                                        <div class="progress-line" data-progress="80"></div>
+                                        <div class="progress-text fw-semibold">
+                                            <i class="icon icon-coins-solid"></i>
+                                            Cost
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h6 class="fw-semibold title">Zero apeluri pierdute</h6>
+                                    <p class="text text-secondary">Agentul răspunde la fiecare apel, indiferent de oră sau zi. Niciun client nu mai pleacă pentru că n-a prins pe nimeni la telefon.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="benefits-box benefits-step effectFade fadeUp">
+                                <div class="benefits-step-inner">
+                                    <div class="line-step"></div>
+                                    <div class="step-item">
+                                        <i class="icon icon-check-solid"></i>
+                                    </div>
+                                    <div class="step-item">
+                                        <i class="icon icon-check-solid"></i>
+                                    </div>
+                                    <div class="step-item">
+                                        <i class="icon icon-check-solid"></i>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h6 class="fw-semibold title">Configurare rapidă, fără bătăi de cap</h6>
+                                    <p class="text text-secondary">Ești agentul tau e activ rapid. Nu schimbi nimic la numărul tău de telefon și nu ai nevoie de echipament sau soft instalat.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="benefits-box benefits-secure ">
+                                <div class="benefits-secure-inner text-center">
+                                    <img src="assets/images/item/benefits-1.svg" alt="">
+                                </div>
+                                <div class="content">
+                                    <h6 class="fw-semibold title">Pachete lunare flexibile</h6>
+                                    <p class="text text-secondary">Plătești lunar și poți opri oricând. Nicio penalitate, nicio birocrație. Continuăm pentru că ești mulțumit, nu pentru că ești blocat.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="benefits-box benefits-design">
+                                <div class="benefits-design-inner">
+                                    <img class="item-img-1" src="assets/images/item/benefits-2.svg" alt="">
+                                    <img class="item-img-2 rightleft" src="assets/images/item/benefits-3.png" alt="">
+                                    <img class="item-img-3 updown" src="assets/images/item/benefits-4.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h6 class="fw-semibold title">Rapoarte clare în fiecare lună</h6>
+                                    <p class="text text-secondary">Primești un raport lunar cu toate apelurile, programările și observațiile clienților. Știi exact ce face agentul și unde mai poți îmbunătăți.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-benefits -->
+        </div>
+
+        <!-- section-tools -->
+        <div class="section-tools flat-spacing">
+            <img class="img-1 img-grow-1" src="assets/images/item/item-4.svg" alt="">
+            <img class="img-2 img-grow-2" src="assets/images/item/item-5.svg" alt="">
+            <img class="img-3 img-grow-3" src="assets/images/item/item-6.svg" alt="">
+            <img class="img-4 img-grow-4" src="assets/images/item/item-7.svg" alt="">
+            <img class="img-5 img-grow-5" src="assets/images/item/item-8.svg" alt="">
+            <img class="img-6 img-grow-6" src="assets/images/item/item-9.svg" alt="">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-md-8 text-center">
+                        <div class="heading-section center mb-48">
+                            <div class="heading-sub fw-semibold effectFade fadeUp">Integrari</div>
+                            <div class="heading-title text-gradient-3 effectFade fadeRotateX">Functioneaza cu ce ai deja</div>
+                        </div>
+                        <div class="text effectFade fadeUp">
+                            Vocalyy se conectează la Google Calendar, Calendly și orice număr de telefon existent. Nu trebuie să schimbi nimic în afacerea ta.
+                        </div>
+                        <a href="try-agent.html" class="tf-btn effectFade fadeRotateX">
+                            Solicită Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-tools -->
+
+        <div class="box-black">
+            <div class="light-box"></div>
+            <img class="light-top" src="assets/images/item/light-top.png" alt="">
+            <img class="light-bot" src="assets/images/item/light-bot.png" alt="">
+            
+            <!-- section-statistic -->
+            <div class="section-statistic">
+                <div class="line"></div>
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-md-6">
+                            <div class="heading-section mb-48">
+                                <div class="heading-sub fw-semibold style-1 effectFade fadeUp">Rezultate</div>
+                                <div class="heading-title text-white effectFade fadeRotateX">Numere reale <br> de la afaceri <br> reale</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="statistic-slider">
+                                <div class="text text-body-1 text-neutral-400 effectFade fadeUp" style="margin-bottom:40px;">
+                                    Peste 500 de afaceri din România folosesc Vocalyy. Niciun apel pierdut, nicio secretară extra, agentul tau lucreaza non-stop.
+                                </div>
+                                <div class="row g-4 effectFade fadeUp">
+                                    <div class="col-4 text-center">
+                                        <div class="title fw-semibold text-body-1" style="color:#fff;margin-bottom:8px;">APELURI/LUNĂ</div>
+                                        <div style="font-size:56px;line-height:1;font-weight:700;color:#fff;letter-spacing:-0.03em;">12K<span style="color:var(--color-brand,#e53935);font-size:52px;">+</span></div>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="title fw-semibold text-body-1" style="color:#fff;margin-bottom:8px;">AFACERI ACTIVE</div>
+                                        <div style="font-size:56px;line-height:1;font-weight:700;color:#fff;letter-spacing:-0.03em;">500<span style="color:var(--color-brand,#e53935);font-size:52px;">+</span></div>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="title fw-semibold text-body-1" style="color:#fff;margin-bottom:8px;">SATISFACȚIE</div>
+                                        <div style="font-size:56px;line-height:1;font-weight:700;color:#fff;letter-spacing:-0.03em;">98<span style="color:var(--color-brand,#e53935);font-size:52px;">%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-statistic -->
+            <!-- section-awards -->
+            <div class="section-awards flat-spacing">
+                <div class="container">
+                    <div class="heading-section center mb-48">
+                        <div class="heading-sub fw-semibold style-1 mb-0 effectFade fadeUp">De incredere</div>
+                    </div>
+                    <div class="d-grid gap-16">
+                        <div class="awards-item effectFade fadeUp">
+                            <div class="title text-body-1 text-white">99.9% Uptime Garantat</div>
+                            <div class="text text-body-1 text-white">Agentul funcționează non-stop, fără întreruperi</div>
+                            <div class="year text-body-1 text-neutral-400">/ SLA</div>
+                        </div>
+                        <div class="awards-item effectFade fadeUp" data-delay="0.1">
+                            <div class="title text-body-1 text-white">500+ Afaceri Active</div>
+                            <div class="text text-body-1 text-white">Clinici, saloane, service-uri, cabinete — toate din România</div>
+                            <div class="year text-body-1 text-neutral-400">/ 2025</div>
+                        </div>
+                        <div class="awards-item effectFade fadeUp" data-delay="0.2">
+                            <div class="title text-body-1 text-white">Configurare Simplă</div>
+                            <div class="text text-body-1 text-white">Fără echipament nou, fără birocrație, fără IT</div>
+                            <div class="year text-body-1 text-neutral-400">/ Garantat</div>
+                        </div>
+                        <div class="awards-item effectFade fadeUp" data-delay="0.3">
+                            <div class="title text-body-1 text-white">Parteneriat pe Termen Lung</div>
+                            <div class="text text-body-1 text-white">Creștem împreună — suport complet și optimizare continuă</div>
+                            <div class="year text-body-1 text-neutral-400">/ Dedicat</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-awards -->
+            <!-- section-testimonials -->
+            <div class="section-testimonials flat-spacing pt-0">
+                <div class="container" style="position:relative;">
+                    <!-- Large side image -->
+                    <div class="testimonial-side-image d-none d-xl-block" style="position:absolute;right:-30px;top:50%;transform:translateY(-50%);width:340px;border-radius:24px;overflow:hidden;z-index:0;">
+                        <img src="assets/images/testimoniale/testimonial-img.jpg" alt="Testimoniale Vocalyy" style="width:100%;height:100%;object-fit:cover;border-radius:24px;">
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-10">
+                            <div class="heading-section mb-48">
+                                <div class="heading-sub fw-semibold style-1 effectFade fadeUp">Testimoniale</div>
+                                <div class="heading-title text-white effectFade fadeRotateX">Ce spun proprietarii<br>de afaceri</div>
+                            </div>
+                            <!-- Testimonial slider -->
+                            <div class="swiper-testimonial_wrap effectFade fadeUp">
+                                <div dir="ltr" class="swiper tf-swiper swiper-testimonial">
+                                    <div class="swiper-wrapper">
+                                        <!-- Slide 1 -->
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-card-orbia">
+                                                <div class="ratings-orbia">
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                </div>
+                                                <p class="text-body-1 text-white desc">"De când am Vocalyy, nu mai pierd niciun apel. Clienții sunt programați automat și eu mă pot concentra pe munca mea. A fost cea mai bună decizie pentru clinica mea."</p>
+                                                <div class="author-info-quote-wrap-orbia">
+                                                    <div class="author-thumb-item-orbia">
+                                                        <div class="author-thumb-orbia">
+                                                            <img src="assets/images/testimoniale/author-img1.jpg" alt="Dr. Andrei Popescu">
+                                                        </div>
+                                                        <div class="author-info-orbia">
+                                                            <h5 class="text-white fw-semibold" style="font-size:16px;margin:0 0 4px;">Dr. Andrei Popescu</h5>
+                                                            <span style="color:#9CA3AF;font-size:13px;">Medic Stomatolog, Cluj-Napoca</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="quote-orbia">
+                                                        <svg width="40" height="34" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#FD3A25"/></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Slide 2 -->
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-card-orbia">
+                                                <div class="ratings-orbia">
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                </div>
+                                                <p class="text-body-1 text-white desc">"Jumătate din apeluri rămâneau fără răspuns. Acum agentul preia tot automat, programările au crescut și nu mai stau cu grija telefoanelor."</p>
+                                                <div class="author-info-quote-wrap-orbia">
+                                                    <div class="author-thumb-item-orbia">
+                                                        <div class="author-thumb-orbia">
+                                                            <img src="assets/images/testimoniale/author-img2.jpg" alt="Maria Ionescu">
+                                                        </div>
+                                                        <div class="author-info-orbia">
+                                                            <h5 class="text-white fw-semibold" style="font-size:16px;margin:0 0 4px;">Maria Ionescu</h5>
+                                                            <span style="color:#9CA3AF;font-size:13px;">Proprietară Salon de Frumusețe, București</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="quote-orbia">
+                                                        <svg width="40" height="34" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#FD3A25"/></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Slide 3 -->
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-card-orbia">
+                                                <div class="ratings-orbia">
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                </div>
+                                                <p class="text-body-1 text-white desc">"La service-ul nostru aveam probleme mari cu apelurile pierdute în orele aglomerate. Vocalyy a rezolvat totul. Clienții sunt mulțumiți, angajații mei sunt mai relaxați."</p>
+                                                <div class="author-info-quote-wrap-orbia">
+                                                    <div class="author-thumb-item-orbia">
+                                                        <div class="author-thumb-orbia">
+                                                            <img src="assets/images/testimoniale/author-img3.jpg" alt="Bogdan Mărculescu">
+                                                        </div>
+                                                        <div class="author-info-orbia">
+                                                            <h5 class="text-white fw-semibold" style="font-size:16px;margin:0 0 4px;">Bogdan Mărculescu</h5>
+                                                            <span style="color:#9CA3AF;font-size:13px;">Manager Service Auto, Timișoara</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="quote-orbia">
+                                                        <svg width="40" height="34" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#FD3A25"/></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Slide 4 -->
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-card-orbia">
+                                                <div class="ratings-orbia">
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                    <i class="icon icon-star-solid" style="color:#FD3A25;"></i>
+                                                </div>
+                                                <p class="text-body-1 text-white desc">"Clienții sunau după program și nu primeau niciun răspuns. Acum agentul preia apelul, îi informează și programează consultații. Am câștigat clienți noi doar din asta."</p>
+                                                <div class="author-info-quote-wrap-orbia">
+                                                    <div class="author-thumb-item-orbia">
+                                                        <div class="author-thumb-orbia">
+                                                            <img src="assets/images/testimoniale/author-img4.jpg" alt="Elena Dumitrescu">
+                                                        </div>
+                                                        <div class="author-info-orbia">
+                                                            <h5 class="text-white fw-semibold" style="font-size:16px;margin:0 0 4px;">Elena Dumitrescu</h5>
+                                                            <span style="color:#9CA3AF;font-size:13px;">Avocat, Firmă de Avocatură, București</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="quote-orbia">
+                                                        <svg width="40" height="34" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.9375 20V10.3597C12.9375 7.72182 13.824 5.51559 15.5969 3.74101C17.4177 1.91847 19.8854 0.671463 23 0V6.40288C21.8021 6.78657 21.0115 7.26619 20.6281 7.84173C20.2448 8.3693 20.0292 9.04077 19.9813 9.85612H23V20H12.9375ZM0 20V10.3597C0 7.72182 0.886459 5.51559 2.65938 3.74101C4.48021 1.91847 6.94792 0.671463 10.0625 0V6.40288C8.9125 6.78657 8.12187 7.26619 7.69062 7.84173C7.30729 8.3693 7.09167 9.04077 7.04375 9.85612H10.0625V20H0Z" fill="#FD3A25"/></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group-slider mt-40">
+                                    <div class="group-btn-slider">
+                                        <div class="btn-slider nav-prev-swiper testimonials-prev">
+                                            <i class="icon icon-angle-left-solid"></i>
+                                        </div>
+                                        <div class="btn-slider nav-next-swiper testimonials-next">
+                                            <i class="icon icon-angle-right-solid"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section-testimonials -->
+        </div>
+
+        <!-- section-pricing -->
+        <div id="pricing" class="section-pricing flat-spacing">
+            <div class="container">
+                <div class="heading-section mb-80">
+                    <div class="heading-sub fw-semibold effectFade fadeUp">Preturi</div>
+                    <div class="heading-title text-gradient-3 gap-8 effectFade fadeRotateX">
+                        Pachete clare.<br>
+                        <div class="h-8 d-none d-lg-block"></div>
+                        Fara surprize.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 lg-mb-24">
+                        <div class="pricing-item h-100 effectFade fadeRotateX">
+                            <div class="top d-flex gap-12 align-items-center">
+                                <div class="d-flex gap-8 align-items-center">
+                                    <i class="icon icon-user-friends-solid fs-24"></i>
+                                    <div class="fw-semibold text">Starter</div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="fw-semibold text-secondary">Pentru inceput</div>
+                            </div>
+                            <div class="heading">
+                                <div class="d-flex gap-14 align-items-end">
+                                    <div class="price-number fw-bold" data-month="299" data-year="2990">€299</div>
+                                    <h6 class="price-per">/ lună</h6>
+                                </div>
+                                <a href="contact.html" class="tf-btn">
+                                    Alege acest pachet
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <div>
+                                    <div class="title fw-semibold mb-4">Ce include</div>
+                                    <div class="text fw-semibold">
+                                        Tot ce ai nevoie ca sa nu mai pierzi niciun apel.
+                                    </div>
+                                </div>
+                                <ul class="list-text type-check">
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Agent vocal 24/7 in romana
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        1.000 minute inbound/luna
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        3 apeluri simultane
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Raspuns FAQ — program, preturi, locatie
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Notificare programare: SMS / WhatsApp / email
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Raport lunar + support email
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 lg-mb-24">
+                        <div class="pricing-item h-100 style-black effectFade fadeRotateX" data-delay="0.1">
+                            <div class="top d-flex gap-12 align-items-center">
+                                <div class="d-flex gap-8 align-items-center">
+                                    <i class="icon icon-bolt-solid fs-24"></i>
+                                    <div class="fw-semibold text">Professional</div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="fw-semibold text-neutral-400">Cel mai ales</div>
+                            </div>
+                            <div class="heading">
+                                <div class="d-flex gap-14 align-items-end">
+                                    <div class="price-number fw-bold" data-month="449" data-year="4490">€449</div>
+                                    <h6 class="price-per">/ lună</h6>
+                                </div>
+                                <a href="contact.html" class="tf-btn">
+                                    Alege acest pachet
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <div>
+                                    <div class="title fw-semibold mb-4">Ce include</div>
+                                    <div class="text fw-semibold">
+                                        Programari automate, calendar sincronizat, zero efort.
+                                    </div>
+                                </div>
+                                <ul class="list-text type-check">
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Tot din Starter, plus:
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        2.500 minute inbound / 7 apeluri simultane
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Google Calendar / Calendly integrat
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        50 apeluri outbound/luna
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Scripturi dinamice per apelant
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Raport detaliat + support prioritar
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 lg-mb-24">
+                        <div class="pricing-item h-100 effectFade fadeRotateX" data-delay="0.2">
+                            <div class="top d-flex gap-12 align-items-center">
+                                <div class="d-flex gap-8 align-items-center">
+                                    <i class="icon icon-crown fs-24"></i>
+                                    <div class="fw-semibold text">Premium</div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="fw-semibold text-secondary">Volum mare</div>
+                            </div>
+                            <div class="heading">
+                                <div class="d-flex gap-14 align-items-end">
+                                    <div class="price-number fw-bold" data-month="749" data-year="7490">€749</div>
+                                    <h6 class="price-per">/ lună</h6>
+                                </div>
+                                <a href="contact.html" class="tf-btn">
+                                    Alege acest pachet
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <div>
+                                    <div class="title fw-semibold mb-4">Ce include</div>
+                                    <div class="text fw-semibold">
+                                        Volum mare, vanzari active, crestere prin fiecare apel.
+                                    </div>
+                                </div>
+                                <ul class="list-text type-check">
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Tot din Professional, plus:
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Minute nelimitate / 12 apeluri simultane
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        500 apeluri outbound/luna
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Voce personalizata / clonare vocala
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Integrari CRM, ERP, API custom
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-check-solid"></i>
+                                        Rapoarte personalizate + support prioritar
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Enterprise Banner -->
+                <div class="row mt-24">
+                    <div class="col-12">
+                        <div class="pricing-item effectFade fadeRotateX" data-delay="0.3" style="display: flex; align-items: center; justify-content: space-between; gap: 48px; flex-wrap: wrap; padding: 48px 56px;">
+                            <div style="flex: 1; min-width: 240px;">
+                                <div class="top d-flex gap-12 align-items-center" style="margin-bottom: 16px;">
+                                    <div class="d-flex gap-8 align-items-center">
+                                        <i class="icon icon-building" style="font-size: 30px;"></i>
+                                        <div class="fw-semibold text" style="font-size: 20px;">Enterprise</div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="fw-semibold text-secondary" style="font-size: 16px;">La cerere</div>
+                                </div>
+                                <div class="fw-bold" style="font-size: 1.75rem; line-height: 1.35;">Solutie personalizata pentru<br>corporatii si afaceri mari.</div>
+                            </div>
+                            <ul class="list-text type-check" style="flex: 2; min-width: 300px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 40px; margin: 0; font-size: 15px;">
+                                <li><i class="icon icon-check-solid"></i>Volum nelimitat, infrastructura dedicata</li>
+                                <li><i class="icon icon-check-solid"></i>Voce clonata dupa brandul tau</li>
+                                <li><i class="icon icon-check-solid"></i>Integrari CRM, ERP, sisteme interne</li>
+                                <li><i class="icon icon-check-solid"></i>SLA garantat + manager de cont dedicat</li>
+                                <li><i class="icon icon-check-solid"></i>Training AI pe datele afacerii tale</li>
+                                <li><i class="icon icon-check-solid"></i>Onboarding & contract personalizat</li>
+                            </ul>
+                            <div style="flex-shrink: 0;">
+                                <a href="contact.html" class="tf-btn" style="padding: 18px 36px; font-size: 16px;">Hai sa vorbim</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-pricing -->
+
+        <!-- section-faqs -->
+        <div class="section-faqs flat-spacing pt-0">
+            <div class="container">
+                <div class="heading-section center mb-64">
+                    <div class="heading-sub fw-semibold effectFade fadeUp">Intrebari frecvente</div>
+                    <div class="heading-title text-gradient-3 effectFade fadeRotateX">
+                        Raspunsuri la <br>intrebarile tale
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion-asked" id="accordion-asked">
+                            <div class="accordion-asked-item effectFade fadeRotateX">
+                                <div class="accordion-asked-title" id="asked1">
+                                    <button class="accordion-button text-body-1 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        Cat dureaza configurarea?
+                                        <span class="right-icon"></span>
+                                    </button>
+                                </div>
+                                <div id="collapse1" role="region" class="accordion-collapse collapse show" aria-labelledby="asked1" data-bs-parent="#accordion-asked">
+                                    <div class="accordion-body">
+                                        Configurarea e simpla si rapida. Facem un apel de discovery, configuram agentul specific afacerii tale si il testam impreuna inainte sa fie activ pe numarul tau.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-asked-item effectFade fadeRotateX" data-delay="0.1">
+                                <div class="accordion-asked-title" id="asked2">
+                                    <button class="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        Vocalyy vorbeste natural in romana?
+                                        <span class="right-icon"></span>
+                                    </button>
+                                </div>
+                                <div id="collapse2" role="region" class="accordion-collapse collapse" aria-labelledby="asked2" data-bs-parent="#accordion-asked">
+                                    <div class="accordion-body">
+                                        Da. Agentul e antrenat pe limba romana si suna ca un angajat real, nu ca un robot. Clientii tai nu isi dau seama ca vorbesc cu un AI.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-asked-item effectFade fadeRotateX" data-delay="0.2">
+                                <div class="accordion-asked-title" id="asked3">
+                                    <button class="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        Ce se intampla daca agentul nu stie raspunsul?
+                                        <span class="right-icon"></span>
+                                    </button>
+                                </div>
+                                <div id="collapse3" role="region" class="accordion-collapse collapse" aria-labelledby="asked3" data-bs-parent="#accordion-asked">
+                                    <div class="accordion-body">
+                                        Il poate spune clientului ca vei suna tu inapoi, poate lua un mesaj sau poate redirectiona apelul catre tine, in functie de cum configurezi.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-asked-item effectFade fadeRotateX" data-delay="0.3">
+                                <div class="accordion-asked-title" id="asked4">
+                                    <button class="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        Cum functioneaza abonamentul?
+                                        <span class="right-icon"></span>
+                                    </button>
+                                </div>
+                                <div id="collapse4" role="region" class="accordion-collapse collapse" aria-labelledby="asked4" data-bs-parent="#accordion-asked">
+                                    <div class="accordion-body">
+                                        Nu. Platesti lunar si poti anula oricand. Nu exista penalitati.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-asked-item effectFade fadeRotateX" data-delay="0.4">
+                                <div class="accordion-asked-title" id="asked5">
+                                    <button class="accordion-button text-body-1 fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                        Functioneaza si pe telefonul meu actual?
+                                        <span class="right-icon"></span>
+                                    </button>
+                                </div>
+                                <div id="collapse5" role="region" class="accordion-collapse collapse" aria-labelledby="asked5" data-bs-parent="#accordion-asked">
+                                    <div class="accordion-body">
+                                        Da. Vocalyy se integreaza cu orice numar de telefon existent, fix sau mobil, fara sa schimbi nimic.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-faqs -->
+        <!-- section-contact -->
+        <div id="contact" class="flat-spacing pt-0">
+            <div class="section-contact">
+                <div class="contact-image">
+                    <img src="assets/images/section/contact-image-bg.jpg" alt="">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="col-left">
+                                <div class="heading-section mb-48">
+                                    <div class="heading-sub fw-semibold effectFade fadeUp">Contact</div>
+                                    <div class="heading-title text-gradient-3 effectFade fadeRotateX">
+                                        Hai sa <br> vorbim
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="contact-item mb-20 effectFade fadeRotateX">
+                                        <i class="icon icon-envelope-solid"></i>
+                                        <div class="content">
+                                            <div class="title fw-semibold mb-2">Adresa de e-mail</div>
+                                            <div class="text">contact@vocalyy.ro</div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item effectFade fadeRotateX" data-delay="0.1">
+                                        <i class="icon icon-headset-solid"></i>
+                                        <div class="content">
+                                            <div class="title fw-semibold mb-2">Telefon</div>
+                                            <div class="text">+40 700 000 000</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <form class="form-contact effectFade fadeUp">
+                                <h4 class="heading fw-semibold">Completeaza formularul</h4>
+                                <fieldset class="mb-21">
+                                    <label class="fw-semibold text-body-3 mb-20">Numele tau</label>
+                                    <input class="" type="text" placeholder="Introdu numele complet" required>
+                                </fieldset>
+                                <fieldset class="mb-21">
+                                    <label class="fw-semibold text-body-3 mb-20">Numarul de telefon</label>
+                                    <input class="" type="text" placeholder="Introdu numarul de telefon" required>
+                                </fieldset>
+                                <fieldset class="mb-18">
+                                    <label class="fw-semibold text-body-3 mb-0">Spune-ne despre afacerea ta</label>
+                                    <textarea name="text" class=""></textarea>
+                                </fieldset>
+                                <div class="attachment d-flex gap-8 align-items-center">
+                                    <i class="icon icon-paperclip-solid fs-24"></i>
+                                    <div class="fw-semibold text-body-3">Adauga un fisier</div>
+                                </div>
+                                <button type="submit" class="tf-btn w-100">Trimite Mesajul</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /section-contact -->
+
+        <!-- footer -->
+        <footer>
+            <div class="footer-image">
+                <img class="effectFade fadeUp" src="assets/images/logo/logo-footer.png" alt="">
+            </div>
+            <div class="container">
+                <div class="footer-content">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/images/logo/logo-2.svg" alt="">
+                    </a>
+                </div>
+                <div class="footer-bottom">
+                    <ul class="footer-links d-flex gap-24 align-items-center">
+                        <li>
+                            <a href="about.html" class="fw-semibold link-underline link1">Despre Noi</a>
+                        </li>
+                        <li>
+                            <a href="service-single.html" class="fw-semibold link-underline link1">Servicii</a>
+                        </li>
+                        <li>
+                            <a href="work.html" class="fw-semibold link-underline link1">Industrii</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="fw-semibold link-underline link1">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="text-secondary coppy-rights text-center">© 2025 Vocalyy. Toate drepturile rezervate.</p>
+                    <a href="#" class="action-go-top d-flex gap-8 align-items-center justify-content-end link1">
+                        <span class="fw-semibold">Inapoi sus</span>
+                        <i class="icon icon-long-arrow-alt-up-solid fs-20"></i>
+                    </a>    
+                </div>
+            </div>
+        </footer>
+        <!-- /footer -->
+    </main>
+    <!-- /wrapper -->
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas-menu">
+        <div class="offcanvas-content">
+            <div class="container h-100">
+                <div class="offcanvas-content_wrapin">
+                    <div class="canvas_head">
+                        <a href="index.html" class="logo-site">
+                            <i class="icon icon-davies-logo"></i>
+                        </a>
+                        <div class="btn-mobile-menu close-mb-menu text-caption link">
+                            <i class="icon icon-close"></i>
+                            CLOSE
+                        </div>
+                    </div>
+                    <div class="canvas_center">
+                        <ul class="nav-ul-mb" id="mobile-menu">
+                            <li>
+                                <div class="item">
+                                    <a href="about.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Despre Noi</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="service-single.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Servicii</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="work.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Industrii</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="pricing.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Prețuri</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="blog-three-columns.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Blog</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="contact.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Contact</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="canvas_foot">
+                        <div class="left">
+                            <a href="mailto:contact@vocalyy.ro" class="text-caption text-neutral-200">contact@vocalyy.ro</a>
+                            <p class="text-caption text-neutral-200">
+                                CUP <span class="clock"></span>
+                            </p>
+                        </div>
+                        <div class="right">
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200">
+                                <i class="icon icon-arrow-top-right"></i>
+                                TWITTER (X)
+                            </a>
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200">
+                                <i class="icon icon-arrow-top-right"></i>
+                                DRIBBBLE
+                            </a>
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200">
+                                <i class="icon icon-arrow-top-right"></i>
+                                LINKEDIN
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+    <!-- Left Bar -->
+    <div class="tf-left-bar">
+        <a class="btn-setting-color" data-bs-toggle="offcanvas" href="#settingColorMenu">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.0015 7.50004C11.1115 7.50004 10.2415 7.76396 9.50144 8.25843C8.76142 8.7529 8.18464 9.4557 7.84405 10.278C7.50346 11.1002 7.41434 12.005 7.58797 12.8779C7.76161 13.7509 8.19019 14.5527 8.81953 15.182C9.44886 15.8114 10.2507 16.2399 11.1236 16.4136C11.9965 16.5872 12.9013 16.4981 13.7236 16.1575C14.5458 15.8169 15.2487 15.2401 15.7431 14.5001C16.2376 13.7601 16.5015 12.8901 16.5015 12C16.5003 10.8069 16.0258 9.66308 15.1821 8.81943C14.3385 7.97579 13.1946 7.50128 12.0015 7.50004ZM12.0015 15C11.4082 15 10.8281 14.8241 10.3348 14.4945C9.84145 14.1648 9.45693 13.6963 9.22987 13.1481C9.00281 12.5999 8.9434 11.9967 9.05915 11.4148C9.17491 10.8328 9.46063 10.2983 9.88019 9.87872C10.2997 9.45916 10.8343 9.17344 11.4162 9.05769C11.9982 8.94193 12.6014 9.00134 13.1496 9.2284C13.6977 9.45547 14.1663 9.83998 14.4959 10.3333C14.8256 10.8267 15.0015 11.4067 15.0015 12C15.0015 12.7957 14.6854 13.5588 14.1228 14.1214C13.5602 14.684 12.7972 15 12.0015 15ZM20.2515 12.2025C20.2553 12.0675 20.2553 11.9325 20.2515 11.7975L21.6503 10.05C21.7236 9.95829 21.7744 9.85059 21.7985 9.73563C21.8226 9.62067 21.8193 9.50165 21.789 9.38817C21.5597 8.52623 21.2167 7.69865 20.769 6.92723C20.7104 6.82628 20.629 6.7404 20.5314 6.67644C20.4337 6.61248 20.3225 6.57219 20.2065 6.55879L17.9828 6.31129C17.8903 6.21379 17.7965 6.12004 17.7015 6.03004L17.439 3.80067C17.4255 3.68462 17.3851 3.57332 17.3209 3.47566C17.2568 3.37801 17.1708 3.29668 17.0696 3.23817C16.2979 2.79131 15.4704 2.44864 14.6087 2.21911C14.4951 2.18891 14.3761 2.18583 14.2611 2.21009C14.1461 2.23435 14.0385 2.28529 13.9468 2.35879L12.204 3.75004C12.069 3.75004 11.934 3.75004 11.799 3.75004L10.0515 2.35411C9.95975 2.28076 9.85206 2.23 9.7371 2.2059C9.62213 2.1818 9.50311 2.18504 9.38963 2.21536C8.52783 2.44507 7.70031 2.78806 6.92869 3.23536C6.82774 3.29397 6.74187 3.37535 6.6779 3.473C6.61394 3.57065 6.57366 3.68189 6.56026 3.79785L6.31276 6.02535C6.21526 6.11848 6.12151 6.21223 6.03151 6.3066L3.80213 6.56254C3.68608 6.57604 3.57479 6.61647 3.47713 6.6806C3.37947 6.74473 3.29814 6.83079 3.23963 6.93192C2.79277 7.70363 2.4501 8.53114 2.22057 9.39286C2.19038 9.50641 2.18729 9.62547 2.21156 9.74044C2.23582 9.8554 2.28675 9.96306 2.36026 10.0547L3.75151 11.7975C3.75151 11.9325 3.75151 12.0675 3.75151 12.2025L2.35557 13.95C2.28223 14.0418 2.23146 14.1495 2.20736 14.2645C2.18326 14.3794 2.1865 14.4984 2.21682 14.6119C2.44612 15.4739 2.78913 16.3014 3.23682 17.0729C3.29544 17.1738 3.37681 17.2597 3.47447 17.3236C3.57212 17.3876 3.68335 17.4279 3.79932 17.4413L6.02307 17.6888C6.1162 17.7863 6.20995 17.88 6.30432 17.97L6.56401 20.1994C6.57751 20.3155 6.61794 20.4268 6.68207 20.5244C6.7462 20.6221 6.83226 20.7034 6.93338 20.7619C7.7051 21.2088 8.53261 21.5514 9.39432 21.781C9.50787 21.8112 9.62693 21.8143 9.7419 21.79C9.85687 21.7657 9.96452 21.7148 10.0562 21.6413L11.799 20.25C11.934 20.2538 12.069 20.2538 12.204 20.25L13.9515 21.6488C14.0433 21.7221 14.151 21.7729 14.2659 21.797C14.3809 21.8211 14.4999 21.8179 14.6134 21.7875C15.4753 21.5582 16.3029 21.2152 17.0743 20.7675C17.1753 20.7089 17.2611 20.6275 17.3251 20.5299C17.3891 20.4322 17.4294 20.321 17.4428 20.205L17.6903 17.9813C17.7878 17.8888 17.8815 17.795 17.9715 17.7L20.2009 17.4375C20.3169 17.424 20.4282 17.3836 20.5259 17.3195C20.6235 17.2554 20.7049 17.1693 20.7634 17.0682C21.2102 16.2965 21.5529 15.4689 21.7824 14.6072C21.8126 14.4937 21.8157 14.3746 21.7915 14.2596C21.7672 14.1447 21.7163 14.037 21.6428 13.9454L20.2515 12.2025ZM18.7421 11.5932C18.7581 11.8642 18.7581 12.1359 18.7421 12.4069C18.731 12.5925 18.7891 12.7755 18.9053 12.9207L20.2356 14.5829C20.0829 15.068 19.8875 15.5386 19.6515 15.9891L17.5328 16.2291C17.3482 16.2496 17.1779 16.3378 17.0546 16.4766C16.8742 16.6796 16.682 16.8718 16.479 17.0522C16.3402 17.1755 16.252 17.3458 16.2315 17.5304L15.9962 19.6472C15.5457 19.8833 15.0751 20.0788 14.5899 20.2313L12.9268 18.901C12.7937 18.7946 12.6284 18.7368 12.4581 18.7369H12.4131C12.1421 18.7529 11.8703 18.7529 11.5993 18.7369C11.4138 18.7257 11.2307 18.7839 11.0856 18.9L9.41869 20.2313C8.93357 20.0786 8.46297 19.8832 8.01244 19.6472L7.77244 17.5313C7.75196 17.3468 7.66378 17.1764 7.52494 17.0532C7.32198 16.8727 7.12978 16.6805 6.94932 16.4775C6.82607 16.3387 6.65571 16.2505 6.4712 16.23L4.35432 15.9938C4.11825 15.5433 3.92279 15.0727 3.77026 14.5875L5.10057 12.9244C5.21673 12.7793 5.27486 12.5962 5.2637 12.4107C5.24776 12.1397 5.24776 11.8679 5.2637 11.5969C5.27486 11.4114 5.21673 11.2283 5.10057 11.0832L3.77026 9.41723C3.92291 8.9321 4.11836 8.4615 4.35432 8.01098L6.47026 7.77098C6.65477 7.7505 6.82513 7.66231 6.94838 7.52348C7.12884 7.32052 7.32105 7.12831 7.52401 6.94785C7.66339 6.82452 7.75194 6.65377 7.77244 6.46879L8.00776 4.35286C8.45823 4.11679 8.92884 3.92132 9.41401 3.76879L11.0771 5.0991C11.2222 5.21527 11.4053 5.2734 11.5909 5.26223C11.8619 5.24629 12.1336 5.24629 12.4046 5.26223C12.5902 5.2734 12.7733 5.21527 12.9184 5.0991L14.5843 3.76879C15.0694 3.92144 15.54 4.1169 15.9906 4.35286L16.2306 6.46879C16.2511 6.65331 16.3392 6.82367 16.4781 6.94692C16.681 7.12738 16.8732 7.31958 17.0537 7.52254C17.1769 7.66137 17.3473 7.74956 17.5318 7.77004L19.6487 8.00535C19.8848 8.45583 20.0802 8.92644 20.2328 9.4116L18.9024 11.0747C18.7852 11.2211 18.727 11.406 18.7393 11.5932H18.7421Z" fill="#fff"/>
+            </svg>
+        </a>
+    </div>
+    <!-- Left Bar -->
+    <!-- Setting Color -->
+    <div class="offcanvas offcanvas-end offcanvas-color" id="settingColorMenu">
+        <div class="offcanvas-content">
+            <span class="icon-close-popup" data-bs-dismiss="offcanvas">
+                <i class="icon-close"></i>
+            </span>
+            <div class="canvas-header">
+                <h3 class="fw-semibold text-white">Configuration</h3>
+            </div>
+            <div class="canvas-body">
+                <h6 class="title fw-semibold text-white">COLORS</h6>
+                <div class="settings-color list-choose mb-24">
+                    <button type="button" class="choose-item link-no-action active"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                    <button type="button" class="choose-item link-no-action"></button>
+                </div>
+                <h6 class="title fw-semibold text-white">CUSTOM CURSOR</h6>
+                <div>
+                    <input type="checkbox" id="cursor" class="tf-switch-check style-small">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Setting Color -->
+
+    <!-- Javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/countto.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/infinityslide.js"></script>
+    <script src="assets/js/ScrollSmooth.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/gsapAnimation.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Subtle parallax for Încearcă Agentul section
+        (function () {
+            var bg = document.getElementById('try-agent-bg');
+            var section = document.getElementById('incearca-agentul');
+            if (!bg || !section) return;
+
+            function onScroll() {
+                var rect = section.getBoundingClientRect();
+                var winH = window.innerHeight;
+                // Only animate when section is in / near viewport
+                if (rect.bottom < -winH || rect.top > winH * 2) return;
+                var progress = (winH - rect.top) / (winH + rect.height);
+                var shift = (progress - 0.5) * 60; // max ±30px
+                bg.style.transform = 'translateY(' + shift + 'px)';
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+    </script>
+
+</body>
+
+</html>

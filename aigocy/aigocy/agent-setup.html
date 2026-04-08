@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Configurează-ți Agentul | Vocalyy</title>
+    <meta name="author" content="Vocalyy">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Configurează agentul tău vocal AI personalizat pentru afacerea ta.">
+
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/icon/icomoon/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick.theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.svg">
+    <link rel="apple-touch-icon-precomposed" href="assets/images/logo/favicon.svg">
+
+    <style>
+        /* === Setup Page === */
+        .setup-page { padding: 60px 0 100px; }
+
+        /* Package banner */
+        .package-banner {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--neutral-100);
+            border: 1.5px solid var(--neutral-200);
+            border-radius: 12px;
+            padding: 10px 20px;
+            margin-bottom: 40px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        .package-banner .pkg-name {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Step progress */
+        .step-progress {
+            display: flex;
+            align-items: center;
+            margin-bottom: 48px;
+        }
+        .step-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+        .step-dot {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            background: var(--neutral-200);
+            color: var(--secondary);
+            transition: background 0.3s, color 0.3s;
+        }
+        .step-item.active .step-dot {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .step-item.done .step-dot {
+            background: #22c55e;
+            color: var(--white);
+            font-size: 16px;
+        }
+        .step-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--neutral-400);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            white-space: nowrap;
+        }
+        .step-item.active .step-label { color: var(--primary); }
+        .step-item.done .step-label { color: #22c55e; }
+        .step-line {
+            flex: 1;
+            height: 2px;
+            background: var(--neutral-200);
+            margin: 0 12px;
+            margin-bottom: 26px;
+            transition: background 0.3s;
+        }
+        .step-line.done { background: #22c55e; }
+
+        /* Form card */
+        .setup-card {
+            background: var(--neutral-100);
+            border-radius: 28px;
+            padding: 48px 40px;
+            box-shadow: 0px 7.77px 16px 0px rgba(0,0,0,0.06),
+                        0px 3px 3px 0px rgba(0,0,0,0.10),
+                        0px -8px 0px 0px rgba(0,0,0,0.05) inset,
+                        0px 4px 0px 0px rgba(255,255,255,0.6) inset;
+        }
+        .setup-card-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .setup-card-desc {
+            color: var(--secondary);
+            font-size: 15px;
+            margin-bottom: 32px;
+        }
+        .form-group { margin-bottom: 22px; }
+        .form-label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .form-label .opt {
+            color: var(--neutral-400);
+            font-weight: 400;
+            font-size: 13px;
+        }
+        .form-label .req { color: #ef4444; }
+        .setup-card input[type="text"],
+        .setup-card input[type="tel"],
+        .setup-card input[type="url"],
+        .setup-card input[type="time"],
+        .setup-card input[type="email"],
+        .setup-card select {
+            width: 100%;
+            padding: 13px 18px;
+            border-radius: 12px;
+            border: 1.5px solid var(--neutral-200);
+            background: #fff;
+            font-size: 15px;
+            color: var(--primary);
+            outline: none;
+            transition: border-color 0.2s;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+        .setup-card input::placeholder { color: var(--neutral-400); }
+        .setup-card input:focus,
+        .setup-card select:focus { border-color: var(--primary); }
+        .setup-card input.has-error,
+        .setup-card select.has-error { border-color: #ef4444; }
+        .setup-card select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9l6 6 6-6' stroke='%2371717A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 42px;
+            cursor: pointer;
+        }
+        .setup-card select option {
+            background: #fff;
+            color: var(--primary);
+            padding: 10px;
+        }
+        /* Nice-select overrides — keep dropdown inside form card */
+        .setup-card .nice-select {
+            float: none;
+            display: block;
+            width: 100% !important;
+            box-sizing: border-box;
+            padding: 13px 42px 13px 18px;
+            border-radius: 12px;
+            border: 1.5px solid var(--neutral-200);
+            background: #fff;
+            font-size: 15px;
+            color: var(--primary);
+            height: auto;
+            line-height: 1.5;
+            font-family: inherit;
+            font-weight: 400;
+            white-space: normal;
+        }
+        .setup-card .nice-select:focus,
+        .setup-card .nice-select.open {
+            border-color: var(--primary);
+        }
+        .setup-card .nice-select:after {
+            right: 14px;
+            margin-top: -4px;
+            border-bottom: 2px solid #71717A;
+            border-right: 2px solid #71717A;
+            width: 8px;
+            height: 8px;
+        }
+        .setup-card .nice-select .list {
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 12px;
+            margin-top: 4px;
+            max-height: 260px;
+            overflow-y: auto;
+            background: #fff;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            border: 1.5px solid var(--neutral-200);
+        }
+        .setup-card .nice-select .option {
+            color: var(--primary);
+            font-size: 15px;
+            padding: 10px 18px;
+            line-height: 1.5;
+            min-height: auto;
+            font-weight: 500;
+        }
+        .setup-card .nice-select .option:hover,
+        .setup-card .nice-select .option.focus,
+        .setup-card .nice-select .option.selected.focus {
+            background: var(--neutral-100);
+        }
+        .setup-card .nice-select .current {
+            color: var(--primary);
+        }
+        .setup-card select.has-error + .nice-select {
+            border-color: #ef4444;
+        }
+        .form-error {
+            color: #ef4444;
+            font-size: 13px;
+            display: none;
+            margin-top: 6px;
+        }
+
+        /* Time row */
+        .time-row { display: flex; gap: 16px; }
+        .time-row .form-group { flex: 1; margin-bottom: 0; }
+
+        /* Day checkboxes */
+        .day-checkboxes {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+        .day-cb {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+        .day-cb input[type="checkbox"] { display: none; }
+        .day-cb .day-box {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1.5px solid var(--neutral-200);
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--secondary);
+            transition: all 0.2s;
+        }
+        .day-cb input:checked + .day-box {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+        }
+
+        /* Language checkboxes & tone radios */
+        .check-group, .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 4px;
+        }
+        .check-item, .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            font-size: 15px;
+            color: var(--primary);
+            font-weight: 500;
+        }
+        .check-item input, .radio-item input { display: none; }
+        .custom-box {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            border: 1.5px solid var(--neutral-300);
+            background: #fff;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .radio-item .custom-box { border-radius: 50%; }
+        .check-item input:checked ~ .custom-box,
+        .radio-item input:checked ~ .custom-box {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+        .check-item input:checked ~ .custom-box::after {
+            content: '✓';
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .radio-item input:checked ~ .custom-box::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #fff;
+            display: block;
+        }
+
+        /* Confirm checkbox */
+        .confirm-cb-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 14px;
+            border: 1.5px solid var(--neutral-200);
+            margin-bottom: 28px;
+            cursor: pointer;
+        }
+        .confirm-cb-row input { display: none; }
+        .confirm-box {
+            width: 24px;
+            height: 24px;
+            border-radius: 7px;
+            border: 1.5px solid var(--neutral-300);
+            background: #fff;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            margin-top: 1px;
+        }
+        .confirm-cb-row input:checked ~ .confirm-box {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+        .confirm-cb-row input:checked ~ .confirm-box::after {
+            content: '✓';
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .confirm-text {
+            font-size: 14px;
+            color: var(--primary);
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        /* Summary */
+        .summary-section { margin-bottom: 28px; }
+        .summary-section:last-child { margin-bottom: 0; }
+        .summary-section-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--secondary);
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--neutral-200);
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--neutral-200);
+        }
+        .summary-row:last-child { border-bottom: none; }
+        .summary-label {
+            font-size: 14px;
+            color: var(--secondary);
+            font-weight: 500;
+            flex-shrink: 0;
+            min-width: 140px;
+        }
+        .summary-value {
+            font-size: 14px;
+            color: var(--primary);
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* Navigation buttons */
+        .step-nav {
+            display: flex;
+            gap: 12px;
+            margin-top: 32px;
+            align-items: center;
+        }
+        .step-nav .tf-btn-2 {
+            flex-shrink: 0;
+        }
+        .step-nav .tf-btn {
+            flex: 1;
+            justify-content: center;
+        }
+        .btn-full { width: 100%; justify-content: center; }
+
+        /* Step panels */
+        .step-panel { display: none; }
+        .step-panel.active { display: block; }
+
+        @media (max-width: 767px) {
+            .setup-card { padding: 32px 20px; border-radius: 20px; }
+            .step-label { display: none; }
+            .step-dot { width: 34px; height: 34px; font-size: 13px; }
+            .step-line { margin: 0 8px; margin-bottom: 0; }
+            .summary-row { flex-direction: column; gap: 4px; }
+            .summary-value { text-align: left; }
+            .summary-label { min-width: unset; }
+            .time-row { flex-direction: column; gap: 16px; }
+        }
+    </style>
+</head>
+
+<body class="">
+    <canvas class="cursor-trail" id="trail" style="display: none;"></canvas>
+    <button id="goTop">
+        <span class="border-progress"></span>
+        <span class="ic-wrap"><span class="icon icon-long-arrow-alt-up-solid"></span></span>
+    </button>
+
+    <main id="wrapper">
+
+        <!-- Header -->
+        <header class="tf-header header2">
+            <div class="header-inner">
+                <a href="index.html" class="logo-site">
+                    <img src="assets/images/logo/logo.svg" alt="Vocalyy">
+                </a>
+                <div class="box-navigation">
+                    <ul class="nav-menu-main">
+                        <li class="menu-item"><a href="about.html" class="item-link link1">Despre Noi</a></li>
+                        <li class="menu-item"><a href="service-single.html" class="item-link link1">Servicii</a></li>
+                        <li class="menu-item"><a href="work.html" class="item-link link1">Industrii</a></li>
+                        <li class="menu-item"><a href="pricing.html" class="item-link link1">Prețuri</a></li>
+                        <li class="menu-item"><a href="blog-three-columns.html" class="item-link link1">Blog</a></li>
+                        <li class="menu-item"><a href="contact.html" class="item-link link1">Contact</a></li>
+                    </ul>
+                </div>
+                <a href="try-agent.html" class="tf-btn d-lg-flex d-none">Solicită Demo</a>
+                <a href="#" class="tf-btn open-mb-menu mobile-menu d-lg-none d-flex">
+                    <i class="icon icon-grip-lines-solid"></i>
+                </a>
+            </div>
+        </header>
+        <!-- /Header -->
+
+        <!-- page-title -->
+        <div class="section-page-title">
+            <div class="container text-center">
+                <h1 class="page-title fw-semibold effectFade fadeZoom">Configurează-ți Agentul</h1>
+                <div class="breadcrumbs effectFade fadeUp">
+                    <a href="index.html" class="link1">Acasă</a>
+                    <div>/</div>
+                    <a href="pricing.html" class="link1">Prețuri</a>
+                    <div>/</div>
+                    <span>Configurare</span>
+                </div>
+            </div>
+        </div>
+        <!-- /page-title -->
+
+        <!-- Main Content -->
+        <div class="setup-page">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-9">
+
+                        <!-- Package Banner -->
+                        <div class="text-center mb-8">
+                            <div class="package-banner">
+                                <i class="icon icon-bolt-solid fs-16"></i>
+                                <span>Configurezi pachetul <span class="pkg-name" id="package-display">Professional</span></span>
+                            </div>
+                        </div>
+
+                        <!-- Step Progress -->
+                        <div class="step-progress">
+                            <div class="step-item active" id="si-1">
+                                <div class="step-dot" id="sd-1">1</div>
+                                <div class="step-label">Informații</div>
+                            </div>
+                            <div class="step-line" id="sl-1"></div>
+                            <div class="step-item" id="si-2">
+                                <div class="step-dot" id="sd-2">2</div>
+                                <div class="step-label">Configurare</div>
+                            </div>
+                            <div class="step-line" id="sl-2"></div>
+                            <div class="step-item" id="si-3">
+                                <div class="step-dot" id="sd-3">3</div>
+                                <div class="step-label">Confirmare</div>
+                            </div>
+                        </div>
+
+                        <!-- STEP 1 -->
+                        <div class="step-panel active" id="step-1">
+                            <div class="setup-card effectFade fadeUp">
+                                <div class="setup-card-title">Informații despre afacere</div>
+                                <div class="setup-card-desc">Spune-ne despre afacerea ta pentru a-ți personaliza agentul.</div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="business-name">Numele afacerii <span class="req">*</span></label>
+                                    <input type="text" id="business-name" placeholder="ex. Clinica Dent Smile" autocomplete="organization">
+                                    <div class="form-error" id="business-name-error">Acest câmp este obligatoriu.</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="business-type">Tipul afacerii <span class="req">*</span></label>
+                                    <select id="business-type">
+                                        <option value="" disabled selected>Alege tipul afacerii</option>
+                                        <option value="clinica-dentara">Clinică Dentară</option>
+                                        <option value="salon">Salon</option>
+                                        <option value="agentie-imobiliara">Agenție Imobiliară</option>
+                                        <option value="service-auto">Service Auto</option>
+                                        <option value="cabinet-medical">Cabinet Medical</option>
+                                        <option value="altele">Altele</option>
+                                    </select>
+                                    <div class="form-error" id="business-type-error">Selectează tipul afacerii.</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="business-address">Adresa completă <span class="req">*</span></label>
+                                    <input type="text" id="business-address" placeholder="ex. Str. Avram Iancu nr. 5" autocomplete="street-address">
+                                    <div class="form-error" id="business-address-error">Acest câmp este obligatoriu.</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="business-phone">Numărul de telefon al afacerii <span class="req">*</span></label>
+                                    <input type="tel" id="business-phone" placeholder="ex. 0264 000 000" autocomplete="tel" inputmode="numeric" pattern="[0-9\s\+\-]*">
+                                    <div class="form-error" id="business-phone-error">Introdu un număr de telefon valid.</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="business-city">Orașul <span class="req">*</span></label>
+                                    <input type="text" id="business-city" placeholder="ex. Cluj-Napoca" autocomplete="address-level2">
+                                    <div class="form-error" id="business-city-error">Acest câmp este obligatoriu.</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="business-website">Website <span class="opt">(opțional)</span></label>
+                                    <input type="text" id="business-website" placeholder="ex. www.clinicadentalsmile.ro" autocomplete="url">
+                                </div>
+
+                                <div class="step-nav">
+                                    <button type="button" class="tf-btn btn-full animate-btn" id="btn-step1-next">
+                                        Continuă
+                                        <i class="icon icon-long-arrow-alt-right-solid"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /STEP 1 -->
+
+                        <!-- STEP 2 -->
+                        <div class="step-panel" id="step-2">
+                            <div class="setup-card effectFade fadeUp">
+                                <div class="setup-card-title">Configurare agent</div>
+                                <div class="setup-card-desc">Personalizăm comportamentul agentului tău vocal.</div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="calendar-type">Ce calendar folosești? <span class="req">*</span></label>
+                                    <select id="calendar-type">
+                                        <option value="" disabled selected>Alege sistemul de calendar</option>
+                                        <option value="google">Google Calendar</option>
+                                        <option value="calendly">Calendly</option>
+                                        <option value="alt">Alt sistem</option>
+                                        <option value="none">Nu folosesc calendar</option>
+                                    </select>
+                                    <div class="form-error" id="calendar-type-error">Selectează o opțiune.</div>
+                                    <div class="form-group conditional-field" id="calendar-other-wrap" style="display:none;margin-top:12px;margin-bottom:0;">
+                                        <label class="form-label" for="calendar-other-name">Numele sistemului <span class="opt">(opțional)</span></label>
+                                        <input type="text" id="calendar-other-name" placeholder="ex. Acuity, SimplyBook, etc.">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="crm-type">Ce CRM folosești? <span class="opt">(opțional)</span></label>
+                                    <select id="crm-type">
+                                        <option value="" selected>Nu folosesc CRM</option>
+                                        <option value="hubspot">HubSpot</option>
+                                        <option value="salesforce">Salesforce</option>
+                                        <option value="alt">Alt CRM</option>
+                                    </select>
+                                    <div class="form-group conditional-field" id="crm-other-wrap" style="display:none;margin-top:12px;margin-bottom:0;">
+                                        <label class="form-label" for="crm-other-name">Numele CRM-ului <span class="opt">(opțional)</span></label>
+                                        <input type="text" id="crm-other-name" placeholder="ex. Pipedrive, Zoho, etc.">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Program de lucru <span class="req">*</span></label>
+                                    <div class="time-row">
+                                        <div class="form-group">
+                                            <label class="form-label" for="work-start" style="font-size:13px;color:var(--secondary);">De la</label>
+                                            <select id="work-start">
+                                                <option value="06:00">06:00</option>
+                                                <option value="06:30">06:30</option>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="09:00" selected>09:00</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="12:00">12:00</option>
+                                                <option value="12:30">12:30</option>
+                                                <option value="13:00">13:00</option>
+                                                <option value="13:30">13:30</option>
+                                                <option value="14:00">14:00</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="18:00">18:00</option>
+                                                <option value="18:30">18:30</option>
+                                                <option value="19:00">19:00</option>
+                                                <option value="19:30">19:30</option>
+                                                <option value="20:00">20:00</option>
+                                                <option value="20:30">20:30</option>
+                                                <option value="21:00">21:00</option>
+                                                <option value="21:30">21:30</option>
+                                                <option value="22:00">22:00</option>
+                                                <option value="22:30">22:30</option>
+                                                <option value="23:00">23:00</option>
+                                            </select>
+                                            <div class="form-error" id="work-start-error">Selectează ora de start.</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="work-end" style="font-size:13px;color:var(--secondary);">Până la</label>
+                                            <select id="work-end">
+                                                <option value="06:00">06:00</option>
+                                                <option value="06:30">06:30</option>
+                                                <option value="07:00">07:00</option>
+                                                <option value="07:30">07:30</option>
+                                                <option value="08:00">08:00</option>
+                                                <option value="08:30">08:30</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="09:30">09:30</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="10:30">10:30</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="11:30">11:30</option>
+                                                <option value="12:00">12:00</option>
+                                                <option value="12:30">12:30</option>
+                                                <option value="13:00">13:00</option>
+                                                <option value="13:30">13:30</option>
+                                                <option value="14:00">14:00</option>
+                                                <option value="14:30">14:30</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="15:30">15:30</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="16:30">16:30</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="17:30">17:30</option>
+                                                <option value="18:00" selected>18:00</option>
+                                                <option value="18:30">18:30</option>
+                                                <option value="19:00">19:00</option>
+                                                <option value="19:30">19:30</option>
+                                                <option value="20:00">20:00</option>
+                                                <option value="20:30">20:30</option>
+                                                <option value="21:00">21:00</option>
+                                                <option value="21:30">21:30</option>
+                                                <option value="22:00">22:00</option>
+                                                <option value="22:30">22:30</option>
+                                                <option value="23:00">23:00</option>
+                                            </select>
+                                            <div class="form-error" id="work-end-error">Selectează ora de final.</div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top:14px;">
+                                        <div style="font-size:13px;font-weight:600;color:var(--secondary);margin-bottom:10px;">Zile active</div>
+                                        <div class="day-checkboxes">
+                                            <label class="day-cb">
+                                                <input type="checkbox" value="Luni" class="work-day" checked>
+                                                <div class="day-box">L</div>
+                                            </label>
+                                            <label class="day-cb">
+                                                <input type="checkbox" value="Marți" class="work-day" checked>
+                                                <div class="day-box">M</div>
+                                            </label>
+                                            <label class="day-cb">
+                                                <input type="checkbox" value="Miercuri" class="work-day" checked>
+                                                <div class="day-box">M</div>
+                                            </label>
+                                            <label class="day-cb">
+                                                <input type="checkbox" value="Joi" class="work-day" checked>
+                                                <div class="day-box">J</div>
+                                            </label>
+                                            <label class="day-cb">
+                                                <input type="checkbox" value="Vineri" class="work-day" checked>
+                                                <div class="day-box">V</div>
+                                            </label>
+                                            <label class="day-cb">
+                                                <input type="checkbox" value="Sâmbătă" class="work-day">
+                                                <div class="day-box">S</div>
+                                            </label>
+                                            <label class="day-cb">
+                                                <input type="checkbox" value="Duminică" class="work-day">
+                                                <div class="day-box">D</div>
+                                            </label>
+                                        </div>
+                                        <div class="form-error" id="days-error">Selectează cel puțin o zi.</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Limbile preferate ale agentului <span class="req">*</span></label>
+                                    <div class="check-group">
+                                        <label class="check-item">
+                                            <input type="checkbox" id="lang-ro" value="ro" checked>
+                                            <div class="custom-box"></div>
+                                            Română
+                                        </label>
+                                        <label class="check-item">
+                                            <input type="checkbox" id="lang-en" value="en">
+                                            <div class="custom-box"></div>
+                                            Engleză
+                                        </label>
+                                    </div>
+                                    <div class="form-error" id="lang-error">Selectează cel puțin o limbă.</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Tonul agentului <span class="req">*</span></label>
+                                    <div class="radio-group">
+                                        <label class="radio-item">
+                                            <input type="radio" name="agent-tone" value="formal">
+                                            <div class="custom-box"></div>
+                                            Formal și profesionist
+                                        </label>
+                                        <label class="radio-item">
+                                            <input type="radio" name="agent-tone" value="friendly" checked>
+                                            <div class="custom-box"></div>
+                                            Prietenos și cald
+                                        </label>
+                                        <label class="radio-item">
+                                            <input type="radio" name="agent-tone" value="direct">
+                                            <div class="custom-box"></div>
+                                            Direct și eficient
+                                        </label>
+                                    </div>
+                                    <div class="form-error" id="tone-error">Selectează tonul agentului.</div>
+                                </div>
+
+                                <div class="step-nav">
+                                    <button type="button" class="tf-btn-2 animate-btn" id="btn-step2-back">
+                                        <i class="icon icon-long-arrow-alt-left-solid"></i>
+                                        Înapoi
+                                    </button>
+                                    <button type="button" class="tf-btn animate-btn" id="btn-step2-next">
+                                        Continuă
+                                        <i class="icon icon-long-arrow-alt-right-solid"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /STEP 2 -->
+
+                        <!-- STEP 3 -->
+                        <div class="step-panel" id="step-3">
+                            <div class="setup-card effectFade fadeUp">
+                                <div class="setup-card-title">Confirmare</div>
+                                <div class="setup-card-desc">Verifică informațiile înainte de a crea agentul.</div>
+
+                                <div id="summary-content">
+                                    <!-- populated by JS -->
+                                </div>
+
+                                <div style="margin-top:28px;">
+                                    <label class="confirm-cb-row" for="confirm-check">
+                                        <input type="checkbox" id="confirm-check">
+                                        <div class="confirm-box"></div>
+                                        <span class="confirm-text">Confirm că informațiile sunt corecte și doresc să continui cu crearea agentului meu vocal.</span>
+                                    </label>
+                                    <div class="form-error" id="confirm-error">Confirmarea este obligatorie.</div>
+                                </div>
+
+                                <div class="step-nav">
+                                    <button type="button" class="tf-btn-2 animate-btn" id="btn-step3-back">
+                                        <i class="icon icon-long-arrow-alt-left-solid"></i>
+                                        Înapoi
+                                    </button>
+                                    <button type="button" class="tf-btn animate-btn" id="btn-create">
+                                        Creează Agentul Meu
+                                        <i class="icon icon-long-arrow-alt-right-solid"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /STEP 3 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Main Content -->
+
+        <!-- footer -->
+        <footer>
+            <div class="footer-image">
+                <img class="effectFade fadeUp" src="assets/images/logo/logo-footer.png" alt="">
+            </div>
+            <div class="container">
+                <div class="footer-content">
+                    <a href="index.html" class="footer-logo"><img src="assets/images/logo/logo-2.svg" alt=""></a>
+                </div>
+                <div class="footer-bottom">
+                    <ul class="footer-links d-flex gap-24 align-items-center">
+                        <li><a href="about.html" class="fw-semibold link-underline link1">Despre Noi</a></li>
+                        <li><a href="service-single.html" class="fw-semibold link-underline link1">Servicii</a></li>
+                        <li><a href="work.html" class="fw-semibold link-underline link1">Industrii</a></li>
+                        <li><a href="pricing.html" class="fw-semibold link-underline link1">Prețuri</a></li>
+                        <li><a href="contact.html" class="fw-semibold link-underline link1">Contact</a></li>
+                    </ul>
+                    <p class="text-secondary coppy-rights text-center">© 2026 Vocalyy. Toate drepturile rezervate.</p>
+                    <a href="#" class="action-go-top d-flex gap-8 align-items-center justify-content-end link1">
+                        <span class="fw-semibold">Înapoi sus</span>
+                        <i class="icon icon-long-arrow-alt-up-solid fs-20"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- /footer -->
+
+    </main>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas-menu">
+        <div class="offcanvas-content">
+            <div class="container h-100">
+                <div class="offcanvas-content_wrapin">
+                    <div class="canvas_head">
+                        <a href="index.html" class="logo-site"><i class="icon icon-davies-logo"></i></a>
+                        <div class="btn-mobile-menu close-mb-menu text-caption link"><i class="icon icon-close"></i> CLOSE</div>
+                    </div>
+                    <div class="canvas_center">
+                        <ul class="nav-ul-mb" id="mobile-menu">
+                            <li><div class="item"><a href="about.html" class="mb-menu-link text-display-1"><span class="text">Despre Noi</span></a></div></li>
+                            <li><div class="item"><a href="service-single.html" class="mb-menu-link text-display-1"><span class="text">Servicii</span></a></div></li>
+                            <li><div class="item"><a href="work.html" class="mb-menu-link text-display-1"><span class="text">Industrii</span></a></div></li>
+                            <li><div class="item"><a href="pricing.html" class="mb-menu-link text-display-1"><span class="text">Prețuri</span></a></div></li>
+                            <li><div class="item"><a href="blog-three-columns.html" class="mb-menu-link text-display-1"><span class="text">Blog</span></a></div></li>
+                            <li><div class="item"><a href="contact.html" class="mb-menu-link text-display-1"><span class="text">Contact</span></a></div></li>
+                        </ul>
+                    </div>
+                    <div class="canvas_foot">
+                        <div class="left">
+                            <a href="mailto:contact@vocalyy.ro" class="text-caption text-neutral-200">contact@vocalyy.ro</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/countto.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/infinityslide.js"></script>
+    <script src="assets/js/ScrollSmooth.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/gsapAnimation.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+    (function () {
+        /* --- URL Params --- */
+        var params = new URLSearchParams(window.location.search);
+        var packageParam = (params.get('package') || 'starter').toLowerCase();
+        var packageNames = { starter: 'Starter', professional: 'Professional', premium: 'Premium' };
+        var displayName = packageNames[packageParam] || 'Starter';
+        document.getElementById('package-display').textContent = displayName;
+
+        /* --- Step management --- */
+        var currentStep = 1;
+
+        function showStep(n) {
+            [1, 2, 3].forEach(function (i) {
+                document.getElementById('step-' + i).classList.toggle('active', i === n);
+                var si = document.getElementById('si-' + i);
+                si.classList.remove('active', 'done');
+                if (i < n) si.classList.add('done');
+                if (i === n) si.classList.add('active');
+                // Update step dot for done steps
+                var sd = document.getElementById('sd-' + i);
+                if (i < n) { sd.innerHTML = '&#10003;'; }
+                else { sd.textContent = i; }
+            });
+            // Update lines
+            [1, 2].forEach(function (i) {
+                var line = document.getElementById('sl-' + i);
+                line.classList.toggle('done', i < n);
+            });
+            currentStep = n;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        /* --- Validation helpers --- */
+        function setError(id, show) {
+            var el = document.getElementById(id);
+            if (el) {
+                el.classList.toggle('has-error', show);
+                var err = document.getElementById(id + '-error');
+                if (err) err.style.display = show ? 'block' : 'none';
+            }
+        }
+        function validateNotEmpty(id) {
+            var val = document.getElementById(id).value.trim();
+            setError(id, !val);
+            return !!val;
+        }
+        function validateSelect(id) {
+            var val = document.getElementById(id).value;
+            setError(id, !val);
+            return !!val;
+        }
+
+        function validateStep1() {
+            var ok = true;
+            ['business-name', 'business-address', 'business-phone', 'business-city'].forEach(function (id) {
+                if (!validateNotEmpty(id)) ok = false;
+            });
+            if (!validateSelect('business-type')) ok = false;
+            return ok;
+        }
+
+        function validateStep2() {
+            var ok = true;
+            if (!validateSelect('calendar-type')) ok = false;
+            if (!document.getElementById('work-start').value) { setError('work-start', true); ok = false; }
+            else { setError('work-start', false); }
+            if (!document.getElementById('work-end').value) { setError('work-end', true); ok = false; }
+            else { setError('work-end', false); }
+            var days = document.querySelectorAll('.work-day:checked');
+            var daysErr = document.getElementById('days-error');
+            if (days.length === 0) { daysErr.style.display = 'block'; ok = false; }
+            else { daysErr.style.display = 'none'; }
+            var langOk = document.getElementById('lang-ro').checked || document.getElementById('lang-en').checked;
+            document.getElementById('lang-error').style.display = langOk ? 'none' : 'block';
+            if (!langOk) ok = false;
+            var tone = document.querySelector('input[name="agent-tone"]:checked');
+            document.getElementById('tone-error').style.display = tone ? 'none' : 'block';
+            if (!tone) ok = false;
+            return ok;
+        }
+
+        /* --- Data collection --- */
+        function collectData() {
+            function selText(id) {
+                var s = document.getElementById(id);
+                return s.options[s.selectedIndex] ? s.options[s.selectedIndex].text : '—';
+            }
+            var days = Array.from(document.querySelectorAll('.work-day:checked')).map(function (c) { return c.value; }).join(', ');
+            var langs = [];
+            if (document.getElementById('lang-ro').checked) langs.push('Română');
+            if (document.getElementById('lang-en').checked) langs.push('Engleză');
+            var toneEl = document.querySelector('input[name="agent-tone"]:checked');
+            var toneMap = { formal: 'Formal și profesionist', friendly: 'Prietenos și cald', direct: 'Direct și eficient' };
+            return {
+                businessName: document.getElementById('business-name').value.trim(),
+                businessType: selText('business-type'),
+                businessAddress: document.getElementById('business-address').value.trim(),
+                businessPhone: document.getElementById('business-phone').value.trim(),
+                businessCity: document.getElementById('business-city').value.trim(),
+                businessWebsite: document.getElementById('business-website').value.trim() || '—',
+                calendarType: selText('calendar-type') + (document.getElementById('calendar-other-name').value.trim() ? ' (' + document.getElementById('calendar-other-name').value.trim() + ')' : ''),
+                crmType: selText('crm-type') + (document.getElementById('crm-other-name').value.trim() ? ' (' + document.getElementById('crm-other-name').value.trim() + ')' : ''),
+                workStart: document.getElementById('work-start').value,
+                workEnd: document.getElementById('work-end').value,
+                workDays: days || '—',
+                languages: langs.join(', ') || '—',
+                tone: toneEl ? toneMap[toneEl.value] : '—'
+            };
+        }
+
+        function row(label, value) {
+            return '<div class="summary-row"><span class="summary-label">' + label + '</span><span class="summary-value">' + (value || '—') + '</span></div>';
+        }
+
+        function buildSummary() {
+            var d = collectData();
+            var html = '<div class="summary-section">'
+                + '<div class="summary-section-title">Informații despre afacere</div>'
+                + row('Afacere', d.businessName)
+                + row('Tip', d.businessType)
+                + row('Adresă', d.businessAddress)
+                + row('Telefon', d.businessPhone)
+                + row('Oraș', d.businessCity)
+                + row('Website', d.businessWebsite)
+                + '</div>'
+                + '<div class="summary-section">'
+                + '<div class="summary-section-title">Configurare agent</div>'
+                + row('Calendar', d.calendarType)
+                + row('CRM', d.crmType)
+                + row('Program', d.workStart + ' — ' + d.workEnd)
+                + row('Zile active', d.workDays)
+                + row('Limbi', d.languages)
+                + row('Ton', d.tone)
+                + '</div>';
+            document.getElementById('summary-content').innerHTML = html;
+        }
+
+        /* --- Phone number: digits only --- */
+        document.getElementById('business-phone').addEventListener('input', function () {
+            this.value = this.value.replace(/[^0-9\s\+\-]/g, '');
+        });
+
+        /* --- Conditional "other" fields --- */
+        document.getElementById('calendar-type').addEventListener('change', function () {
+            document.getElementById('calendar-other-wrap').style.display = this.value === 'alt' ? 'block' : 'none';
+            if (this.value !== 'alt') document.getElementById('calendar-other-name').value = '';
+        });
+        document.getElementById('crm-type').addEventListener('change', function () {
+            document.getElementById('crm-other-wrap').style.display = this.value === 'alt' ? 'block' : 'none';
+            if (this.value !== 'alt') document.getElementById('crm-other-name').value = '';
+        });
+
+        /* --- Button handlers --- */
+        document.getElementById('btn-step1-next').addEventListener('click', function () {
+            if (validateStep1()) showStep(2);
+        });
+        document.getElementById('btn-step2-back').addEventListener('click', function () { showStep(1); });
+        document.getElementById('btn-step2-next').addEventListener('click', function () {
+            if (validateStep2()) { buildSummary(); showStep(3); }
+        });
+        document.getElementById('btn-step3-back').addEventListener('click', function () { showStep(2); });
+        document.getElementById('btn-create').addEventListener('click', function () {
+            var cb = document.getElementById('confirm-check');
+            var err = document.getElementById('confirm-error');
+            if (!cb.checked) { err.style.display = 'block'; return; }
+            err.style.display = 'none';
+            var d = collectData();
+            window.location.href = 'agent-loading.html?business=' + encodeURIComponent(d.businessName) + '&package=' + encodeURIComponent(packageParam);
+        });
+
+        /* --- Live validation on input --- */
+        ['business-name', 'business-address', 'business-phone', 'business-city'].forEach(function (id) {
+            document.getElementById(id).addEventListener('input', function () {
+                if (this.value.trim()) setError(id, false);
+            });
+        });
+        ['business-type', 'calendar-type'].forEach(function (id) {
+            document.getElementById(id).addEventListener('change', function () {
+                if (this.value) setError(id, false);
+            });
+        });
+    })();
+    </script>
+
+</body>
+</html>
