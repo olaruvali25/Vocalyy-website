@@ -1,117 +1,145 @@
 <!DOCTYPE html>
 
-<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro"> <![endif]-->
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
-    <title>Cabinete Medicale | De Ce Nu Mai Vin Pacientii la Consultatie? | Vocalyy</title>
+    <title>Notary Offices | Your Staff Loses 4 Hours a Day on the Phone? | Vocalyy</title>
     <meta name="author" content="Vocalyy">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Pacientul suna sa reprogrameze. Linia e ocupata. A treia oara renunta si merge la alt cabinet. Vocalyy raspunde la fiecare apel, programeaza si trimite confirmari automat.">
+    <meta name="description" content="Clientul suna pentru programare urgenta. Secretara e in teren cu notarul. Nimeni nu raspunde. Vocalyy preia apelul, comunica actele necesare si programeaza automat.">
 
-    <link rel="stylesheet" href="assets/fonts/fonts.css">
-    <link rel="stylesheet" href="assets/icon/icomoon/style.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/slick.theme.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    <link rel="shortcut icon" href="assets/images/logo/favicon.svg">
-    <link rel="apple-touch-icon-precomposed" href="assets/images/logo/favicon.svg">
+    <!-- font -->
+    <link rel="stylesheet" href="../assets/fonts/fonts.css">
+    <link rel="stylesheet" href="../assets/icon/icomoon/style.css">
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/slick.theme.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="../assets/images/logo/favicon.svg">
+    <link rel="apple-touch-icon-precomposed" href="../assets/images/logo/favicon.svg">
 </head>
 
 <body class="">
     <canvas class="cursor-trail" id="trail" style="display: none;"></canvas>
 
+    <!-- Scroll Top -->
     <button id="goTop">
         <span class="border-progress"></span>
         <span class="ic-wrap">
             <span class="icon icon-long-arrow-alt-up-solid"></span>
         </span>
     </button>
+    <!-- /Scroll Top -->
 
+    <!-- #wrapper -->
     <main id="wrapper">
 
+        <!-- Header -->
         <header class="tf-header header2">
             <div class="header-inner">
                 <a href="index.html" class="logo-site">
-                    <img src="assets/images/logo/logo.svg" alt="">
+                    <img src="../assets/images/logo/logo.svg" alt="">
                 </a>
                 <div class="box-navigation">
                     <ul class="nav-menu-main">
-                        <li class="menu-item"><a href="about.html" class="item-link link1">Despre Noi</a></li>
-                        <li class="menu-item"><a href="service-single.html" class="item-link link1">Servicii</a></li>
-                        <li class="menu-item"><a href="work.html" class="item-link link1 active">Industrii</a></li>
-                        <li class="menu-item"><a href="pricing.html" class="item-link link1">Prețuri</a></li>
-                        <li class="menu-item"><a href="blog-three-columns.html" class="item-link link1">Blog</a></li>
-                        <li class="menu-item"><a href="contact.html" class="item-link link1">Contact</a></li>
+                        <li class="menu-item">
+                            <a href="about.html" class="item-link link1">About</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="service-single.html" class="item-link link1">Services</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="work.html" class="item-link link1 active">Industries</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="pricing.html" class="item-link link1">Pricing</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="blog-three-columns.html" class="item-link link1">Blog</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="contact.html" class="item-link link1">Contact</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="lang-dropdown d-lg-flex d-none" style="position:relative;margin-right:10px;" onmouseenter="this.querySelector('.ld-menu').style.display='block'" onmouseleave="this.querySelector('.ld-menu').style.display='none'">
-                    <button style="background:transparent;border:1px solid rgba(0,0,0,0.15);border-radius:6px;color:#000;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:5px;letter-spacing:0.5px;">RO <span style="font-size:8px;opacity:0.5;color:#000;">▼</span></button>
+                    <button style="background:transparent;border:1px solid rgba(0,0,0,0.15);border-radius:6px;color:#000;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:5px;letter-spacing:0.5px;">EN <span style="font-size:8px;opacity:0.5;color:#000;">▼</span></button>
                     <div class="ld-menu" style="display:none;position:absolute;top:100%;right:0;padding-top:4px;z-index:1000;">
-                        <a href="en/industry-cabinete-medicale.html" style="display:block;padding:7px 16px;background:#fff;color:#000;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:0.5px;border:1px solid rgba(0,0,0,0.1);border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,0.1);transition:all 0.2s;" onmouseover="this.style.color='#000';this.style.background='#f5f5f5'" onmouseout="this.style.color='#000';this.style.background='#fff'">EN</a>
+                        <a href="../industry-notariate.html" style="display:block;padding:7px 16px;background:#fff;color:#000;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:0.5px;border:1px solid rgba(0,0,0,0.1);border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,0.1);transition:all 0.2s;" onmouseover="this.style.color='#000';this.style.background='#f5f5f5'" onmouseout="this.style.color='#000';this.style.background='#fff'">RO</a>
                     </div>
                 </div>
-                <a href="try-agent.html" class="tf-btn d-lg-flex d-none" style="padding:8px 20px;font-size:13px;">Încarcă Gratuit</a>
+                <a href="{cta_link}" class="tf-btn d-lg-flex d-none" style="padding:8px 20px;font-size:13px;">Try Free</a>
                 <a href="#" class="tf-btn open-mb-menu mobile-menu d-lg-none d-flex">
                     <i class="icon icon-grip-lines-solid"></i>
                 </a>
             </div>
         </header>
+        <!-- /Header -->
 
+        <!-- Hero Banner -->
         <div class="section-hero v2">
             <div class="hero-image"></div>
             <div class="container">
                 <div class="content-wrap text-center">
                     <div class="title text-display-2 effectFade fadeRotateX">
-                        <span class="title1 fw-semibold text-gradient-1">Cabinete Medicale</span>
+                        <span class="title1 fw-semibold text-gradient-1">Notariate</span>
                         <br>
                         <div class="title2 d-flex gap-20 justify-content-center flex-wrap">
                             <span class="fw-semibold text-gradient-1">cu Vocalyy</span>
                         </div>
                     </div>
                     <p class="text effectFade fadeUp">
-                        Pacientul suna sa reprogrameze. Linia e ocupata. A treia oara renunta. Maine nu vine. Tu nu stii de ce. <br> Cu Vocalyy, fiecare pacient primeste raspuns. Fiecare consultatie, ocupata.
+                        "How much does a succession cost?" "What documents are needed?" The same question, 30 times a day. Your staff answers the phone instead of working on files. <br> With Vocalyy, clients come informed. Staff works, not answers phones.
                     </p>
                 </div>
             </div>
         </div>
+        <!-- /Hero Banner -->
 
+        <!-- section-work-single -->
         <div id="works" class="section-work-single flat-spacing pt-0">
             <div class="container">
                 <div class="row mb-32">
                     <div class="col-12">
                         <div class="wrap-image mb-60 effectFade fadeZoom">
-                            <img src="assets/images/industries/cabinete-medicale/banner.jpg" alt="Cabinete Medicale - Vocalyy">
+                            <img src="../assets/images/industries/notariate/banner.jpg" alt="Notariate - Vocalyy">
                         </div>
-                        <h2 class="heading fw-semibold mb-32 effectFade fadeUp">Problema Principala</h2>
+                        <h2 class="heading fw-semibold mb-32 effectFade fadeUp">The Main Problem</h2>
                         <p class="text-secondary effectFade fadeUp">
-                            Pacientul suna sa reprogrameze. Linia e ocupata. Suna din nou. Ocupat. A treia oara renunta. Maine nu vine la consultatie. Tu nu stii de ce. El merge la alt cabinet.
+                            The client calls for an urgent notary appointment. The secretary is out with the notary. Nobody answers. The client calls the notary next door. And tomorrow they go to them, not to you. A lost sale deed is worth hundreds of lei in notary fees.
                             <br><br>
-                            Asta se intampla zilnic in cabinetul tau. Medicul e cu pacientul, secretara e la ghiseu cu alt pacient, iar telefonul suna de 5 ori in 10 minute. Cine raspunde? Nimeni. Si fiecare apel pierdut e un pacient care nu mai revine. Reprogramari, anulari, intrebari despre rezultate, solicitari de retete, toate concureaza pentru acelasi fir de telefon. Sambata dimineata suna cineva cu o urgenta. Duminica seara alt pacient vrea programare pentru luni. Nimeni nu e la birou. Pacientii nu asteapta pana luni. Ei cauta pe Google „cabinet medical langa mine" si programeaza la primul care raspunde. Un cabinet medical pierde in medie 20 pana la 35 de apeluri pe zi. La o consultatie medie de 200 de lei, asta inseamna pana la 7.000 de lei pe zi care se duc la concurenta. Nu pentru ca nu esti un medic bun. Pentru ca telefonul a sunat in gol.
+                            "How much does a succession cost?" "What documents are needed for a power of attorney?" "Can I come tomorrow with a will?" The same question, 30 times a day. Your staff spends 3 to 4 hours daily answering the phone instead of working on files. And the most painful: clients still show up unprepared. They come without documents, without copies, without the necessary certificates. The appointment is useless, rescheduling happens, staff wastes double the time. Your notary office operates at half capacity because half the day goes to phone calls. Files pile up on the desk, clients wait longer, and those who cannot reach you go straight to the competition that answers.
                         </p>
                     </div>
                 </div>
 
                 <div class="row mb-60">
                     <div class="col-md-8 md-mb-24">
-                        <div class="text-body-1 fw-semibold text-secondary mb-15 effectFade fadeUp">PROBLEME FRECVENTE</div>
+                        <div class="text-body-1 fw-semibold text-secondary mb-15 effectFade fadeUp">
+                            COMMON PROBLEMS
+                        </div>
                         <div class="list-tags effectFade fadeUp">
-                            <span class="tags-item fw-semibold">20 35 apeluri pierdute/zi</span>
-                            <span class="tags-item fw-semibold">Pacienti plecati la alt cabinet</span>
-                            <span class="tags-item fw-semibold">7.000 lei/zi venituri pierdute</span>
-                            <span class="tags-item fw-semibold">Medic intrerupt in consultatie</span>
+                            <span class="tags-item fw-semibold">4 hours/day lost on the phone</span>
+                            <span class="tags-item fw-semibold">Clients arriving without documents</span>
+                            <span class="tags-item fw-semibold">Files piling up on the desk</span>
+                            <span class="tags-item fw-semibold">Appointments lost to competitors</span>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="text-body-1 fw-semibold text-secondary mb-15 effectFade fadeUp" data-delay="0.1">INDUSTRIE</div>
+                        <div class="text-body-1 fw-semibold text-secondary mb-15 effectFade fadeUp" data-delay="0.1">
+                            INDUSTRY
+                        </div>
                         <div class="list-tags effectFade fadeUp" data-delay="0.1">
-                            <span class="tags-item fw-semibold">Medicina Generala</span>
+                            <span class="tags-item fw-semibold">Notariat</span>
                         </div>
                     </div>
                 </div>
@@ -123,21 +151,21 @@
         <div class="section-flow-demo">
             <div class="flow-scroll-container">
                 <div class="flow-sticky-wrapper">
-                    <div class="flow-label-top">Vocalyy in actiune</div>
+                    <div class="flow-label-top">Vocalyy in action</div>
                     <div class="flow-inner">
                         <div class="flow-patient-card" id="fcd-card">
                             <div class="fcd-card-header">
-                                <div class="fcd-avatar">ID</div>
+                                <div class="fcd-avatar">CI</div>
                                 <div class="fcd-info">
-                                    <div class="fcd-name">Ion Dumitrescu</div>
-                                    <span class="fcd-badge">Pacient nou</span>
+                                    <div class="fcd-name">Cristina Ionescu</div>
+                                    <span class="fcd-badge">Active appointment</span>
                                 </div>
-                                <div class="fcd-expires">&#9201; Consultatie azi</div>
+                                <div class="fcd-expires">&#9201; Act notarial maine</div>
                             </div>
                             <div class="fcd-card-body">
-                                <div class="fcd-meta"><span>&#128197;</span> Prima programare la cabinet</div>
-                                <div class="fcd-meta"><span>&#128222;</span> Trimis de medicul de familie</div>
-                                <div class="fcd-meta"><span>&#128138;</span> Consultatie generala</div>
+                                <div class="fcd-meta"><span>&#128196;</span> Contract vanzare-cumparare</div>
+                                <div class="fcd-meta"><span>&#128197;</span> First appointment</div>
+                                <div class="fcd-meta"><span>&#9989;</span> Documente pregatite</div>
                             </div>
                         </div>
                         <div class="fcd-line-wrap">
@@ -147,7 +175,7 @@
                         </div>
                         <div class="fcd-node" id="fcd-node">
                             <span class="fcd-node-spinner" id="fcd-spinner">&#9696;</span>
-                            <span class="fcd-node-text" id="fcd-node-text" data-success="Consultatie confirmata!">Confirmare consultatie trimisa...</span>
+                            <span class="fcd-node-text" id="fcd-node-text" data-success="Appointment confirmed!">Sending notary appointment confirmation...</span>
                         </div>
                         <div class="fcd-branches" id="fcd-branches">
                             <svg class="fcd-branch-svg" viewBox="0 0 420 80" preserveAspectRatio="none">
@@ -276,47 +304,49 @@
         <div class="section-work-single flat-spacing pt-0"><div class="container">
                 <div class="row mb-60">
                     <div class="col-12">
-                        <h2 class="heading fw-semibold mb-20 effectFade fadeUp">Rezultate Tipice</h2>
+                        <h2 class="heading fw-semibold mb-20 effectFade fadeUp">Typical Results</h2>
                         <p class="text-secondary effectFade fadeUp">
-                            Medicul consulta linistit. Telefonul nu mai suna in cabinet. Fiecare pacient care suna primeste raspuns in secunde, se programeaza automat si primeste confirmare pe SMS. Programul de consultatii s-a umplut cu 30% mai rapid din prima saptamana.
+                            Staff works on files, not on the phone. Clients come prepared, with all necessary documents. Unnecessary visits decreased by 40% from the first month. Appointments book themselves, no phone queues.
                             <br><br>
-                            Cabinetele medicale cu Vocalyy au recuperat in medie 20 pana la 35 de programari saptamanale care altfel se pierdeau. Pacientii care sunau sambata sau duminica si nu primeau raspuns acum au programare pentru luni dimineata. Personalul administrativ e eliberat de 65% din apelurile repetitive: intrebari despre program, retete, rezultate analize. Se concentreaza pe ceea ce conteaza: primirea pacientilor, documentatie, facturare. No-show-urile au scazut cu 35% pentru ca fiecare pacient primeste reminder automat. Un cabinet medical cu Vocalyy costa o fractiune dintr-un salariu de operator telefonic si lucreaza 24/7 fara pauza, fara concediu, fara zile libere.
+                            Notary offices with Vocalyy save an average of 3 to 4 hours daily of staff time. Clients are automatically informed what documents to bring, how much the service costs and when they can come. They no longer come empty-handed. They no longer leave and return the next day with the missing documents. Staff focuses on drafting and authenticating documents, not on repetitive phone answers. The number of new clients grew by 20% because nobody calls to no answer anymore. Every call gets an answer, every client gets complete information, every appointment is confirmed automatically.
                         </p>
                     </div>
                 </div>
 
                 <div class="row mb-60">
                     <div class="col-12 text-center">
-                        <a href="try-agent.html" class="tf-btn">Încearcă Gratuit</a>
+                        <a href="try-agent.html" class="tf-btn">Try Free</a>
                         &nbsp;&nbsp;
-                        <a href="work.html" class="tf-btn style-outline">Inapoi la industrii</a>
+                        <a href="work.html" class="tf-btn style-outline">Back to industries</a>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-6 md-mb-24">
                         <div class="image effectFade fadeUp">
-                            <img src="assets/images/industries/cabinete-medicale/rezultate-1.jpg" alt="">
+                            <img src="../assets/images/industries/notariate/rezultate-1.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="image effectFade fadeUp" data-delay="0.1">
-                            <img src="assets/images/industries/cabinete-medicale/rezultate-2.jpg" alt="">
+                            <img src="../assets/images/industries/notariate/rezultate-2.jpg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- /section-work-single -->
 
         <div class="box-black">
             <div class="light-box"></div>
-            <img class="light-top" src="assets/images/item/light-top.png" alt="">
-            <img class="light-bot" src="assets/images/item/light-bot.png" alt="">
+            <img class="light-top" src="../assets/images/item/light-top.png" alt="">
+            <img class="light-bot" src="../assets/images/item/light-bot.png" alt="">
+            <!-- section-testimonials -->
             <div class="section-testimonials flat-spacing">
                 <div class="container">
                     <div class="heading-section center mb-64">
-                        <div class="heading-sub fw-semibold style-1 effectFade fadeUp">Testimoniale</div>
-                        <div class="heading-title text-white effectFade fadeRotateX">Ce Spun Clientii Nostri</div>
+                        <div class="heading-sub fw-semibold style-1 effectFade fadeUp">Testimonials</div>
+                        <div class="heading-title text-white effectFade fadeRotateX">What Our Clients Say</div>
                     </div>
                     <div class="testimonials-v2-wrap">
                         <div class="col-left">
@@ -336,13 +366,13 @@
                                                     <i class="icon icon-star-solid"></i>
                                                 </div>
                                                 <div class="text-body-1 text-white desc">
-                                                    Consultam un pacient si telefonul suna de 3 ori in 10 minute. Ma distragea, pacientul se simtea neglijat. De cand am Vocalyy, cabinetul e linistit. Toti pacientii primesc raspuns instant. Eu consult, Vocalyy programeaza. Am recuperat 25 de programari in prima saptamana.
+                                                    I spent 4 hours a day explaining on the phone what documents are needed for successions, powers of attorney, contracts. The same answers, 30 times a day. Since I got Vocalyy, clients come informed, with all documents. I recovered 4 hours per day of real work on files.
                                                 </div>
                                                 <div class="cite mb-0">
-                                                    <img class="line-left" src="assets/images/item/line-1.png" alt="">
-                                                    <div class="name text-body-3 text-neutral-400 fw-semibold">Dr. Catalin Gheorghe</div>
+                                                    <img class="line-left" src="../assets/images/item/line-1.png" alt="">
+                                                    <div class="name text-body-3 text-neutral-400 fw-semibold">Notara Cristina Popa</div>
                                                     <div class="line"></div>
-                                                    <div class="sub text-body-3 text-neutral-400">Medic de Familie, Timisoara</div>
+                                                    <div class="sub text-body-3 text-neutral-400">Notar Public, Bucuresti</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -356,13 +386,13 @@
                                                     <i class="icon icon-star-solid"></i>
                                                 </div>
                                                 <div class="text-body-1 text-white desc">
-                                                    Duminica seara, un pacient a sunat cu o urgenta. Inainte, apelul se pierdea. Acum, Vocalyy a preluat, a identificat urgenta si mi-a trimis notificare. Luni dimineata, pacientul era la consultatie. A spus ca a ales cabinetul meu pentru ca e singurul care i-a raspuns.
+                                                    Before, 1 in 3 clients came without the necessary documents. They left, came back, we lost double the time. Since Vocalyy tells them exactly what documents to bring, 95% come prepared. We reduced unnecessary visits by 40% and staff works on files, not on the phone.
                                                 </div>
                                                 <div class="cite mb-0">
-                                                    <img class="line-left" src="assets/images/item/line-1.png" alt="">
-                                                    <div class="name text-body-3 text-neutral-400 fw-semibold">Dr. Raluca Stanciu</div>
+                                                    <img class="line-left" src="../assets/images/item/line-1.png" alt="">
+                                                    <div class="name text-body-3 text-neutral-400 fw-semibold">Gheorghe Marinescu</div>
                                                     <div class="line"></div>
-                                                    <div class="sub text-body-3 text-neutral-400">Medic Specialist, Iasi</div>
+                                                    <div class="sub text-body-3 text-neutral-400">Notar Public, Constanta</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -374,10 +404,14 @@
                             <div dir="ltr" class="swiper sw-main-image">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <div class="testimonial-image-v2"><img src="assets/images/industries/cabinete-medicale/testimonial-1.jpg" alt=""></div>
+                                        <div class="testimonial-image-v2">
+                                            <img src="../assets/images/industries/notariate/testimonial-1.jpg" alt="">
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <div class="testimonial-image-v2"><img src="assets/images/industries/cabinete-medicale/testimonial-2.jpg" alt=""></div>
+                                        <div class="testimonial-image-v2">
+                                            <img src="../assets/images/industries/notariate/testimonial-2.jpg" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -385,14 +419,15 @@
                     </div>
                 </div>
             </div>
+            <!-- /section-testimonials -->
         </div>
 
         <!-- section-recommended-package -->
         <div class="section-pricing flat-spacing">
             <div class="container">
                 <div class="heading-section center mb-64">
-                    <div class="heading-sub fw-semibold effectFade fadeUp">Recomandat</div>
-                    <div class="heading-title text-gradient-3 effectFade fadeRotateX">Pachetul potrivit<br>pentru afacerea ta</div>
+                    <div class="heading-sub fw-semibold effectFade fadeUp">Recommended</div>
+                    <div class="heading-title text-gradient-3 effectFade fadeRotateX">The right plan<br>for your business</div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
@@ -403,32 +438,32 @@
                                     <div class="fw-semibold text">Professional</div>
                                 </div>
                                 <div class="line"></div>
-                                <div class="fw-semibold text-neutral-400">Cel mai ales</div>
+                                <div class="fw-semibold text-neutral-400">Most popular</div>
                             </div>
                             <div class="heading">
                                 <div class="d-flex gap-14 align-items-end">
                                     <div class="price-number fw-bold" data-month="449" data-year="4490">€449</div>
-                                    <h6 class="price-per">/ lună</h6>
+                                    <h6 class="price-per">/ month</h6>
                                 </div>
                                 <a href="try-agent.html" class="tf-btn">
-                                    Încearcă Gratuit
+                                    Try Free
                                 </a>
                             </div>
                             <div class="line"></div>
                             <div class="content">
                                 <div>
-                                    <div class="title fw-semibold mb-4">Ce include</div>
+                                    <div class="title fw-semibold mb-4">What is included</div>
                                     <div class="text fw-semibold">
-                                        Programari automate, calendar sincronizat, zero efort.
+                                        Automatic appointments, synced calendar, zero effort.
                                     </div>
                                 </div>
                                 <ul class="list-text type-check">
-                                    <li><i class="icon icon-check-solid"></i>Tot din Starter, plus:</li>
-                                    <li><i class="icon icon-check-solid"></i>2.500 minute inbound / 7 apeluri simultane</li>
+                                    <li><i class="icon icon-check-solid"></i>Everything from Starter, plus:</li>
+                                    <li><i class="icon icon-check-solid"></i>2,500 inbound minutes / 7 simultaneous calls</li>
                                     <li><i class="icon icon-check-solid"></i>Google Calendar / Calendly integrat</li>
-                                    <li><i class="icon icon-check-solid"></i>50 apeluri outbound/luna</li>
-                                    <li><i class="icon icon-check-solid"></i>Scripturi dinamice per apelant</li>
-                                    <li><i class="icon icon-check-solid"></i>Raport detaliat + support prioritar</li>
+                                    <li><i class="icon icon-check-solid"></i>50 outbound calls/month</li>
+                                    <li><i class="icon icon-check-solid"></i>Dynamic scripts per caller</li>
+                                    <li><i class="icon icon-check-solid"></i>Detailed report + priority support</li>
                                 </ul>
                             </div>
                         </div>
@@ -438,75 +473,151 @@
         </div>
         <!-- /section-recommended-package -->
 
+        <!-- footer -->
         <footer>
             <div class="footer-image">
-                <img class="effectFade fadeUp" src="assets/images/logo/logo-footer.png" alt="">
+                <img class="effectFade fadeUp" src="../assets/images/logo/logo-footer.png" alt="">
             </div>
             <div class="container">
                 <div class="footer-content">
-                    <a href="index.html" class="footer-logo"><img src="assets/images/logo/logo-2.svg" alt=""></a>
+                    <a href="index.html" class="footer-logo">
+                        <img src="../assets/images/logo/logo-2.svg" alt="">
+                    </a>
                 </div>
                 <div class="footer-bottom">
                     <ul class="footer-links d-flex gap-24 align-items-center">
-                        <li><a href="about.html" class="fw-semibold link-underline link1">Despre Noi</a></li>
-                        <li><a href="service-single.html" class="fw-semibold link-underline link1">Servicii</a></li>
-                        <li><a href="work.html" class="fw-semibold link-underline link1">Industrii</a></li>
-                        <li><a href="contact.html" class="fw-semibold link-underline link1">Contact</a></li>
+                        <li>
+                            <a href="about.html" class="fw-semibold link-underline link1">About</a>
+                        </li>
+                        <li>
+                            <a href="service-single.html" class="fw-semibold link-underline link1">Services</a>
+                        </li>
+                        <li>
+                            <a href="work.html" class="fw-semibold link-underline link1">Industries</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="fw-semibold link-underline link1">Contact</a>
+                        </li>
                     </ul>
-                    <p class="text-secondary coppy-rights text-center">© 2026 Vocalyy. Toate drepturile rezervate.</p>
+                    <p class="text-secondary coppy-rights text-center">&#169; 2026 Vocalyy. All rights reserved.</p>
                     <a href="#" class="action-go-top d-flex gap-8 align-items-center justify-content-end link1">
-                        <span class="fw-semibold">Inapoi sus</span>
+                        <span class="fw-semibold">Back to top</span>
                         <i class="icon icon-long-arrow-alt-up-solid fs-20"></i>
                     </a>
                 </div>
             </div>
         </footer>
+        <!-- /footer -->
     </main>
+    <!-- /wrapper -->
 
+    <!-- Mobile Menu -->
     <div class="offcanvas-menu">
         <div class="offcanvas-content">
             <div class="container h-100">
                 <div class="offcanvas-content_wrapin">
                     <div class="canvas_head">
-                        <a href="index.html" class="logo-site"><i class="icon icon-davies-logo"></i></a>
-                        <div class="btn-mobile-menu close-mb-menu text-caption link"><i class="icon icon-close"></i> CLOSE</div>
+                        <a href="index.html" class="logo-site">
+                            <i class="icon icon-davies-logo"></i>
+                        </a>
+                        <div class="btn-mobile-menu close-mb-menu text-caption link">
+                            <i class="icon icon-close"></i>
+                            CLOSE
+                        </div>
                     </div>
                     <div class="canvas_center">
                         <ul class="nav-ul-mb" id="mobile-menu">
-                            <li><div class="item"><a href="about.html" class="mb-menu-link text-display-1"><span class="text">Despre Noi</span></a></div></li>
-                            <li><div class="item"><a href="service-single.html" class="mb-menu-link text-display-1"><span class="text">Servicii</span></a></div></li>
-                            <li><div class="item"><a href="work.html" class="mb-menu-link text-display-1"><span class="text">Industrii</span></a></div></li>
-                            <li><div class="item"><a href="pricing.html" class="mb-menu-link text-display-1"><span class="text">Prețuri</span></a></div></li>
-                            <li><div class="item"><a href="blog-three-columns.html" class="mb-menu-link text-display-1"><span class="text">Blog</span></a></div></li>
-                            <li><div class="item"><a href="contact.html" class="mb-menu-link text-display-1"><span class="text">Contact</span></a></div></li>
+                            <li>
+                                <div class="item">
+                                    <a href="about.html" class="mb-menu-link text-display-1">
+                                        <span class="text">About</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="service-single.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Services</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="work.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Industries</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="pricing.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Pricing</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="blog-three-columns.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Blog</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <a href="contact.html" class="mb-menu-link text-display-1">
+                                        <span class="text">Contact</span>
+                                    </a>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <div class="canvas_foot">
                         <div class="left">
                             <a href="mailto:contact@vocalyy.ro" class="text-caption text-neutral-200">contact@vocalyy.ro</a>
-                            <p class="text-caption text-neutral-200">CUP <span class="clock"></span></p>
+                            <p class="text-caption text-neutral-200">
+                                CUP <span class="clock"></span>
+                            </p>
                         </div>
                         <div class="right">
-                            <a href="#" class="tf-link-icon text-caption text-neutral-200"><i class="icon icon-arrow-top-right"></i> TWITTER (X)</a>
-                            <a href="#" class="tf-link-icon text-caption text-neutral-200"><i class="icon icon-arrow-top-right"></i> FACEBOOK</a>
-                            <a href="#" class="tf-link-icon text-caption text-neutral-200"><i class="icon icon-arrow-top-right"></i> LINKEDIN</a>
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200">
+                                <i class="icon icon-arrow-top-right"></i>
+                                TWITTER (X)
+                            </a>
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200">
+                                <i class="icon icon-arrow-top-right"></i>
+                                FACEBOOK
+                            </a>
+                            <a href="#" class="tf-link-icon text-caption text-neutral-200">
+                                <i class="icon icon-arrow-top-right"></i>
+                                LINKEDIN
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- /Mobile Menu -->
 
+    <!-- Left Bar -->
     <div class="tf-left-bar">
         <a class="btn-setting-color" data-bs-toggle="offcanvas" href="#settingColorMenu">
-            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0015 7.50004C11.1115 7.50004 10.2415 7.76396 9.50144 8.25843C8.76142 8.7529 8.18464 9.4557 7.84405 10.278C7.50346 11.1002 7.41434 12.005 7.58797 12.8779C7.76161 13.7509 8.19019 14.5527 8.81953 15.182C9.44886 15.8114 10.2507 16.2399 11.1236 16.4136C11.9965 16.5872 12.9013 16.4981 13.7236 16.1575C14.5458 15.8169 15.2487 15.2401 15.7431 14.5001C16.2376 13.7601 16.5015 12.8901 16.5015 12C16.5003 10.8069 16.0258 9.66308 15.1821 8.81943C14.3385 7.97579 13.1946 7.50128 12.0015 7.50004Z" fill="#fff"/></svg>
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.0015 7.50004C11.1115 7.50004 10.2415 7.76396 9.50144 8.25843C8.76142 8.7529 8.18464 9.4557 7.84405 10.278C7.50346 11.1002 7.41434 12.005 7.58797 12.8779C7.76161 13.7509 8.19019 14.5527 8.81953 15.182C9.44886 15.8114 10.2507 16.2399 11.1236 16.4136C11.9965 16.5872 12.9013 16.4981 13.7236 16.1575C14.5458 15.8169 15.2487 15.2401 15.7431 14.5001C16.2376 13.7601 16.5015 12.8901 16.5015 12C16.5003 10.8069 16.0258 9.66308 15.1821 8.81943C14.3385 7.97579 13.1946 7.50128 12.0015 7.50004ZM12.0015 15C11.4082 15 10.8281 14.8241 10.3348 14.4945C9.84145 14.1648 9.45693 13.6963 9.22987 13.1481C9.00281 12.5999 8.9434 11.9967 9.05915 11.4148C9.17491 10.8328 9.46063 10.2983 9.88019 9.87872C10.2997 9.45916 10.8343 9.17344 11.4162 9.05769C11.9982 8.94193 12.6014 9.00134 13.1496 9.2284C13.6977 9.45547 14.1663 9.83998 14.4959 10.3333C14.8256 10.8267 15.0015 11.4067 15.0015 12C15.0015 12.7957 14.6854 13.5588 14.1228 14.1214C13.5602 14.684 12.7972 15 12.0015 15ZM20.2515 12.2025C20.2553 12.0675 20.2553 11.9325 20.2515 11.7975L21.6503 10.05C21.7236 9.95829 21.7744 9.85059 21.7985 9.73563C21.8226 9.62067 21.8193 9.50165 21.789 9.38817C21.5597 8.52623 21.2167 7.69865 20.769 6.92723C20.7104 6.82628 20.629 6.7404 20.5314 6.67644C20.4337 6.61248 20.3225 6.57219 20.2065 6.55879L17.9828 6.31129C17.8903 6.21379 17.7965 6.12004 17.7015 6.03004L17.439 3.80067C17.4255 3.68462 17.3851 3.57332 17.3209 3.47566C17.2568 3.37801 17.1708 3.29668 17.0696 3.23817C16.2979 2.79131 15.4704 2.44864 14.6087 2.21911C14.4951 2.18891 14.3761 2.18583 14.2611 2.21009C14.1461 2.23435 14.0385 2.28529 13.9468 2.35879L12.204 3.75004C12.069 3.75004 11.934 3.75004 11.799 3.75004L10.0515 2.35411C9.95975 2.28076 9.85206 2.23 9.7371 2.2059C9.62213 2.1818 9.50311 2.18504 9.38963 2.21536C8.52783 2.44507 7.70031 2.78806 6.92869 3.23536C6.82774 3.29397 6.74187 3.37535 6.6779 3.473C6.61394 3.57065 6.57366 3.68189 6.56026 3.79785L6.31276 6.02535C6.21526 6.11848 6.12151 6.21223 6.03151 6.3066L3.80213 6.56254C3.68608 6.57604 3.57479 6.61647 3.47713 6.6806C3.37947 6.74473 3.29814 6.83079 3.23963 6.93192C2.79277 7.70363 2.4501 8.53114 2.22057 9.39286C2.19038 9.50641 2.18729 9.62547 2.21156 9.74044C2.23582 9.8554 2.28675 9.96306 2.36026 10.0547L3.75151 11.7975C3.75151 11.9325 3.75151 12.0675 3.75151 12.2025L2.35557 13.95C2.28223 14.0418 2.23146 14.1495 2.20736 14.2645C2.18326 14.3794 2.1865 14.4984 2.21682 14.6119C2.44612 15.4739 2.78913 16.3014 3.23682 17.0729C3.29544 17.1738 3.37681 17.2597 3.47447 17.3236C3.57212 17.3876 3.68335 17.4279 3.79932 17.4413L6.02307 17.6888C6.1162 17.7863 6.20995 17.88 6.30432 17.97L6.56401 20.1994C6.57751 20.3155 6.61794 20.4268 6.68207 20.5244C6.7462 20.6221 6.83226 20.7034 6.93338 20.7619C7.7051 21.2088 8.53261 21.5514 9.39432 21.781C9.50787 21.8112 9.62693 21.8143 9.7419 21.79C9.85687 21.7657 9.96452 21.7148 10.0562 21.6413L11.799 20.25C11.934 20.2538 12.069 20.2538 12.204 20.25L13.9515 21.6488C14.0433 21.7221 14.151 21.7729 14.2659 21.797C14.3809 21.8211 14.4999 21.8179 14.6134 21.7875C15.4753 21.5582 16.3029 21.2152 17.0743 20.7675C17.1753 20.7089 17.2611 20.6275 17.3251 20.5299C17.3891 20.4322 17.4294 20.321 17.4428 20.205L17.6903 17.9813C17.7878 17.8888 17.8815 17.795 17.9715 17.7L20.2009 17.4375C20.3169 17.424 20.4282 17.3836 20.5259 17.3195C20.6235 17.2554 20.7049 17.1693 20.7634 17.0682C21.2102 16.2965 21.5529 15.4689 21.7824 14.6072C21.8126 14.4937 21.8157 14.3746 21.7915 14.2596C21.7672 14.1447 21.7163 14.037 21.6428 13.9454L20.2515 12.2025Z" fill="#fff"/>
+            </svg>
         </a>
     </div>
+    <!-- Left Bar -->
 
+    <!-- Setting Color -->
     <div class="offcanvas offcanvas-end offcanvas-color" id="settingColorMenu">
         <div class="offcanvas-content">
-            <span class="icon-close-popup" data-bs-dismiss="offcanvas"><i class="icon-close"></i></span>
-            <div class="canvas-header"><h3 class="fw-semibold text-white">Configuration</h3></div>
+            <span class="icon-close-popup" data-bs-dismiss="offcanvas">
+                <i class="icon-close"></i>
+            </span>
+            <div class="canvas-header">
+                <h3 class="fw-semibold text-white">Configuration</h3>
+            </div>
             <div class="canvas-body">
                 <h6 class="title fw-semibold text-white">COLORS</h6>
                 <div class="settings-color list-choose mb-24">
@@ -520,23 +631,29 @@
                     <button type="button" class="choose-item link-no-action"></button>
                 </div>
                 <h6 class="title fw-semibold text-white">CUSTOM CURSOR</h6>
-                <div><input type="checkbox" id="cursor" class="tf-switch-check style-small"></div>
+                <div>
+                    <input type="checkbox" id="cursor" class="tf-switch-check style-small">
+                </div>
             </div>
         </div>
     </div>
+    <!-- /Setting Color -->
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/carousel.js"></script>
-    <script src="assets/js/infinityslide.js"></script>
-    <script src="assets/js/ScrollSmooth.js"></script>
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/ScrollToPlugin.min.js"></script>
-    <script src="assets/js/gsapAnimation.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Javascript -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/carousel.js"></script>
+    <script src="../assets/js/infinityslide.js"></script>
+    <script src="../assets/js/ScrollSmooth.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../assets/js/gsapAnimation.js"></script>
+    <script src="../assets/js/main.js"></script>
+
 </body>
+
 </html>

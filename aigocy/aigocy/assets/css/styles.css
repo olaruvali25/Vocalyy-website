@@ -1793,7 +1793,7 @@ header.header-sticky {
   font-size: 20px;
 }
 .tf-header.header2 .header-inner {
-  max-width: 807px;
+  max-width: 940px;
 }
 @media (max-width: 991px) {
   .tf-header .box-navigation {
