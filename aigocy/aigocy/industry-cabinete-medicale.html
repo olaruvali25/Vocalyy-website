@@ -7,6 +7,20 @@
 
 <head>
     <meta charset="utf-8">
+<!-- VOCALYY-DOMAIN-ROUTE -->
+<script>
+(function(){
+  var h=window.location.hostname.toLowerCase();
+  if(h.indexOf('vocalyy.co.il')!==-1||h.indexOf('vocalyy.com')!==-1){
+    var p=window.location.pathname;
+    if(p.indexOf('/en/')===- 1){
+      var newPath='/en/'+p.replace(/^\/+/,'');
+      if(!newPath.match(/\.html$/))newPath='/en/index.html';
+      window.location.replace(newPath);
+    }
+  }
+})();
+</script>
     <title>Cabinete Medicale | De Ce Nu Mai Vin Pacientii la Consultatie? | Vocalyy</title>
     <meta name="author" content="Vocalyy">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -496,34 +510,7 @@
             </div>
         </div>
     </div>
-
-    <div class="tf-left-bar">
-        <a class="btn-setting-color" data-bs-toggle="offcanvas" href="#settingColorMenu">
-            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0015 7.50004C11.1115 7.50004 10.2415 7.76396 9.50144 8.25843C8.76142 8.7529 8.18464 9.4557 7.84405 10.278C7.50346 11.1002 7.41434 12.005 7.58797 12.8779C7.76161 13.7509 8.19019 14.5527 8.81953 15.182C9.44886 15.8114 10.2507 16.2399 11.1236 16.4136C11.9965 16.5872 12.9013 16.4981 13.7236 16.1575C14.5458 15.8169 15.2487 15.2401 15.7431 14.5001C16.2376 13.7601 16.5015 12.8901 16.5015 12C16.5003 10.8069 16.0258 9.66308 15.1821 8.81943C14.3385 7.97579 13.1946 7.50128 12.0015 7.50004Z" fill="#fff"/></svg>
-        </a>
-    </div>
-
-    <div class="offcanvas offcanvas-end offcanvas-color" id="settingColorMenu">
-        <div class="offcanvas-content">
-            <span class="icon-close-popup" data-bs-dismiss="offcanvas"><i class="icon-close"></i></span>
-            <div class="canvas-header"><h3 class="fw-semibold text-white">Configuration</h3></div>
-            <div class="canvas-body">
-                <h6 class="title fw-semibold text-white">COLORS</h6>
-                <div class="settings-color list-choose mb-24">
-                    <button type="button" class="choose-item link-no-action active"></button>
-                    <button type="button" class="choose-item link-no-action"></button>
-                    <button type="button" class="choose-item link-no-action"></button>
-                    <button type="button" class="choose-item link-no-action"></button>
-                    <button type="button" class="choose-item link-no-action"></button>
-                    <button type="button" class="choose-item link-no-action"></button>
-                    <button type="button" class="choose-item link-no-action"></button>
-                    <button type="button" class="choose-item link-no-action"></button>
-                </div>
-                <h6 class="title fw-semibold text-white">CUSTOM CURSOR</h6>
-                <div><input type="checkbox" id="cursor" class="tf-switch-check style-small"></div>
-            </div>
-        </div>
-    </div>
+</div>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -538,5 +525,73 @@
     <script src="assets/js/ScrollToPlugin.min.js"></script>
     <script src="assets/js/gsapAnimation.js"></script>
     <script src="assets/js/main.js"></script>
+
+<!-- Sticky CTA Button -->
+<a href="try-agent.html" class="vocalyy-sticky-cta" aria-label="Ascultă agentul tău">
+  <span class="vocalyy-sticky-pulse"></span>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 10.5V13.5C3 14.6 3.9 15.5 5 15.5H6L10 19.5V6.5L6 10.5H5C3.9 10.5 3 11.4 3 12.5V10.5Z" fill="white"/>
+    <path d="M14 3.23V5.29C16.89 6.15 19 8.83 19 12C19 15.17 16.89 17.85 14 18.71V20.77C18.01 19.86 21 16.28 21 12C21 7.72 18.01 4.14 14 3.23Z" fill="white"/>
+    <path d="M14 7.97V16.02C15.48 15.29 16.5 13.77 16.5 12C16.5 10.23 15.48 8.71 14 7.97Z" fill="white"/>
+  </svg>
+  <span class="vocalyy-sticky-text">Ascultă agentul tău</span>
+</a>
+<style>
+.vocalyy-sticky-cta {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #09090B;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 60px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25), 0 0 0 1px rgba(253,58,37,0.15);
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  border: 1px solid rgba(253,58,37,0.3);
+}
+.vocalyy-sticky-cta:hover {
+  background: #FD3A25;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(253,58,37,0.35);
+  border-color: #FD3A25;
+  text-decoration: none;
+}
+.vocalyy-sticky-cta svg { flex-shrink: 0; }
+.vocalyy-sticky-pulse {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 12px;
+  height: 12px;
+  background: #FD3A25;
+  border-radius: 50%;
+  animation: vocalyyPulse 2s ease-in-out infinite;
+}
+@keyframes vocalyyPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+}
+@media (max-width: 600px) {
+  .vocalyy-sticky-cta {
+    bottom: 20px;
+    right: 16px;
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+  .vocalyy-sticky-text { display: none; }
+  .vocalyy-sticky-cta { padding: 14px; border-radius: 50%; }
+}
+</style>
+<!-- /Sticky CTA Button -->
+
 </body>
 </html>

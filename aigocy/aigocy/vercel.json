@@ -2,5 +2,73 @@
   "buildCommand": "",
   "installCommand": "",
   "framework": null,
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/:path((?!en/).*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "vocalyy.co.il"
+        }
+      ],
+      "destination": "/en/:path",
+      "permanent": false
+    },
+    {
+      "source": "/:path((?!en/).*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.vocalyy.co.il"
+        }
+      ],
+      "destination": "/en/:path",
+      "permanent": false
+    },
+    {
+      "source": "/:path((?!en/).*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "vocalyy.com"
+        }
+      ],
+      "destination": "/en/:path",
+      "permanent": false
+    },
+    {
+      "source": "/:path((?!en/).*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.vocalyy.com"
+        }
+      ],
+      "destination": "/en/:path",
+      "permanent": false
+    },
+    {
+      "source": "/en/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "vocalyy.ro"
+        }
+      ],
+      "destination": "/:path",
+      "permanent": false
+    },
+    {
+      "source": "/en/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.vocalyy.ro"
+        }
+      ],
+      "destination": "/:path",
+      "permanent": false
+    }
+  ]
 }
