@@ -9878,4 +9878,91 @@ footer .footer-bottom::before {
   opacity: 0.9;
 }
 
+/* ========================================================================
+   MOBILE FIXES (2026-04-09)
+   ======================================================================== */
+
+/* FIX 1: Hero section overflow on mobile — prevent horizontal scroll */
+@media (max-width: 767px) {
+  .section-hero {
+    overflow: hidden;
+  }
+  .section-hero .content-wrap .sub {
+    width: auto;
+    max-width: 100%;
+    text-align: center;
+    word-break: break-word;
+  }
+  .section-hero .content-wrap .title .title2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-hero .content-wrap .title-icon {
+    display: none;
+  }
+}
+
+/* FIX 2: text-gradient-2 bottom text barely visible on mobile */
+@media (max-width: 767px) {
+  .text-gradient-2 {
+    background: linear-gradient(360deg, rgba(41, 44, 46, 0.7) 0%, #292C2E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0px transparent;
+    -webkit-text-fill-color: transparent;
+  }
+}
+@media (max-width: 575px) {
+  .text-gradient-2 {
+    background: #3a3d40;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0px transparent;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* FIX 5: Statistics section — more spacing on mobile */
+@media (max-width: 767px) {
+  .section-statistic .statistic-slider .row.g-4 > [class*="col-4"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .section-statistic .statistic-slider .row.g-4 {
+    justify-content: center;
+  }
+}
+
+/* FIX 6: Header — disable hide-on-scroll on mobile, bigger burger button */
+@media (max-width: 991px) {
+  .tf-header.header-scrolled {
+    transform: translateY(0) !important;
+  }
+  .tf-header.header-hidden {
+    transform: translateY(0) !important;
+  }
+  .tf-header .mobile-menu {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    font-size: 24px;
+  }
+  .tf-header .header-inner {
+    padding: 6px 6px 6px 20px;
+  }
+}
+
+/* FIX 7: Language switch visible on mobile, next to burger menu */
+@media (max-width: 991px) {
+  .lang-dropdown {
+    margin-right: 6px !important;
+    order: 0;
+  }
+  .lang-dropdown button {
+    padding: 4px 10px !important;
+    font-size: 11px !important;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

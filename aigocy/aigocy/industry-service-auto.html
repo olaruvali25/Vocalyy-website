@@ -85,7 +85,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="lang-dropdown d-lg-flex d-none" style="position:relative;margin-right:10px;" onmouseenter="this.querySelector('.ld-menu').style.display='block'" onmouseleave="this.querySelector('.ld-menu').style.display='none'">
+                <div class="lang-dropdown d-flex" style="position:relative;margin-right:10px;" onclick="var m=this.querySelector('.ld-menu');m.style.display=m.style.display==='block'?'none':'block'" onmouseenter="this.querySelector('.ld-menu').style.display='block'" onmouseleave="this.querySelector('.ld-menu').style.display='none'">
                     <button style="background:transparent;border:1px solid rgba(0,0,0,0.15);border-radius:6px;color:#000;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:5px;letter-spacing:0.5px;">RO <span style="font-size:8px;opacity:0.5;color:#000;">▼</span></button>
                     <div class="ld-menu" style="display:none;position:absolute;top:100%;right:0;padding-top:4px;z-index:1000;">
                         <a href="en/industry-service-auto.html" style="display:block;padding:7px 16px;background:#fff;color:#000;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:0.5px;border:1px solid rgba(0,0,0,0.1);border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,0.1);transition:all 0.2s;" onmouseover="this.style.color='#000';this.style.background='#f5f5f5'" onmouseout="this.style.color='#000';this.style.background='#fff'">EN</a>
@@ -254,6 +254,23 @@
         .fcd-ch-label { font-size: 15px; }
         .fcd-ch-status { font-size: 15px; color: #aaa; margin-left: 2px; }
         .fcd-channel.success .fcd-ch-status { color: #6bc799; }
+
+        /* Mobile: center flow demo, prevent overflow */
+        @media (max-width: 600px) {
+            .flow-inner { max-width: 100%; padding: 0 4px; box-sizing: border-box; }
+            .flow-patient-card { padding: 20px 16px 16px; }
+            .fcd-card-header { flex-wrap: wrap; gap: 8px; }
+            .fcd-expires { font-size: 11px; padding: 4px 10px; }
+            .fcd-node { min-width: unset; white-space: normal; padding: 10px 16px; font-size: 13px; text-align: center; }
+            .fcd-branches { overflow: hidden; }
+            .fcd-branch-svg { height: 70px; }
+            .fcd-channels { padding: 0; gap: 4px; justify-content: center; flex-wrap: nowrap; }
+            .fcd-channel { padding: 8px 8px; font-size: 11px; gap: 4px; border-radius: 10px; }
+            .fcd-ch-icon { font-size: 14px; }
+            .fcd-ch-label { font-size: 11px; }
+            .fcd-ch-status { font-size: 12px; }
+            .flow-sticky-wrapper { padding: 30px 10px; }
+        }
         </style>
 
         <script>
@@ -684,13 +701,14 @@
 }
 @media (max-width: 600px) {
   .vocalyy-sticky-cta {
-    bottom: 20px;
+    bottom: 90px;
     right: 16px;
-    padding: 12px 18px;
-    font-size: 13px;
+    padding: 10px 16px;
+    font-size: 12px;
+    gap: 7px;
   }
-  .vocalyy-sticky-text { display: none; }
-  .vocalyy-sticky-cta { padding: 14px; border-radius: 50%; }
+  .vocalyy-sticky-text { display: inline; }
+  .vocalyy-sticky-cta svg { width: 16px; height: 16px; }
 }
 </style>
 <!-- /Sticky CTA Button -->
